@@ -1,0 +1,76 @@
+#fundoLogin {
+    background-color: rgb(241, 241, 241);
+}
+#telaLogin {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 5px 30px rgb(185, 77, 31);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    background-color: #f6f6f6;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding: 15px 80px;
+    background-color: #56baed;
+}
+
+img {
+    margin-top: 18px;
+    /* margin-bottom: 18px; */
+    border-radius: 25%;
+    height: 140px;
+}
+a {
+    color: #92badd;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.wrapLink {
+    display: flex;
+    justify-content: space-around;
+}
+.underlineHover {
+    margin-bottom: 15px;
+}
+.underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.underlineHover:hover {
+    color: #0d0d0d;
+}
+
+.underlineHover:hover:after {
+    width: 100%;
+}
+
+.botaoLogin {
+    background-color: rgb(244, 211, 104);
+    padding: 15px 80px;
+    text-transform: uppercase;
+}
+
+.modificaInput {
+    padding: 15px 80px;
+    border-style: none;
+}
