@@ -9,7 +9,7 @@ class Material_Ordem_Servico extends Model
 {
     private Material $material;
     private Ordem_Servico $ordem_servico;
-    private $qnt_material;
+    private $qtd_material;
     private Decimal $valor_material;
     use HasFactory;
 }
