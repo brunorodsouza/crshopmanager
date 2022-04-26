@@ -8,6 +8,6 @@ class Servico extends Model
 {
     private $codigo;
     private $titulo;
-    private $valor;
+    private Decimal $valor;
     use HasFactory;
 }

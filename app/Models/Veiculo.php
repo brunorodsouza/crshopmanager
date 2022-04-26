@@ -10,6 +10,7 @@ class Veiculo extends Model
     private $codigo;
     private $modelo;
     private $marca;
+    private $cor;
     private $ano_fab;
     private $ano_mod;
     private $combustivel;

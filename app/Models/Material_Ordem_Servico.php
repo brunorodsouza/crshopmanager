@@ -7,7 +7,7 @@ use Ramsey\Uuid\Type\Decimal;
 
 class Material_Ordem_Servico extends Model
 {
-    private $material;
+    private Material $material;
     private Ordem_Servico $ordem_servico;
     private $qnt_material;
     private Decimal $valor_material;
