@@ -11,11 +11,12 @@ class Ordem_Servico extends Model
     private Servico $servico;
     private Veiculo $veiculo;
     private Mecanico $mecanico;
-    private $data_inicio;
+    private Cliente $cliente;
+    private Date $data_inicio;
     private Date $data_previsao;
     private Date $data_fim;
     private Decimal $valor_servico;
-    private Decimal $valor_material_servico;
+    private Decimal $valor_total_material;
     private Decimal $valor_pago;
     private $status_pagamento;
     use HasFactory;

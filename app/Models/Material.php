@@ -9,6 +9,6 @@ class Material extends Model
     private $codigo;
     private $titulo;
     private $valor;
-    private $descricao;
+    private Decimal $descricao;
     use HasFactory;
 }
