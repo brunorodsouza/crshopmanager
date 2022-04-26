@@ -15,3 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [LoginController::class, 'index'])->name('login');
+Route::get('/novasenha', [LoginController::class, 'novasenha'])->name('novasenha');
+Route::get('/registrar', [LoginController::class, 'registrar'])->name('registrar');
+Route::get('/esqueceusenha', [LoginController::class, 'esqueceusenha'])->name('esqueceusenha');
+
+

@@ -15,13 +15,15 @@
                     <input type="password" class="form-control modificaInput" id="" placeholder="Senha" required>
                 </div>
 
-                <button type="submit" class="btn botaoLogin" style="width: 85%">Entrar</button>
+                <div class="mb-3">
+                    <input type="password" class="form-control modificaInput" id="" placeholder="Repita a Senha" required>
+                </div>
+
+                <button type="submit" class="btn botaoLogin" style="width: 85%">Cadastrar</button>
             </form>
             <div class="wrapLink">
                 <a class="underlineHover" href='esqueceusenha's>Esqueceu sua senha?</a>
-                {{-- <a class="underlineHover" href='{{route('login.esqueceusenha')}}'>Esqueceu sua senha?</a> --}}
-                <a class="underlineHover" href="registrar">Novo por aqui? Cadastre-se</a>
-                {{-- <a class="underlineHover" href="{{route('login.registrar')}}">Novo por aqui? Cadastre-se</a> --}}
+                <a class="underlineHover" href="/">Já tem cadastro? Entre agora!</a>
             </div>
         </div>
     </div>
