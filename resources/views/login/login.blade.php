@@ -18,10 +18,9 @@
                 <button type="submit" class="btn botaoLogin" style="width: 85%">Entrar</button>
             </form>
             <div class="wrapLink">
-                <a class="underlineHover" href='esqueceusenha's>Esqueceu sua senha?</a>
-                {{-- <a class="underlineHover" href='{{route('login.esqueceusenha')}}'>Esqueceu sua senha?</a> --}}
-                <a class="underlineHover" href="registrar">Novo por aqui? Cadastre-se</a>
-                {{-- <a class="underlineHover" href="{{route('login.registrar')}}">Novo por aqui? Cadastre-se</a> --}}
+                {{-- <a class="underlineHover" href='esqueceusenha'>Esqueceu sua senha?</a> --}}
+                <a class="underlineHover" href='{{route('esqueceusenha')}}'>Esqueceu sua senha?</a>
+                <a class="underlineHover" href="{{route('registrar')}}">Novo por aqui? Cadastre-se</a>
             </div>
         </div>
     </div>

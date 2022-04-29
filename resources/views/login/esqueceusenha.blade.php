@@ -14,7 +14,7 @@
                 <button type="submit" class="btn botaoLogin" style="width: 85%">Enviar</button>
             </form>
             <div class="wrapLink">
-                <a class="underlineHover" href="/">Já tem cadastro? Entre agora!</a>
+                <a class="underlineHover" href='{{route('login')}}'>Já tem cadastro? Entre agora!</a>
             </div>
         </div>
     </div>
