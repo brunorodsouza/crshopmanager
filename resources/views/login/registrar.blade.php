@@ -23,6 +23,7 @@
             </form>
             <div class="wrapLink">
                 <a class="underlineHover" href='{{route('esqueceusenha')}}'>Esqueceu sua senha?</a>
+                <a class="underlineHover" href='{{route('login')}}'>Já tem cadastro? Entre agora!</a>
             </div>
         </div>
     </div>
