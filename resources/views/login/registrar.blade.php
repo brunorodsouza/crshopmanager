@@ -22,7 +22,7 @@
                 <button type="submit" class="btn botaoLogin" style="width: 85%">Cadastrar</button>
             </form>
             <div class="wrapLink">
-                <a class="underlineHover" href='{{route('esqueceusenha')}}'s>Esqueceu sua senha?</a>
+                <a class="underlineHover" href='{{route('esqueceusenha')}}'>Esqueceu sua senha?</a>
             </div>
         </div>
     </div>
