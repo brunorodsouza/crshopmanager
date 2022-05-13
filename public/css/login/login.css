@@ -1,44 +1,38 @@
-#imgfundo {
-    width: 100%;
-    height: auto;
-    align-content: center;
+#fundoLogin {
+    background-color: rgb(241, 241, 241);
 }
-
- #telaLogin {
+#telaLogin {
     width: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(214, 58, 30);
-    box-shadow: 1px 5px 30px rgb(255, 231, 20);
+    box-shadow: 1px 5px 30px rgb(185, 77, 31);
 }
-
 
 body {
     font-family: "Poppins", sans-serif;
     height: 100vh;
     text-align: center;
-    margin: 0;
 }
 
 input {
     text-align: center;
-    background-color: #ffffff;
+    background-color: #f6f6f6;
     margin-top: 15px;
     margin-bottom: 25px;
     padding: 15px 80px;
+    background-color: #56baed;
 }
 
-/*img {
+img {
     margin-top: 18px;
-    margin-bottom: 18px;
+    /* margin-bottom: 18px; */
     border-radius: 25%;
     height: 140px;
-}*/
-
+}
 a {
-    color: #ffffff;
+    color: #92badd;
     display: inline-block;
     text-decoration: none;
     font-weight: 400;
@@ -57,13 +51,13 @@ a {
     bottom: -10px;
     width: 0;
     height: 2px;
-    background-color: #fdc200;
+    background-color: #56baed;
     content: "";
     transition: width 0.2s;
 }
 
 .underlineHover:hover {
-    color: #f8d300;
+    color: #0d0d0d;
 }
 
 .underlineHover:hover:after {
