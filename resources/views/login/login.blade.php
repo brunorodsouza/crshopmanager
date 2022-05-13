@@ -6,7 +6,7 @@
 
     <div class="card telaLogin" id="telaLogin">
         <div class="card-body">
-            <!--<img src={{asset("img/download-removebg-preview.png")}} id="logo">-->
+            <!--<img src={{asset("storage/download-removebg-preview.png")}} id="logo">-->
             <h2>C. R. Shop - Soluções Automotivas</h2>
             <form>
                 <div class="form-floating">
