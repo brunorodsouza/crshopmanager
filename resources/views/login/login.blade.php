@@ -1,26 +1,30 @@
 @extends('layout')
 
 @section('conteudo')
-<body id="fundoLogin">
+<body>
+    <img src={{asset("storage/hermes-rivera-XUB0bKA13ho-unsplash.jpg")}} alt="Photo by Hermes Rivera on Unsplash" id="imgfundo">
+
     <div class="card telaLogin" id="telaLogin">
         <div class="card-body">
-            <img src={{asset("storage/download-removebg-preview.png")}}>
-            <h2>Bar do Francês</h2>
+            <!--<img src={{asset("storage/download-removebg-preview.png")}} id="logo">-->
+            <h2>C. R. Shop - Soluções Automotivas</h2>
             <form>
-                <div class="mb-3">
-                    <input type="email" class="form-control modificaInput" id="" aria-describedby="emailHelp" placeholder="Email" required>
+                <div class="form-floating">
+                    <input type="text" class="form-control modificaInput" id="floatingInputGrid" aria-describedby="emailHelp" placeholder="Usuário" required>
+                    <label for="floatingInputGrid">Nome de Usuário</label>
                 </div>
 
-                <div class="mb-3">
-                    <input type="password" class="form-control modificaInput" id="" placeholder="Senha" required>
+                <div class="form-floating">
+                    <input type="password" class="form-control modificaInput" id="floatingInputGridSenha" placeholder="Senha" required>
+                    <label for="floatingInputGridSenha">Senha</label>
                 </div>
 
-                <button type="submit" class="btn botaoLogin" style="width: 85%">Entrar</button>
+                <button type="submit" class="btn botaoLogin" id="botaoLogin" style="width: 85%">Entrar</button>
             </form>
             <div class="wrapLink">
                 {{-- <a class="underlineHover" href='esqueceusenha'>Esqueceu sua senha?</a> --}}
+                <a class="underlineHover" href="{{route('registrar')}}">Cadastre-se</a>
                 <a class="underlineHover" href='{{route('esqueceusenha')}}'>Esqueceu sua senha?</a>
-                <a class="underlineHover" href="{{route('registrar')}}">Novo por aqui? Cadastre-se</a>
             </div>
         </div>
     </div>
