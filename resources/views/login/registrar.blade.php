@@ -29,3 +29,5 @@
     </div>
     </body>
     @endsection
+
+{{-- resolução de tela --}}
