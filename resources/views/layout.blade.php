@@ -6,7 +6,6 @@
     <title>C. R. Shop Manager</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" type="text/css" href={{asset('css/login/login.css')}}>
-    <link rel="stylesheet" type="text/css" href={{asset('css/bootstrap/bootstrap.min.css')}}>
 </head>
 
 <body>
