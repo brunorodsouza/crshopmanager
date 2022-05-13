@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -23,38 +25,34 @@ class LoginController extends Controller
         return view('login.novasenha');
     }
 
-
-    public function create()
+    public function auth(Request $request)
     {
-        //
+        $this->validate($request,[
+            'email' => 'required',
+            'password' => 'required'
+        ],[
+            'email.required' => 'O E-mail é obrigatório',
+            'password.required' => 'A Senha é obrigatório'
+        ]);
+
+        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+            return redirect()->route('home');
+        }
+        else{
+            return redirect()->back()->with('danger','Email ou senha incorretos');
+        }
     }
 
     public function store(Request $request)
     {
-        //
-    }
+        $property = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password)
 
+        ];
 
-    public function show($id)
-    {
-        //
-    }
-
-
-    public function edit($id)
-    {
-        //
-    }
-
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-
-    public function destroy($id)
-    {
-        //
+        DB::table('users')->insert($property);
+        return redirect()->route('home');
     }
 }
