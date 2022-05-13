@@ -4,7 +4,7 @@
 <body id="fundoLogin">
     <div class="card telaLogin" id="telaLogin">
         <div class="card-body">
-            <img src={{asset("storage/download-removebg-preview.png")}}>
+            <img src={{asset("storage/img.png")}}>
             <h4>Insira o seu email e enviaremos um link para você voltar a acessar a sua conta.</h4>
             <form>
                 <div class="mb-3">

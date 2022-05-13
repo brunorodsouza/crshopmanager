@@ -4,7 +4,7 @@
 <body id="fundoLogin">
     <div class="card telaLogin" id="telaLogin">
         <div class="card-body">
-            <img src={{asset("storage/download-removebg-preview.png")}}>
+            <img src={{asset("storage/img.png")}}>
             <h2>Bar do Francês</h2>
             <form>
                 <div class="mb-3">
