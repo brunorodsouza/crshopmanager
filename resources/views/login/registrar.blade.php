@@ -40,7 +40,7 @@
                 <input type="password" class="form-control modificaInput" id="password2" name="password" placeholder="Repita a Senha" required>
             </div>
 
-            <button type="submit" class="btn botaoLogin" id="registrar" style="width: 85%">Cadastrar</button>
+            <button type="submit" class="btn botaoLogin btn-primary" id="registrar" style="width: 85%">Cadastrar</button>
             </form>
 
             <div class="wrapLink">
