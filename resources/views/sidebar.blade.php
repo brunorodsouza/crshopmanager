@@ -1,7 +1,6 @@
-@extends('layout2')
+@extends('layout2') <!--Lincando com o layout2.blade.php-->
 
-@section('conteudo')
-
+@section('conteudo') <!--Criando a section 'conteudo' que é chamada em layout2.blade.php-->
 <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height:100%;">
     <span class="fs-4">CRSHOPMANAGER</span>
     <hr>
@@ -27,13 +26,13 @@
       <li>
         <a href="#" class="nav-link text-white">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-          Cadastrar Droga
+          Cadastrar
         </a>
       </li>
       <li>
         <a href="#" class="nav-link text-white">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-          Fodase
+          Cadastrar
         </a>
       </li>
     </ul>
