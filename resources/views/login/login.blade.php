@@ -19,7 +19,7 @@
             </div>
         @endif
             <img src={{asset("storage/img.png")}}>
-            <h2>Bar do Francês</h2>
+            <h2>C. R. Shop Manager</h2>
             <form method="POST" action='{{route('auth.user')}}'>
             @csrf
                 <div class="mb-3">
