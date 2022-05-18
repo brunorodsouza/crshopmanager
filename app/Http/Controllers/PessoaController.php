@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pessoa;
 
 class PessoaController extends Controller
 {
@@ -13,7 +14,8 @@ class PessoaController extends Controller
      */
     public function index()
     {
-
+        $dados = Pessoa::all();
+        return view('pessoa.index')->with('dados', $dados);
     }
 
     /**
