@@ -15,3 +15,11 @@ Route::get('/esqueceusenha', [LoginController::class, 'esqueceusenha'])->name('e
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+
+Route::get('/pessoa', [PessoaController::class, 'index'])->name('pessoa');
+Route::get('/pessoa/novo', [PessoaController::class, 'create'])->name('pessoa.novo');
+Route::post('/pessoa/store', [PessoaController::class, 'store'])->name('pessoa.store');
+Route::get('/pessoa/{name}', [PessoaController::class, 'show'])->name('pessoa.show');
+Route::get('/pessoa/editar/{name}', [PessoaController::class, 'edit'])->name('pessoa.editar');
+Route::put('/pessoa/update/{name}', [PessoaController::class, 'update'])->name('pessoa.update');
+Route::get('/pessoa/remover/{name}', [PessoaController::class, 'destroy'])->name('pessoa.remover');

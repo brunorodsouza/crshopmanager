@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout2')
 
 @section('conteudo')
 <body>
@@ -23,7 +23,7 @@
                     <div class="form-group row mt-2">
                         <div class="col-md-6">
                             <label for="matricula" class="form-label">Matrícula:</label>
-                            <input type="text" class="form-control" id="matricula" >  
+                            <input type="text" class="form-control" id="matricula" >
                         </div>
                         <div class="col-md-3">
                             <label  class="form-label" for="data_nascimento">Data Nascimento:</label>
@@ -72,7 +72,7 @@
                         </div>
                         <div class="col-md-6">
                             <label class="form-label" for="complemento">Complemento:</label>
-                            <input type="text" class="form-control" id ="complemento" > 
+                            <input type="text" class="form-control" id ="complemento" >
                         </div>
                     </div>
 
@@ -83,7 +83,7 @@
                         </div>
                         <div class="col-md-2">
                             <label class="form-label" for="uf">UF:</label>
-                            <input type="text" class="form-control" id ="uf"> 
+                            <input type="text" class="form-control" id ="uf">
                         </div>
                     </div>
 
