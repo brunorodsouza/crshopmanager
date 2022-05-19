@@ -15,9 +15,9 @@
             </thead>";
 
         foreach($dados as $dado){
-            $linkReadMore = url('/pessoa/' . $dado->name);
-            $linkEditItem = url ('/pessoa/editar/' . $dado->name);
-            $linkRemoveItem = url ('/pessoa/remover/' . $dado->name);
+            $linkReadMore = url('/pessoa/' . $dado->id);
+            $linkEditItem = url ('/pessoa/editar/' . $dado->id);
+            $linkRemoveItem = url ('/pessoa/remover/' . $dado->id);
             echo"<tr>
                  <td>$dado->nome</td>
                  <td>$dado->matricula</td>
