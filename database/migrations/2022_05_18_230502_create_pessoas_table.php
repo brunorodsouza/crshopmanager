@@ -16,7 +16,7 @@ class CreatePessoasTable extends Migration
         Schema::create('pessoas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('matricula');
-            $table->string('cpf');
+            $table->string('cpf')->unique();
             $table->string('nome');
             $table->date('data_nascimento');
             $table->string('telefone');
