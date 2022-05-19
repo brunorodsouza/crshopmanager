@@ -1,4 +1,4 @@
-@extends('layout2')
+@extends('home.home')
 
 @section('conteudo')
 EM DESENVOLVIMENTO SHOW BLADE
