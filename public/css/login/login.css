@@ -1,76 +1,107 @@
 #fundoLogin {
     background-color: rgb(241, 241, 241);
+    background-image: url("../../storage/moody-blur-wallpaper.jpg");
+    background-repeat: repeat-y;
+    background-size: cover;
 }
+
 #telaLogin {
+    background-color: rgba(243, 243, 243, 0.938);
     width: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 1px 5px 30px rgb(185, 77, 31);
+    box-shadow: 1px 5px 30px rgb(146, 14, 14);
 }
 
 body {
-    font-family: "Poppins", sans-serif;
     height: 100vh;
     text-align: center;
 }
 
-input {
+.card-body{
     text-align: center;
-    background-color: #f6f6f6;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    padding: 15px 80px;
-    background-color: #56baed;
 }
 
 img {
-    margin-top: 18px;
-    /* margin-bottom: 18px; */
-    border-radius: 25%;
+    margin-bottom: 18px;
+    border-radius: 20%;
     height: 140px;
 }
-a {
-    color: #92badd;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 400;
+
+h2.card-title {
+    font-family: "Ubuntu", "Poppins", sans-serif;
+    font-weight: 500;
 }
 
-.wrapLink {
+.form-control {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border-color: rgba(1, 15, 63, 0.904);
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: rgba(1, 15, 63, 0.904);
+}
+
+#inputGroupAlign {
+    margin-top: -10px;
+}
+
+.input-group-text {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-color: rgba(1, 15, 63, 0.904);
+    background-color: rgba(1, 15, 63, 0.904);
+    color: rgb(241, 241, 241);
+}
+
+a {
+    color: #000000;
+    display: inline-block;
+}
+
+.container-fluid {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-.underlineHover {
-    margin-bottom: 15px;
-}
-.underlineHover:after {
+
+.card-link:after {
     display: block;
     left: 0;
     bottom: -10px;
     width: 0;
     height: 2px;
-    background-color: #56baed;
+    background-color: rgba(1, 15, 63, 0.904);
     content: "";
     transition: width 0.2s;
 }
 
-.underlineHover:hover {
-    color: #0d0d0d;
+.card-link:hover {
+    color: rgba(1, 15, 63, 0.904);
 }
 
-.underlineHover:hover:after {
+.card-link:hover:after {
     width: 100%;
 }
 
 .botaoLogin {
-    background-color: rgb(244, 211, 104);
+    background-color: rgba(1, 15, 63, 0.904);
+    color: rgb(241, 241, 241);
+    margin-bottom: 5px;
+    margin-top: -5px;
+    width: 75%;
     padding: 15px 80px;
     text-transform: uppercase;
 }
 
-.modificaInput {
-    padding: 15px 80px;
-    border-style: none;
+.botaoLogin:hover {
+    background-color: rgb(146, 14, 14);
+    color: rgb(241, 241, 241);
 }
+
+

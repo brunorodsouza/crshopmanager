@@ -19,24 +19,34 @@
             </div>
         @endif
             <img src={{asset("storage/img.png")}}>
-            <h2>C. R. Shop Manager</h2>
+            <h2 class="card-title">C. R. Shop - Manager</h2>
+
+            <!--FORM DO CARD-->
             <form method="POST" action='{{route('auth.user')}}'>
             @csrf
-                <div class="mb-3">
-                    <input type="email" class="form-control modificaInput" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" required>
+                <div class="input-group">
+                    <span class="input-group-text" id="email">E-mail</span>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="crshopmanager@gmail.com" required>
                 </div>
 
-                <div class="mb-3">
-                    <input type="password" class="form-control modificaInput" id="password" name="password" placeholder="Senha" required>
+                <div class="input-group" id="inputGroupAlign">
+                    <span class="input-group-text" id="password">Senha</span>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="*********" required>
                 </div>
 
-                <button type="submit" class="btn botaoLogin" style="width: 85%">Entrar</button>
+                <button type="submit" class="btn botaoLogin">Entrar</button>
             </form>
-            <div class="wrapLink">
-                <a class="underlineHover" href='{{route('esqueceusenha')}}'>Esqueceu sua senha?</a>
-                <a class="underlineHover" href="{{route('registrar')}}">Novo por aqui? Cadastre-se</a>
+
+            <div class="container-fluid">
+                <a class="card-link" href="{{route('registrar')}}">Cadastre-se</a>
+                <a class="card-link" href='{{route('esqueceusenha')}}'>Esqueceu sua senha?</a>
             </div>
         </div>
     </div>
-    </body>
-    @endsection
+</body>
+@endsection
+
+@section('scripts') 
+    <script type="text/javascript" href={{asset('../js/bootstrap.js')}}></script>
+    <script type="text/javascript" href={{asset('../js/login.js')}}></script>
+@endsection

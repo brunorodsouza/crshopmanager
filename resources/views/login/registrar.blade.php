@@ -1,10 +1,9 @@
 @extends('layout')
 
-@section('conteudo')
+@section('conteudo') 
 <body id="fundoLogin">
     <div class="card telaLogin" id="telaLogin">
         <div class="card-body">
-            <img src={{asset("storage/img.png")}}>
             @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -20,38 +19,44 @@
                     {{ session('danger') }}
                 </div>
             @endif
-            <h2>Bar do Francês</h2>
+
+            <img src={{asset("storage/img.png")}}>
+            <h2 class="card-title">Cadastro de Acesso</h2>
+            
+            <!--FORM DO CARD-->
             <form method="POST" action="{{route('store.user')}}">
             @csrf
+                <div class="input-group">
+                    <span class="input-group-text" id="name">Nome</span>
+                    <input type="text" class="form-control" id="name" name="name"  placeholder="Bruno Rodrigues Souza" required>
+                </div>
 
-            <div class="form group mb-3">
-                <input type="text" class="form-control modificaInput" id="name" name="name"  placeholder="Nome" required>
-            </div>
+                <div class="input-group" id="inputGroupAlign">
+                    <span class="input-group-text" id="email">E-mail</span>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="crshopmanager@gmail.com" required>
+                </div>
 
-            <div class="form group mb-3">
-                <input type="email" class="form-control modificaInput" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" required>
-            </div>
+                <div class="input-group" id="inputGroupAlign">
+                    <span class="input-group-text" id="password1">Senha</span>
+                    <input type="password" class="form-control" id="password1" name="password" placeholder="*********" required>
+                </div>
 
-            <div class="form group mb-3">
-                <input type="password" class="form-control modificaInput" id="password1" name="password" placeholder="Senha" required>
-            </div>
+                <div class="input-group" id="inputGroupAlign">
+                    <span class="input-group-text" id="password2">Repita a senha</span>
+                    <input type="password" class="form-control" id="password2" name="password" placeholder="Repita a Senha" required>
+                </div>
 
-            <div class="formp group mb-3">
-                <input type="password" class="form-control modificaInput" id="password2" name="password" placeholder="Repita a Senha" required>
-            </div>
-
-            <button type="submit" class="btn botaoLogin btn-primary" id="registrar" style="width: 85%">Cadastrar</button>
+                <button type="submit" class="btn botaoLogin" id="registrar">Cadastrar</button>
             </form>
 
-            <div class="wrapLink">
-                <a class="underlineHover" href='{{route('esqueceusenha')}}'>Esqueceu sua senha?</a>
-                <a class="underlineHover" href='{{route('login')}}'>Já tem cadastro? Entre agora!</a>
+            <div class="container-fluid">
+                <a class="card-link" href='{{route('login')}}'>Já tem cadastro? Entre agora!</a>
             </div>
         </div>
     </div>
-    </body>
-    @endsection
+</body>
+@endsection
 
 @section('scripts')
-<script src="{{mix("static/js/login.js")}}"></script>
+    <script src="{{mix("static/js/login.js")}}"></script>
 @endsection
