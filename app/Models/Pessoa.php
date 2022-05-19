@@ -25,20 +25,20 @@ class Pessoa extends Model
     protected $table = 'pessoas';
 
     protected $fillable = [
+        'nome',
         'matricula',
         'cpf',
-        'nome',
+        'email',
         'data_nascimento',
         'telefone',
         'celular',
-        'email',
         'cep',
+        'uf',
+        'cidade',
         'bairro',
         'logradouro',
         'numero',
         'complemento',
-        'cidade',
-        'uf',
     ];
 
     use HasFactory;
