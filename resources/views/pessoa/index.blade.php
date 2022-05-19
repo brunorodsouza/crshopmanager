@@ -3,6 +3,7 @@
 @section('conteudo')
 <div class="container my-4">
     <h1> Pessoas que frequentam o bar do frances </h1>
+    <a href='{{route('pessoa.novo')}}' class='btn btn-primary'>Cadastrar</a>
     <?php
     if (!empty($dados)){
         echo"<table class='table table-striped table-hover'>";
