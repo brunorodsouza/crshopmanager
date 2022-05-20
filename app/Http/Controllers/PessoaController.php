@@ -56,12 +56,36 @@ class PessoaController extends Controller
 
     public function edit($id)
     {
-        //
+        $dado = Pessoa::where('id',$id)->get();
+        if(!empty($dado)){
+            return view('pessoa.edit')->with('dado',$dado);
+        } else {
+            return redirect()->route('pessoa');
+        }
     }
 
     public function update(Request $request, $id)
     {
-        //
+        $dado = Pessoa::find($id);
+
+        $dado->nome = $request->nome;
+        $dado->matricula = $request->matricula;
+        $dado->cpf = $request->cpf;
+        $dado->email = $request-> email;
+        $dado->data_nascimento = $request->data_nascimento;
+        $dado->telefone = $request->telefone;
+        $dado->celular = $request->celular;
+        $dado->cep = $request->cep;
+        $dado->uf = $request->uf;
+        $dado->cidade = $request->cidade;
+        $dado->bairro = $request->bairro;
+        $dado->logradouro = $request->logradouro;
+        $dado->numero = $request->numero;
+        $dado->complemento = $request->complemento;
+
+        $dado->save();
+        return redirect()->route('pessoa');
+
     }
 
     public function destroy($id)

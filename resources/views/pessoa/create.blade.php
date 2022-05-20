@@ -79,12 +79,8 @@
             </div>
         </div>
 
-        <div class="form-group row mt-2">
-
-        </div>
-
         <div class="mt-4 text-end">
-            <button type ="submit "class="btn btn-success mr-3">Confirmar</button>
+            <button type ="submit "class="btn btn-success">Confirmar</button>
 
     </form>
     <a href="{{route('pessoa')}}" class="btn btn-secondary">Cancelar</a>
