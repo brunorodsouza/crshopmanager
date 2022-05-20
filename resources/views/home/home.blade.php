@@ -26,7 +26,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a style="text-transform:uppercase; font-weight:bold;" href="#" class="nav-link">Admin</a>
+        <a style="text-transform:uppercase; font-weight:bold;" href='{{route('pessoa')}}' class="nav-link">Admin</a>
       </li>
     </ul>
 
@@ -44,7 +44,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{ url('home') }}" class="brand-link">
+    <a href='{{route('pessoa')}}' class="brand-link">
       <img src={{asset("storage/img.png")}} alt="C.R Shop Manager Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">C.R Shop Manager</span>
     </a>
