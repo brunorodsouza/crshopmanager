@@ -70,7 +70,7 @@
 
             <li class="nav-item menu-open">
                 <a href="#" class="nav-link active" style="background-color: #28a745">
-                    <i class="nav-icon fas fa-th"></i>
+                    <i class="nav-icon fas fa-user"></i>
                   <p>
                     Usuários
                     <i class="right fas fa-angle-left"></i>
@@ -79,16 +79,16 @@
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
                         <a href='{{route('pessoa')}}' class="nav-link">
-                          <i class="far fa-circle nav-icon"></i>
-                          <p>Lista dos Usuários</p>
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Lista dos Usuários</p>
                         </a>
                       </li>
-                  <li class="nav-item">
-                    <a href='{{route('pessoa.novo')}}' class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Novo Usuário</p>
-                    </a>
-                  </li>
+                    <li class="nav-item">
+                        <a href='{{route('pessoa.novo')}}' class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Novo Usuário</p>
+                        </a>
+                    </li>
                 </ul>
               </li>
       <!-- /.sidebar-menu -->
