@@ -14,6 +14,7 @@
                 <td>Matrícula</td>
                 <td>CPF</td>
                 <td>Email</td>
+                <td>Tipo de Cadastro</td>
                 <td>Ações</td>
             </thead>";
 
@@ -25,6 +26,7 @@
                  <td>$dado->nome</td>
                  <td>$dado->matricula</td>
                  <td>$dado->cpf</td>
+                 <td>$dado->email</td>
                  <td>$dado->email</td>
                  <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a></td>
                   </tr>";
