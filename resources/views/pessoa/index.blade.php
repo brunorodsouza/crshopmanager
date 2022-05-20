@@ -2,12 +2,14 @@
 
 @section('conteudo')
 <div class="container my-4">
-    <h1> Pessoas que frequentam o bar do frances </h1>
-    <a href='{{route('pessoa.novo')}}' class='btn btn-primary'>Cadastrar</a>
+    <div style=" margin-bottom: 15px; padding-top:15px; display:flex; justify-content:space-evenly; align-items:center">
+    <h1>Lista dos Cadastrados</h1>
+    <a href='{{route('pessoa.novo')}}' class='btn btn-success' style="height: 40px;">Cadastrar</a>
+    </div>
     <?php
     if (!empty($dados)){
         echo"<table class='table table-striped table-hover'>";
-        echo"<thead class='bg-primary text-white'>
+        echo"<thead class='bg-secondary text-white'>
                 <td>Nome</td>
                 <td>Matrícula</td>
                 <td>CPF</td>
