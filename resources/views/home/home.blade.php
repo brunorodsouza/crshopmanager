@@ -91,6 +91,30 @@
                     </li>
                 </ul>
               </li>
+
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active" style="background-color: #29A9A2">
+                    <i class="nav-icon fas fa-cog"></i>
+                  <p>
+                    Materiais
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href='{{route('pessoa')}}' class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Lista dos Materiais</p>
+                        </a>
+                      </li>
+                    <li class="nav-item">
+                        <a href='{{route('pessoa')}}' class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Novo Material</p>
+                        </a>
+                    </li>
+                </ul>
+              </li>
       <!-- /.sidebar-menu -->
     </div>
 
