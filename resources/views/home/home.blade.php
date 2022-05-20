@@ -14,6 +14,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" type="text/css" href={{asset('dist/css/adminlte.min.css')}}>
 </head>
+
 <body class="hold-transition light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
 
@@ -44,7 +45,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ url('home') }}" class="brand-link">
-      <img src="storage/img.png" alt="C.R Shop Manager Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src={{asset("storage/img.png")}} alt="C.R Shop Manager Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">C.R Shop Manager</span>
     </a>
 
