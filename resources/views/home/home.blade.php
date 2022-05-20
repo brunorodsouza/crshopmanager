@@ -67,14 +67,29 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-          <li class="nav-item">
-            <a href="{{ url('pessoa') }}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Cadastrar Pessoa
-              </p>
-            </a>
-          </li>
+            <li class="nav-item menu-open">
+                <a href="#" class="nav-link active" style="background-color: #28a745">
+                    <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Cadastros
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href='{{route('pessoa')}}' class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Lista dos Cadastros</p>
+                        </a>
+                      </li>
+                  <li class="nav-item">
+                    <a href='{{route('pessoa.novo')}}' class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Novo Cadastro</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
       <!-- /.sidebar-menu -->
     </div>
 
