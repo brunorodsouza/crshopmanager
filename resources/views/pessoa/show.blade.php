@@ -8,7 +8,7 @@
     if(!empty($dado)){
         foreach ($dado as $d) {
               ?>
-            <h2 class="fw-bold text-uppercase">Pessoa: <?= $d -> nome; ?></h2>
+            <h2 class="fw-bold text-uppercase" style="margin-bottom: 15px; padding-top:15px;"><?= $d -> nome; ?></h2>
 
             <form>
                 <p class="text-center bg-secondary text-white fw-bold">Dados Cadastrais</p>
@@ -95,10 +95,9 @@
 
             <?php
         }
-        
+
     }
     ?>
 </div>
 @endsection
 
-   
