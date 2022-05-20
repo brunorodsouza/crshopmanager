@@ -2,7 +2,7 @@
 
 @section('conteudo')
 <div class="container my-4">
-    <h2 style="margin-bottom: 15px; padding-top:15px;"> Novo Cadastro </h2>
+    <h2 style="margin-bottom: 15px; padding-top:15px;"> Novo Usuário </h2>
 
     <form action='{{route('pessoa.store')}}' method="POST">
         @csrf

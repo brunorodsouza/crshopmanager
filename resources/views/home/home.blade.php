@@ -72,7 +72,7 @@
                 <a href="#" class="nav-link active" style="background-color: #28a745">
                     <i class="nav-icon fas fa-th"></i>
                   <p>
-                    Cadastros
+                    Usuários
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
@@ -80,13 +80,13 @@
                     <li class="nav-item">
                         <a href='{{route('pessoa')}}' class="nav-link">
                           <i class="far fa-circle nav-icon"></i>
-                          <p>Lista dos Cadastros</p>
+                          <p>Lista dos Usuários</p>
                         </a>
                       </li>
                   <li class="nav-item">
                     <a href='{{route('pessoa.novo')}}' class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Novo Cadastro</p>
+                      <p>Novo Usuário</p>
                     </a>
                   </li>
                 </ul>

@@ -2,7 +2,7 @@
 
 @section('conteudo')
 <div class="container my-4">
-    <h2 style="margin-bottom: 15px; padding-top:15px;"> Editar Cadastro </h2>
+    <h2 style="margin-bottom: 15px; padding-top:15px;"> Editar Usuário </h2>
 
     <?php
     $dado = $dado[0];
