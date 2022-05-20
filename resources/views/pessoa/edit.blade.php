@@ -20,11 +20,11 @@
         </div>
         <div class="col-md-2">
             <label class="form-label" for="cpf">CPF: </label>
-            <input type="text" class="form-control" id="cpf" name="cpf" value="<?= $dado -> cpf ?>">
+            <input type="text" class="form-control" id="cpf" name="cpf" minlength="11" maxlength="16" value="<?= $dado -> cpf ?>">
         </div>
         <div class="col-md-2">
             <label class="form-label" for="matricula">Matrícula: </label>
-            <input type="text" class="form-control" id="matricula" name="matricula" value="<?= $dado -> matricula ?>">
+            <input type="text" class="form-control" id="matricula" name="matricula" minlength="11" maxlength="16" value="<?= $dado -> matricula ?>">
         </div>
         <div class="col-md-2">
             <label class="form-label" for="data_nascimento">Data Nascimento: </label>
@@ -35,11 +35,11 @@
     <div class="form-group row">
         <div class="col-md-4">
             <label class="form-label" for="telefone">Telefone: </label>
-            <input type="text" class="form-control" id="telefone" name="telefone" value="<?= $dado -> telefone ?>">
+            <input type="text" class="form-control" id="telefone" name="telefone" minlength="9" maxlength="16" value="<?= $dado -> telefone ?>">
         </div>
         <div class="col-md-4">
             <label class="form-label" for="celular">Celular: </label>
-            <input type="text" class="form-control" id="celular" name="celular" value="<?= $dado -> celular ?>">
+            <input type="text" class="form-control" id="celular" name="celular" minlength="9" maxlength="16" value="<?= $dado -> celular ?>">
         </div>
         <div class="col-md-4">
             <label class="form-label" for="email">Email: </label>
@@ -52,11 +52,11 @@
     <div class="form-group row">
         <div class="col-md-2">
             <label class="form-label" for="cep">CEP: </label>
-            <input type="text" class="form-control" id="cep" name="cep" value="<?= $dado -> cep ?>">
+            <input type="text" class="form-control" id="cep" name="cep" minlength="7" maxlength="12" value="<?= $dado -> cep ?>">
         </div>
         <div class="col-md-1">
             <label class="form-label" for="uf">UF: </label>
-            <input type="text" class="form-control" id="uf" name="uf" value="<?= $dado -> uf ?>">
+            <input type="text" class="form-control" id="uf" name="uf" minlength="2" maxlength="2" value="<?= $dado -> uf ?>">
         </div>
         <div class="col-md-5">
             <label class="form-label" for="cidade">Cidade: </label>
