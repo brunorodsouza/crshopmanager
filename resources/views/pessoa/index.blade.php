@@ -3,7 +3,7 @@
 @section('conteudo')
 <div class="container my-4">
     <div style=" margin-bottom: 15px; padding-top:15px; display:flex; justify-content:space-evenly; align-items:center">
-    <h1>Lista dos Cadastrados</h1>
+    <h1>Lista dos Cadastros</h1>
     <a href='{{route('pessoa.novo')}}' class='btn btn-success' style="height: 40px;">Cadastrar</a>
     </div>
     <?php
