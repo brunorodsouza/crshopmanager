@@ -80,7 +80,7 @@
         </div>
 
         <div class="mt-4 text-end">
-            <button type ="submit "class="btn btn-success">Confirmar</button>
+            <button type ="submit "class="btn btn-success">Cadastrar</button>
 
     </form>
     <a href="{{route('pessoa')}}" class="btn btn-secondary">Cancelar</a>
