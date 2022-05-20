@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('conteudo') 
+@section('conteudo')
 <body id="fundoLogin">
     <div class="card telaLogin" id="telaLogin">
         <div class="card-body">
@@ -22,7 +22,7 @@
 
             <img src={{asset("storage/img.png")}}>
             <h2 class="card-title">Cadastro de Acesso</h2>
-            
+
             <!--FORM DO CARD-->
             <form method="POST" action="{{route('store.user')}}">
             @csrf
@@ -50,7 +50,7 @@
             </form>
 
             <div class="container-fluid">
-                <a class="card-link" href='{{route('login')}}'>Já tem cadastro? Entre agora!</a>
+                <a class="card-link" href='{{route('pessoa')}}'>Já tem cadastro? Entre agora!</a>
             </div>
         </div>
     </div>
