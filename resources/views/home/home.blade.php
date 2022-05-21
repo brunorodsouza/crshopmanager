@@ -102,15 +102,39 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href='{{route('pessoa')}}' class="nav-link">
+                        <a href='{{route('material')}}' class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Lista dos Materiais</p>
                         </a>
                       </li>
                     <li class="nav-item">
-                        <a href='{{route('pessoa')}}' class="nav-link">
+                        <a href='{{route('material.novo')}}' class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Novo Material</p>
+                        </a>
+                    </li>
+                </ul>
+              </li>
+              
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active" style="background-color: #3b39a7">
+                    <i class="nav-icon fas fa-cog"></i>
+                  <p>
+                    Serviços
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href='{{route('material')}}' class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Lista de Serviços</p>
+                        </a>
+                      </li>
+                    <li class="nav-item">
+                        <a href='{{route('material.novo')}}' class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Novo Serviço</p>
                         </a>
                     </li>
                 </ul>

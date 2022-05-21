@@ -6,9 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Material extends Model
 {
-    private $codigo;
-    private $titulo;
-    private $valor;
-    private Decimal $descricao;
-    use HasFactory;
+    //private $codigo;
+    //private $titulo;
+    //private $valor;
+    //private $descricao;
+    //use HasFactory;
+
+    protected $table = 'material';
+
+    protected $fillable = [
+        'codigo',
+        'titulo',
+        'valor',
+        'descricao'
+
+    ];
 }
