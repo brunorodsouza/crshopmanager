@@ -115,10 +115,10 @@
                     </li>
                 </ul>
               </li>
-              
+
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link active" style="background-color: #3b39a7">
-                    <i class="nav-icon fas fa-cog"></i>
+                    <i class="nav-icon fas fa-wrench"></i>
                   <p>
                     Serviços
                     <i class="right fas fa-angle-left"></i>
@@ -142,7 +142,7 @@
 
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link active" style="background-color: #79581b">
-                    <i class="nav-icon fas fa-cog"></i>
+                    <i class="nav-icon fas fa-car"></i>
                   <p>
                     Veículo
                     <i class="right fas fa-angle-left"></i>
