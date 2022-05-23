@@ -144,7 +144,7 @@
                 <a href="#" class="nav-link active" style="background-color: #79581b">
                     <i class="nav-icon fas fa-car"></i>
                   <p>
-                    Veículo
+                    Veículos
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
