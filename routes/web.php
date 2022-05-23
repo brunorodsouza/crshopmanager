@@ -4,6 +4,8 @@ use App\Http\Controllers\PessoaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MaterialController;
+use App\Http\Controllers\ServicoController;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -33,3 +35,12 @@ Route::get('/material/{id}', [MaterialController::class, 'show'])->name('materia
 Route::get('/material/editar/{id}', [MaterialController::class, 'edit'])->name('material.editar');
 Route::put('/material/update/{id}', [MaterialController::class, 'update'])->name('material.update');
 Route::get('/material/remover/{id}', [MaterialController::class, 'destroy'])->name('material.remover');
+
+
+Route::get('/servico', [ServicoController::class, 'index'])->name('servico');
+Route::get('/servico/novo', [ServicoController::class, 'create'])->name('servico.novo');
+Route::post('/servico/store', [ServicoController::class, 'store'])->name('servico.store');
+Route::get('/servico/{id}', [ServicoController::class, 'show'])->name('servico.show');
+Route::get('/servico/editar/{id}', [ServicoController::class, 'edit'])->name('servico.editar');
+Route::put('/servico/update/{id}', [ServicoController::class, 'update'])->name('servico.update');
+Route::get('/servico/remover/{id}', [ServicoController::class, 'destroy'])->name('servico.remover');

@@ -6,8 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Servico extends Model
 {
-    private $codigo;
-    private $titulo;
-    private Decimal $valor;
+    //private $codigo;
+    //private $titulo;
+    //private Decimal $valor;
+    //use HasFactory;
+
+    protected $table = 'servico';
+
+    protected $fillable = [
+        'codigo',
+        'titulo',
+        'valor',
+    ];
+
     use HasFactory;
 }

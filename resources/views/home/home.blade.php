@@ -126,15 +126,39 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href='{{route('material')}}' class="nav-link">
+                        <a href='{{route('servico')}}' class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Lista de Serviços</p>
                         </a>
                       </li>
                     <li class="nav-item">
-                        <a href='{{route('material.novo')}}' class="nav-link">
+                        <a href='{{route('servico.novo')}}' class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Novo Serviço</p>
+                        </a>
+                    </li>
+                </ul>
+              </li>
+
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active" style="background-color: #79581b">
+                    <i class="nav-icon fas fa-cog"></i>
+                  <p>
+                    Veículo
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href='{{route('servico')}}' class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Lista de Veículos</p>
+                        </a>
+                      </li>
+                    <li class="nav-item">
+                        <a href='{{route('servico.novo')}}' class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Novo Veículo</p>
                         </a>
                     </li>
                 </ul>
