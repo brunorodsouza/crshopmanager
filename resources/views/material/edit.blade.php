@@ -16,19 +16,19 @@
     <div class="form-group row">
         <div class="col-md-4">
             <label class="form-label" for="titulo">Título: </label>
-            <input type="text" class="form-control" id="titulo" value="<?= $dado -> titulo ?>">
+            <input type="text" class="form-control" id="titulo" name="titulo" value="<?= $dado -> titulo ?>">
         </div>
         <div class="col-md-2">
             <label class="form-label" for="codigo">Código: </label>
-            <input type="text" class="form-control" id="codigo" value="<?= $dado -> codigo ?>">
+            <input type="text" class="form-control" id="codigo" name="codigo" value="<?= $dado -> codigo ?>">
         </div>
         <div class="col-md-2">
             <label class="form-label" for="valor">Valor: </label>
-            <input type="text" class="form-control" id="valor" value="<?= $dado -> valor ?>">
+            <input type="text" class="form-control" id="valor" name="valor" value="<?= $dado -> valor ?>">
         </div>
         <div class="col-md-4">
             <label class="form-label" for="descricao">Descrição: </label>
-            <input type="text" class="form-control" id="descricao" value="<?= $dado -> descricao ?>">
+            <input type="text" class="form-control" id="descricao" name="descricao" value="<?= $dado -> descricao ?>">
         </div>
     </div>
 
