@@ -6,6 +6,19 @@
 
     <form action='{{route('pessoa.store')}}' method="POST">
         @csrf
+
+        <p class="text-center bg-secondary text-white fw-bold">Tipo de Usuário</p>
+
+        <div class="form-group row">
+            <div class="col-sm-6">
+                <label class="form-label" for="nome">Selecione a opção desejada:</label>
+                <select class="form-select" name="tipoStatus" style="width:150px;height:35px;margin-left:10px;" required>
+                    <option value="1">Cliente</option>
+                    <option value="2">Funcionário</option>
+                  </select>
+            </div>
+        </div>
+
         <p class="text-center bg-secondary text-white fw-bold">Dados Cadastrais</p>
 
         <div class="form-group row">
@@ -78,6 +91,26 @@
                 <input type="text" class="form-control" id ="complemento" name="complemento">
             </div>
         </div>
+
+        <p class="text-center bg-secondary text-white fw-bold">Informações do Mecânico</p>
+
+        {{-- <div class="form-group row">
+            <div class="col-md-2">
+                <label class="form-label" for="cep">CEP:</label>
+                <input type="text" class="form-control" minlength="7" maxlength="12" id="cep" name="cep">
+            </div>
+            <div class="col-md-1">
+                <label class="form-label" for="uf">UF:</label>
+                <input type="text" class="form-control"  minlength="2" maxlength="2" id ="uf" name="uf">
+            </div>
+            <div class="col-md-5">
+                <label class="form-label" for="cidade">Cidade:</label>
+                <input type="text" class="form-control" id="cidade" name="cidade">
+            </div>
+            <div class="col-md-4">
+                <label class="form-label" for="bairro">Bairro:</label>
+                <input type="text" class="form-control" id ="bairro" name="bairro">
+            </div> --}}
 
         <div class="mt-4 text-end">
             <button type ="submit "class="btn btn-success">Cadastrar</button>

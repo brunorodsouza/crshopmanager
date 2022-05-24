@@ -39,6 +39,7 @@ class Pessoa extends Model
         'logradouro',
         'numero',
         'complemento',
+        'tipoStatus',
     ];
 
     use HasFactory;

@@ -7,8 +7,18 @@
 
     if(!empty($dado)){
         foreach ($dado as $d) {
+            if($d->tipoStatus == 1){
+                $d->tipoStatus = "Cliente";
+            };
+            if($d->tipoStatus == 2){
+                $d->tipoStatus = "Funcionário";
+            };
               ?>
-            <h2 class="fw-bold text-uppercase" style="margin-bottom: 15px; padding-top:15px;"><?= $d -> nome; ?></h2>
+            <div class="d-flex">
+                <h2 class="fw-bold text-uppercase" style="margin-bottom: 15px; padding-top:15px;"><?=$d->nome;?></h2>
+                <h2 class="fw-bold text-uppercase" style="margin-bottom: 15px; padding-top:15px;">&nbsp&nbsp-&nbsp&nbsp<?=$d->tipoStatus;?></h2>
+            </div>
+
 
             <form>
                 <p class="text-center bg-secondary text-white fw-bold">Dados Cadastrais</p>
