@@ -26,9 +26,16 @@
             <div class="col-sm-6">
                 <label class="form-label" for="nome">Selecione a opção desejada:</label>
                 <select class="form-select" name="tipoStatus" style="width:150px;height:35px;margin-left:10px;">
+
+                @if ($dado->tipoStatus == "Cliente")
+                <option default value="<?= $dado -> tipoStatus;?>"><?= $dado -> tipoStatus;?></option>
+                <option value="2">Funcionário</option>
+                @endif
+
+                @if ($dado->tipoStatus == "Funcionário")
                     <option default value="<?= $dado -> tipoStatus;?>"><?= $dado -> tipoStatus;?></option>
                     <option value="1">Cliente</option>
-                    <option value="2">Funcionário</option>
+                @endif
                 </select>
             </div>
         </div>
