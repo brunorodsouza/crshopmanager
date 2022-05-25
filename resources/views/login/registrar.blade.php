@@ -50,7 +50,7 @@
             </form>
 
             <div class="container-fluid">
-                <a class="card-link" href='{{route('pessoa')}}'>Já tem cadastro? Entre agora!</a>
+                <a class="card-link" href='{{route('login')}}'>Já tem cadastro? Entre agora!</a>
             </div>
         </div>
     </div>
