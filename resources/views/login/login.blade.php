@@ -46,7 +46,7 @@
 </body>
 @endsection
 
-@section('scripts') 
-    <script type="text/javascript" href={{asset('../js/bootstrap.js')}}></script>
-    <script type="text/javascript" href={{asset('../js/login.js')}}></script>
+@section('scripts')
+    <script type="text/javascript" src='{{asset('../js/bootstrap.js')}}'></script>
+    <script type="text/javascript" src='{{asset('../js/login.js')}}'></script>
 @endsection
