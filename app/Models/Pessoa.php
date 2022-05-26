@@ -42,5 +42,12 @@ class Pessoa extends Model
         'tipoStatus',
     ];
 
+
+
+    public function mecanico()
+    {
+        return $this->hasOne('App\Models\Pessoa', 'PESSOA', 'id');
+    }
+
     use HasFactory;
 }

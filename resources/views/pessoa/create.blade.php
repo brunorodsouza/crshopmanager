@@ -100,7 +100,7 @@
                     <input type="date" class="form-control" id="data_admissão" name="data_admissão">
                 </div>
                 <div class="col-md-3">
-                    <label class="form-label" for="uf">Salario</label>
+                    <label class="form-label" for="uf">Salário</label>
                     <input type="text" class="form-control" id ="salario" name="salario">
                 </div>
             </div>
