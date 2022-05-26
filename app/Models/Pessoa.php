@@ -7,21 +7,6 @@ use Illuminate\Support\Facades\Date;
 
 class Pessoa extends Model
 {
-    // private $matricula;
-    // private $cpf;
-    // private $nome;
-    // private Date $data_nascimento;
-    // private $telefone;
-    // private $celular;
-    // private $email;
-    // private $cep;
-    // private $bairro;
-    // private $logradouro;
-    // private $numero;
-    // private $complemento;
-    // private $cidade;
-    // private $uf;
-
     protected $table = 'pessoas';
 
     protected $fillable = [
@@ -41,8 +26,6 @@ class Pessoa extends Model
         'complemento',
         'tipoStatus',
     ];
-
-
 
     public function mecanico()
     {
