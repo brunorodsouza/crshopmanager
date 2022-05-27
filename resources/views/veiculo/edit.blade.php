@@ -13,19 +13,11 @@
     <?= method_field('PUT');?>
     <p class="text-center bg-secondary text-white fw-bold">Dados Veículo</p>
 
-    
+
     <div class="form-group row">
         <div class="col-md-3">
             <label class="form-label" for="id_pessoa">Selecione o Cliente: </label>
-            <select class="custom-select custom-select-md mb-3" name="id_pessoa" id="id_pessoa">  
-                <!--Montar o select com o nome dos clientes-->
-                @foreach ( $dadosPessoas as $dadoPessoa ) 
-                    @if ($dadoPessoa->id == $dado->pessoa->id)
-                        <option value="{{$dadoPessoa->id}}" selected>{{$dadoPessoa->nome}}</option>
-                    @else
-                        <option value="{{$dadoPessoa->id}}">{{$dadoPessoa->nome}}</option>
-                    @endif          
-                @endforeach
+                <input type="text" class="form-control" id="modelo" value="<?= $dado->pessoa->nome ?>" disabled>
             </select>
         </div>
 
@@ -65,7 +57,7 @@
             <label class="form-label" for="combustivel">Combustivel: </label>
             <input type="text" class="form-control" id="combustivel" name="combustivel" value="<?= $dado -> combustivel ?>">
         </div>
-        
+
         <div class="col-md-3">
             <label class="form-label" for="placa">Placa: </label>
             <input type="text" class="form-control" id="placa" name ="placa" value="<?= $dado -> placa ?>">

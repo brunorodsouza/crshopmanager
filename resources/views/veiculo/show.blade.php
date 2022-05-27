@@ -16,9 +16,7 @@
                 <div class="form-group row">
                     <div class="col-md-3">
                         <label class="form-label" for="id_pessoa">Cliente: </label>
-                        <select class="custom-select custom-select-md mb-3" id="id_pessoa" disabled>
-                            <option selected value="{{$d->pessoa->id}}">{{$d->pessoa->nome}}</option>               
-                        </select>
+                        <input type="text" class="form-control" id="modelo" value="{{$d->pessoa->nome}}" disabled>
                     </div>
                     <div class="col-md-2">
                         <label class="form-label" for="modelo">Modelo: </label>
@@ -37,7 +35,7 @@
                         <input type="text" class="form-control" id="cor" value="<?= $d -> cor ?>" disabled>
                     </div>
                 </div>
-        
+
                 <div class="form-group row">
                     <div class="col-md-2">
                         <label class="form-label" for="ano_fab">Ano Fabricação: </label>
