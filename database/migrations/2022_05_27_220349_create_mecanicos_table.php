@@ -4,11 +4,11 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class create_mecanico_tabela extends Migration
+class CreateMecanicosTable extends Migration
 {
     public function up()
     {
-        Schema::create('mecanico', function (Blueprint $table) {
+        Schema::create('mecanicos', function (Blueprint $table) {
             $table->increments('id');
             $table->date('data_admissao');
             $table->decimal('salario', 10, 2);
@@ -20,6 +20,6 @@ class create_mecanico_tabela extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('mecanico');
+        Schema::dropIfExists('mecanicos');
     }
 }

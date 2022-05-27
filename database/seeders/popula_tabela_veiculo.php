@@ -12,6 +12,7 @@ class popula_tabela_veiculo extends Seeder
         $pessoaId = DB::statement('SELECT TOP 1 id FROM pessoas ');
 
         DB::table('veiculo')->insert([
+            'codigo' => '20181105255',
             'id_pessoa' => $pessoaId,
             'modelo' => 'Sedan',
             'marca' => '200',

@@ -27,7 +27,7 @@ class Pessoa extends Model
         'tipoStatus',
     ];
 
-    public function mecanico()
+    public function mecanicos()
     {
         return $this->hasOne('App\Models\Mecanico', 'pessoa', 'id');
     }

@@ -88,10 +88,15 @@ class PessoaController extends Controller
 
     public function destroy($id)
     {
+        DB::beginTransaction();
+
         $dado = Pessoa::where('id', $id)->get();
+
         if (!empty($dado)) {
             DB::delete('DELETE FROM pessoas WHERE id = ?', [$id]);
+            DB::delete('DELETE FROM mecanicos WHERE pessoa = ?', [$id]);
         }
+        DB::commit();
         return redirect()->route('pessoa');
     }
 }
