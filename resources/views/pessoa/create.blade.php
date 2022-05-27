@@ -96,11 +96,11 @@
 
             <div class="form-group row ">
                 <div class="col-md-3">
-                    <label class="form-label" for="cep">Data de Admissão</label>
-                    <input type="date" class="form-control" id="data_admissão" name="data_admissão">
+                    <label class="form-label" for="cep">Data de Admissão:</label>
+                    <input type="date" class="form-control" id="data_admissao" name="data_admissao">
                 </div>
                 <div class="col-md-3">
-                    <label class="form-label" for="uf">Salário</label>
+                    <label class="form-label" for="uf">Salário:</label>
                     <input type="text" class="form-control" id ="salario" name="salario">
                 </div>
             </div>

@@ -6,11 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Servico extends Model
 {
-    //private $codigo;
-    //private $titulo;
-    //private Decimal $valor;
-    //use HasFactory;
-
     protected $table = 'servico';
 
     protected $fillable = [

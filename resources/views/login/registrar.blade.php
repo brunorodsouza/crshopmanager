@@ -23,12 +23,11 @@
             <img src={{asset("storage/img.png")}}>
             <h2 class="card-title">Cadastro de Acesso</h2>
 
-            <!--FORM DO CARD-->
             <form method="POST" action="{{route('store.user')}}">
             @csrf
                 <div class="input-group">
                     <span class="input-group-text" id="name">Nome</span>
-                    <input type="text" class="form-control" id="name" name="name"  placeholder="Bruno Rodrigues Souza" required>
+                    <input type="text" class="form-control" id="name" name="name"  placeholder="crshopmanager" required>
                 </div>
 
                 <div class="input-group" id="inputGroupAlign">
@@ -49,7 +48,7 @@
                 <button type="submit" class="btn botaoLogin" id="registrar">Cadastrar</button>
             </form>
 
-            <div class="container-fluid">
+            <div class="">
                 <a class="card-link" href='{{route('login')}}'>Já tem cadastro? Entre agora!</a>
             </div>
         </div>
@@ -59,4 +58,5 @@
 
 @section('scripts')
     <script src="{{mix("static/js/login.js")}}"></script>
+    {{-- <script type="text/javascript" src="{{asset("/static/js/login.js")}}"></script> --}}
 @endsection

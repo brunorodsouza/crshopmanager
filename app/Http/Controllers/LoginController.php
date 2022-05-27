@@ -17,14 +17,6 @@ class LoginController extends Controller
         return view('login.registrar');
     }
 
-    public function esqueceusenha(){
-        return view('login.esqueceusenha');
-    }
-
-    public function novasenha(){
-        return view('login.novasenha');
-    }
-
     public function auth(Request $request)
     {
         $this->validate($request,[

@@ -6,12 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Material extends Model
 {
-    //private $codigo;
-    //private $titulo;
-    //private $valor;
-    //private $descricao;
-    //use HasFactory;
-
     protected $table = 'material';
 
     protected $fillable = [
@@ -19,6 +13,5 @@ class Material extends Model
         'titulo',
         'valor',
         'descricao'
-
     ];
 }

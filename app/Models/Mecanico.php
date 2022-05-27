@@ -8,13 +8,11 @@ use Ramsey\Uuid\Type\Decimal;
 
 class Mecanico extends Pessoa
 {
-
     protected $table = 'mecanico';
 
     protected $fillable = [
         'data_admissao',
         'salario',
-        // 'senha_admin',
         'pessoa',
     ];
 

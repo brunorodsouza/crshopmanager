@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\ServicoController;
+use App\Http\Controllers\VeiculoController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -44,3 +45,11 @@ Route::get('/servico/{id}', [ServicoController::class, 'show'])->name('servico.s
 Route::get('/servico/editar/{id}', [ServicoController::class, 'edit'])->name('servico.editar');
 Route::put('/servico/update/{id}', [ServicoController::class, 'update'])->name('servico.update');
 Route::get('/servico/remover/{id}', [ServicoController::class, 'destroy'])->name('servico.remover');
+
+Route::get('/veiculo', [VeiculoController::class, 'index'])->name('veiculo');
+Route::get('/veiculo/novo', [VeiculoController::class, 'create'])->name('veiculo.novo');
+Route::post('/veiculo/store', [VeiculoController::class, 'store'])->name('veiculo.store');
+Route::get('/veiculo/{id}', [VeiculoController::class, 'show'])->name('veiculo.show');
+Route::get('/veiculo/editar/{id}', [VeiculoController::class, 'edit'])->name('veiculo.editar');
+Route::put('/veiculo/update/{id}', [VeiculoController::class, 'update'])->name('veiculo.update');
+Route::get('/veiculo/remover/{id}', [VeiculoController::class, 'destroy'])->name('veiculo.remover');
