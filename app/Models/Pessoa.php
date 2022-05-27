@@ -29,7 +29,7 @@ class Pessoa extends Model
 
     public function mecanico()
     {
-        return $this->hasOne('App\Models\Pessoa', 'PESSOA', 'id');
+        return $this->hasOne('App\Models\Mecanico', 'pessoa', 'id');
     }
 
     use HasFactory;
