@@ -7,16 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Veiculo extends Model
 {
-    //private Cliente $cliente;
-    //private $codigo;
-    //private $modelo;
-    //private $marca;
-    //private $cor;
-    //private $ano_fab;
-    //private $ano_mod;
-    //private $combustivel;
-    //private $placa;
-
     protected $table = 'veiculo';
 
     protected $fillable = [
@@ -32,7 +22,7 @@ class Veiculo extends Model
 
     ];
 
-    public function Pessoa()
+    public function pessoa()
     {
         return $this->belongsTo(Pessoa::class, 'id_pessoa', 'id');
     }

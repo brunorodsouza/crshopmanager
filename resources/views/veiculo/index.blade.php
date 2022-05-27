@@ -21,9 +21,6 @@
 
         foreach($dados as $dado){
 
-            //pegar o nome da pessoa, como id que está na tabela "veiculo"
-            //$nomePessoa = DB::select('SELECT nome FROM pessoas WHERE id = ?', [$dado->id_pessoa])[0];
-            
             $linkReadMore = url('/veiculo/' . $dado->id);
             $linkEditItem = url ('/veiculo/editar/' . $dado->id);
             $linkRemoveItem = url ('/veiculo/remover/' . $dado->id);

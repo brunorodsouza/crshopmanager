@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateVeiculoTabela extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('veiculo', function (Blueprint $table) {
@@ -23,19 +18,12 @@ class CreateVeiculoTabela extends Migration
             $table->string('ano_mod');
             $table->string('combustivel');
             $table->string('placa');
-
             $table->integer('id_pessoa')->unsigned();
             $table->foreign('id_pessoa')->references('id')->on('pessoas');
-
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('veiculo');

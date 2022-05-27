@@ -11,30 +11,14 @@ class VeiculoController extends Controller
 {
     public function index()
     {
-        $dados = Veiculo::with('Pessoa')->get();
+        $dados = Veiculo::with('pessoa')->get();
         return view('veiculo.index')->with('dados', $dados);
-        
-        //$dados = $pessoas->Veiculo()->get();
-        //$dados = Veiculo::all();
-        //$dadosDonoVeiculo = $dados->Veiculo()-first();
-        //echo"<h1> {$dados->marca}</h1>";
-        //return view('veiculo.index')->with('dados', $dados);
     }
 
 
     public function show($id)
     {
-        $dado = Veiculo::where('id', $id)->with('Pessoa')->get();
-        //$d = DB::table('pessoas')->pluck('nome');
-        //$d2 = DB::select('select * from pessoas where id = ?', [$d[0]->id_pessoa])->get();
-
-        //$d[0]->id_pessoa
-        //$dado = Pessoa::whereBelongsTo($d[0]->id_pessoa)->get();
-        //$dados = Veiculo::with('Pessoa')->get();
-        //$dado = DB::table('pessoas')->where('id', [$d[0]->id_pessoa])->value('nome');
-        //$dado = DB::table('pessoas')->find();
-
-        //echo "<p>{$d}</p>";
+        $dado = Veiculo::where('id', $id)->with('pessoa')->get();
 
         if (!empty($dado)) {
             return view('veiculo.show')->with('dado', $dado);
@@ -46,7 +30,7 @@ class VeiculoController extends Controller
     public function create()
     {
         $dados = Pessoa::get();
-        //echo "<p>{$dado}</p>";
+
         if (!empty($dados)) {
             return view('veiculo.create')->with('dados', $dados);
         } else {
@@ -63,12 +47,12 @@ class VeiculoController extends Controller
 
     public function edit($id)
     {
-        $dado = Veiculo::where('id',$id)->with('Pessoa')->get();
+        $dado = Veiculo::where('id',$id)->with('pessoa')->get();
 
-        $dadosPessoas = DB::table('pessoas')->select('id','nome')->where('tipoStatus','=',1)->get();
-               
+        // $dadosPessoas = DB::table('pessoas')->select('id','nome')->where('tipoStatus','=',1)->get();
+
         if(!empty($dado)){
-            return view('veiculo.edit')->with('dado',$dado)->with('dadosPessoas', $dadosPessoas);
+            return view('veiculo.edit')->with('dado',$dado);
         } else {
             return redirect()->route('veiculo');
         }
@@ -77,7 +61,7 @@ class VeiculoController extends Controller
     public function update(Request $request, $id)
     {
         $dado = Veiculo::find($id);
- 
+
         $dado->codigo = $request->codigo;
         $dado->modelo = $request->modelo;
         $dado->marca = $request->marca;

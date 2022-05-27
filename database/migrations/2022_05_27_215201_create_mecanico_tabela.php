@@ -4,9 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Mecanico extends Migration
+class create_mecanico_tabela extends Migration
 {
-
     public function up()
     {
         Schema::create('mecanico', function (Blueprint $table) {
