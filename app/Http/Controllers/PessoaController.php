@@ -55,6 +55,7 @@ class PessoaController extends Controller
     public function edit($id)
     {
         $dado = Pessoa::where('id',$id)->get();
+        $label = "Cliente";
         if(!empty($dado)){
             return view('pessoa.edit')->with('dado',$dado);
         } else {

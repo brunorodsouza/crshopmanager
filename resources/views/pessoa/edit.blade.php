@@ -6,14 +6,6 @@
 
     <?php
     $dado = $dado[0];
-
-    if($dado->tipoStatus == 1){
-        $dado->tipoStatus = "Cliente";
-
-    };
-    if($dado->tipoStatus == 2){
-        $dado->tipoStatus = "Funcionário";
-    };
     ?>
 
     <form  action="<?= url('/pessoa/update',['id' => $dado -> id]);?>" method="post">
@@ -25,16 +17,16 @@
         <div class="form-group row">
             <div class="col-sm-6">
                 <label class="form-label" for="nome">Selecione a opção desejada:</label>
-                <select class="form-select" name="tipoStatus" style="width:150px;height:35px;margin-left:10px;">
+                <select class="form-select" id="select" name="tipoStatus" style="width:150px;height:35px;margin-left:10px;">
 
-                @if ($dado->tipoStatus == "Cliente")
-                <option default value="<?= $dado -> tipoStatus;?>"><?= $dado -> tipoStatus;?></option>
-                <option value="2">Funcionário</option>
+                @if ($dado->tipoStatus == "1")
+                    <option default value="<?=$dado->tipoStatus;?>"><?="Cliente"?></option>
+                    <option value="2" id="funcionario">Funcionário</option>
                 @endif
 
-                @if ($dado->tipoStatus == "Funcionário")
-                    <option default value="<?= $dado -> tipoStatus;?>"><?= $dado -> tipoStatus;?></option>
-                    <option value="1">Cliente</option>
+                @if ($dado->tipoStatus == "2")
+                    <option default value="<?=$dado->tipoStatus;?>"><?='Funcionario'?></option>
+                    <option value="1" id="cliente">Cliente</option>
                 @endif
                 </select>
             </div>
@@ -45,34 +37,34 @@
         <div class="form-group row">
             <div class="col-md-6">
                 <label class="form-label" for="nome">Nome:</label>
-                <input type="text" class="form-control"  id="nome" name="nome" value="<?= $dado -> nome ?>">
+                <input type="text" class="form-control"  id="nome" name="nome" value="<?=$dado->nome?>">
             </div>
             <div class="col-md-2">
                 <label class="form-label" for="cpf">CPF: </label>
-                <input type="text" class="form-control" id="cpf" name="cpf" minlength="11" maxlength="16" value="<?= $dado -> cpf ?>">
+                <input type="text" class="form-control" id="cpf" name="cpf" minlength="11" maxlength="16" value="<?=$dado->cpf?>">
             </div>
             <div class="col-md-2">
                 <label class="form-label" for="matricula">Matrícula: </label>
-                <input type="text" class="form-control" id="matricula" name="matricula" minlength="11" maxlength="16" value="<?= $dado -> matricula ?>">
+                <input type="text" class="form-control" id="matricula" name="matricula" minlength="11" maxlength="16" value="<?=$dado->matricula?>">
             </div>
             <div class="col-md-2">
                 <label class="form-label" for="data_nascimento">Data Nascimento: </label>
-                <input type="text" class="form-control" id="data_nascimento" name="data_nascimento" value="<?= $dado -> data_nascimento ?>">
+                <input type="text" class="form-control" id="data_nascimento" name="data_nascimento" value="<?=$dado->data_nascimento?>">
             </div>
         </div>
 
         <div class="form-group row">
             <div class="col-md-4">
                 <label class="form-label" for="telefone">Telefone: </label>
-                <input type="text" class="form-control" id="telefone" name="telefone" minlength="9" maxlength="16" value="<?= $dado -> telefone ?>">
+                <input type="text" class="form-control" id="telefone" name="telefone" minlength="9" maxlength="16" value="<?=$dado->telefone?>">
             </div>
             <div class="col-md-4">
                 <label class="form-label" for="celular">Celular: </label>
-                <input type="text" class="form-control" id="celular" name="celular" minlength="9" maxlength="16" value="<?= $dado -> celular ?>">
+                <input type="text" class="form-control" id="celular" name="celular" minlength="9" maxlength="16" value="<?=$dado->celular?>">
             </div>
             <div class="col-md-4">
                 <label class="form-label" for="email">Email: </label>
-                <input type="text" class="form-control" id="email" name="email" value="<?= $dado -> email ?>">
+                <input type="text" class="form-control" id="email" name="email" value="<?=$dado->email?>">
             </div>
         </div>
 
@@ -81,34 +73,49 @@
         <div class="form-group row">
             <div class="col-md-2">
                 <label class="form-label" for="cep">CEP: </label>
-                <input type="text" class="form-control" id="cep" name="cep" minlength="7" maxlength="12" value="<?= $dado -> cep ?>">
+                <input type="text" class="form-control" id="cep" name="cep" minlength="7" maxlength="12" value="<?=$dado->cep?>">
             </div>
             <div class="col-md-1">
                 <label class="form-label" for="uf">UF: </label>
-                <input type="text" class="form-control" id="uf" name="uf" minlength="2" maxlength="2" value="<?= $dado -> uf ?>">
+                <input type="text" class="form-control" id="uf" name="uf" minlength="2" maxlength="2" value="<?=$dado->uf?>">
             </div>
             <div class="col-md-5">
                 <label class="form-label" for="cidade">Cidade: </label>
-                <input type="text" class="form-control" id="cidade" name="cidade" value="<?= $dado -> cidade ?>">
+                <input type="text" class="form-control" id="cidade" name="cidade" value="<?=$dado->cidade?>">
             </div>
             <div class="col-md-4">
                 <label class="form-label" for="bairro">Bairro: </label>
-                <input type="text" class="form-control" id="bairro"  name="bairro" value="<?= $dado -> bairro ?>">
+                <input type="text" class="form-control" id="bairro"  name="bairro" value="<?=$dado->bairro?>">
             </div>
         </div>
 
         <div class="form-group row">
             <div class="col-md-6">
                 <label class="form-label" for="cep">Logradouro: </label>
-                <input type="text" class="form-control" id="cep" name="logradouro" value="<?= $dado -> logradouro ?>">
+                <input type="text" class="form-control" id="cep" name="logradouro" value="<?=$dado->logradouro?>">
             </div>
             <div class="col-md-1">
                 <label class="form-label" for="numero">Nº: </label>
-                <input type="text" class="form-control" id="numero" name="numero" value="<?= $dado -> numero ?>">
+                <input type="text" class="form-control" id="numero" name="numero" value="<?=$dado->numero?>">
             </div>
             <div class="col-md-5">
                 <label class="form-label" for="complemento">Complemento: </label>
-                <input type="text" class="form-control" id="complemento" name="complemento" value="<?= $dado -> complemento ?>">
+                <input type="text" class="form-control" id="complemento" name="complemento" value="<?=$dado->complemento?>">
+            </div>
+        </div>
+
+        <div class="mecanicos" id="mecanico" style="content-visibility: hidden">
+            <p class="text-center bg-secondary text-white fw-bold">Informações do Mecânico</p>
+
+            <div class="form-group row ">
+                <div class="col-md-3">
+                    <label class="form-label" for="cep">Data de Admissão:</label>
+                    <input type="date" class="form-control" id="data_admissao" name="data_admissao" value="<?=$dado->data_admissao?>">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label" for="uf">Salário:</label>
+                    <input type="text" class="form-control" id ="salario" name="salario" value="<?=$dado->salario?>">
+                </div>
             </div>
         </div>
 
@@ -119,3 +126,8 @@
         </div>
 </div>
 @endsection
+
+@section('scripts')
+    <script type="text/javascript" src='{{asset('/static/js/pessoa.js')}}'></script>
+@endsection
+
