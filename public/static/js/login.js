@@ -10,6 +10,7 @@ registrar.addEventListener('click', function (e) {
   if (pass1.value != pass2.value) {
     e.preventDefault();
     alert("As senhas estão diferentes");
+    console.log("As senhas estão diferentes");
     return false;
   }
 

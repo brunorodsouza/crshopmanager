@@ -178,6 +178,7 @@
 
         @yield('conteudo')
 
+
       </div><!--/. container-fluid -->
     </section>
     <!-- /.content -->
@@ -204,6 +205,7 @@
 <script src={{asset('plugins/raphael/raphael.min.js')}}></script>
 <script src={{asset('plugins/jquery-mapael/jquery.mapael.min.js')}}></script>
 <script src={{asset('plugins/jquery-mapael/maps/usa_states.min.js')}}></script>
-
+@yield('scripts')
 </body>
+
 </html>

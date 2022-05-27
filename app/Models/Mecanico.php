@@ -8,8 +8,13 @@ use Ramsey\Uuid\Type\Decimal;
 
 class Mecanico extends Pessoa
 {
-    private Date $data_admissao;
-    private Decimal $salario;
-    private $senha_admin;
+    protected $table = 'mecanico';
+
+    protected $fillable = [
+        'data_admissao',
+        'salario',
+        'pessoa',
+    ];
+
     use HasFactory;
 }

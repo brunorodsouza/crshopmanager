@@ -37,16 +37,14 @@
                 <button type="submit" class="btn botaoLogin">Entrar</button>
             </form>
 
-            <div class="container-fluid">
+            <div class="">
                 <a class="card-link" href="{{route('registrar')}}">Cadastre-se</a>
-                <a class="card-link" href='{{route('esqueceusenha')}}'>Esqueceu sua senha?</a>
             </div>
         </div>
     </div>
 </body>
 @endsection
 
-@section('scripts') 
-    <script type="text/javascript" href={{asset('../js/bootstrap.js')}}></script>
-    <script type="text/javascript" href={{asset('../js/login.js')}}></script>
+@section('scripts')
+    <script type="text/javascript" src='{{asset('/static/js/bootstrap.js')}}'></script>
 @endsection

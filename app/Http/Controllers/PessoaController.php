@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Pessoa;
+use App\Models\Mecanico;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,18 @@ class PessoaController extends Controller
     public function store(Request $request)
     {
         $dados = $request->all();
-        Pessoa::create($dados);
+
+        DB::beginTransaction();
+
+        $pessoa = Pessoa::create($dados);
+
+        Mecanico::create([
+            "pessoa" => $pessoa->id,
+            'salario' => $request->salario,
+            'data_admissao' => $request->data_admissao
+        ]);
+
+        DB::commit();
         return redirect()->route('pessoa');
     }
 
