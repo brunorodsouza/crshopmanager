@@ -17,9 +17,6 @@ Route::get('/novasenha', [LoginController::class, 'novasenha'])->name('novasenha
 Route::get('/registrar', [LoginController::class, 'registrar'])->name('registrar');
 Route::get('/esqueceusenha', [LoginController::class, 'esqueceusenha'])->name('esqueceusenha');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-
 Route::get('/pessoa', [PessoaController::class, 'index'])->name('pessoa');
 Route::get('/pessoa/novo', [PessoaController::class, 'create'])->name('pessoa.novo');
 Route::post('/pessoa/store', [PessoaController::class, 'store'])->name('pessoa.store');
@@ -28,7 +25,6 @@ Route::get('/pessoa/editar/{id}', [PessoaController::class, 'edit'])->name('pess
 Route::put('/pessoa/update/{id}', [PessoaController::class, 'update'])->name('pessoa.update');
 Route::get('/pessoa/remover/{id}', [PessoaController::class, 'destroy'])->name('pessoa.remover');
 
-
 Route::get('/material', [MaterialController::class, 'index'])->name('material');
 Route::get('/material/novo', [MaterialController::class, 'create'])->name('material.novo');
 Route::post('/material/store', [MaterialController::class, 'store'])->name('material.store');
@@ -36,7 +32,6 @@ Route::get('/material/{id}', [MaterialController::class, 'show'])->name('materia
 Route::get('/material/editar/{id}', [MaterialController::class, 'edit'])->name('material.editar');
 Route::put('/material/update/{id}', [MaterialController::class, 'update'])->name('material.update');
 Route::get('/material/remover/{id}', [MaterialController::class, 'destroy'])->name('material.remover');
-
 
 Route::get('/servico', [ServicoController::class, 'index'])->name('servico');
 Route::get('/servico/novo', [ServicoController::class, 'create'])->name('servico.novo');
