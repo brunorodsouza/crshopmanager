@@ -69,7 +69,7 @@
           <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-item menu-open">
-                <a href="#" class="nav-link active" style="background-color: rgb(222, 22, 22)">
+                <a href="#" class="nav-link active" style="background-color: #28a745">
                   <!--<i class="nav-icon fas fa-user"></i>-->
                   <i class="nav-icon fas fa-users"></i>
                   <p>
@@ -94,7 +94,7 @@
               </li>
 
               <li class="nav-item  menu-open">
-                <a href="#" class="nav-link active" style="background-color: rgb(146, 14, 14)">
+                <a href="#" class="nav-link active" style="background-color: #29A9A2">
                   <i class="nav-icon fas fa-car"></i>
                   <p>
                     Veículos
@@ -118,7 +118,7 @@
               </li>
 
               <li class="nav-item  menu-open">
-                <a href="#" class="nav-link active" style="background-color: rgb(69, 0, 0)">
+                <a href="#" class="nav-link active" style="background-color: #28A7D3">
                   <i class="nav-icon fas fa-tools"></i>
                   <p>
                     Materiais
@@ -142,7 +142,7 @@
               </li>
 
               <li class="nav-item  menu-open">
-                <a href="#" class="nav-link active" style="background-color: rgb(8, 10, 168)">
+                <a href="#" class="nav-link active" style="background-color: #3B3AF0">
                   <i class="nav-icon fas fa-hard-hat"></i>
                   <p>
                     Serviços
@@ -166,7 +166,7 @@
               </li>
 
               <li class="nav-item  menu-open">
-                <a href="#" class="nav-link active" style="background-color: rgb(0, 89, 145)">
+                <a href="#" class="nav-link active" style="background-color: #3B3B89">
                   <i class="nav-icon fas fa-book"></i>
                   <p>
                     Ordens de Serviço
@@ -175,13 +175,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href='{{route('servico.novo')}}' class="nav-link">
+                    <a href='' class="nav-link">
                       <i class="nav-icon fas fa-plus-square"></i>
                       <p>Nova OS</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href='{{route('servico')}}' class="nav-link">
+                    <a href='' class="nav-link">
                       <i class="nav-icon fas fa-list-alt"></i>
                       <p>Lista de OS</p>
                     </a>
@@ -190,7 +190,7 @@
               </li>
 
               <li class="nav-item  menu-open">
-                <a href="#" class="nav-link active" style="background-color: rgb(3, 44, 69)">
+                <a href="#" class="nav-link active" style="background-color: #79581b">
                   <i class="nav-icon fas fa-dolly"></i>
                   <p>
                     Materiais OS
@@ -199,7 +199,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href='{{route('material_ordem_servico.novo')}}' class="nav-link">
+                    <a href='' class="nav-link">
                       <i class="nav-icon fas fa-plus-square"></i>
                       <p>Novo Material OS</p>
                     </a>
