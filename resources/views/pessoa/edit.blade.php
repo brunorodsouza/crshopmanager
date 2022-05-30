@@ -104,7 +104,8 @@
             </div>
         </div>
 
-        <div class="mecanicos" id="mecanico" style="content-visibility: hidden">
+        @if ($dado->tipoStatus == 2)
+        <div class="mecanicos" id="mecanico">
             <p class="text-center bg-secondary text-white fw-bold">Informações do Mecânico</p>
 
             <div class="form-group row ">
@@ -118,6 +119,7 @@
                 </div>
             </div>
         </div>
+        @endif
 
         <div class="mt-4 text-left">
             <button type="submit" class="btn btn-success text-white">Salvar</button>
