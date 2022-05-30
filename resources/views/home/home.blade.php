@@ -83,7 +83,7 @@
                       <i class="nav-icon fas fa-user-plus"></i>
                       <p>Novo Usuário</p>
                     </a>
-                  </li>  
+                  </li>
                   <li class="nav-item">
                     <a href='{{route('pessoa')}}' class="nav-link">
                       <i class="nav-icon fas fa-list-alt"></i>
@@ -205,7 +205,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href='{{route('material_ordem_servico')}}' class="nav-link">
+                    <a href='' class="nav-link">
                       <i class="nav-icon fas fa-list-alt"></i>
                       <p>Lista de Materiais OS</p>
                     </a>
