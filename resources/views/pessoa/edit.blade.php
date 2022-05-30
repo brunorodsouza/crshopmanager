@@ -110,11 +110,11 @@
             <div class="form-group row ">
                 <div class="col-md-3">
                     <label class="form-label" for="cep">Data de Admissão:</label>
-                    <input type="date" class="form-control" id="data_admissao" name="data_admissao" value="<?=$dado->data_admissao?>">
+                    <input type="date" class="form-control" id="data_admissao" name="data_admissao" value="<?=$dado->mecanicos->data_admissao?>">
                 </div>
                 <div class="col-md-3">
                     <label class="form-label" for="uf">Salário:</label>
-                    <input type="text" class="form-control" id ="salario" name="salario" value="<?=$dado->salario?>">
+                    <input type="text" class="form-control" id ="salario" name="salario" value="<?=$dado->mecanicos->salario?>">
                 </div>
             </div>
         </div>

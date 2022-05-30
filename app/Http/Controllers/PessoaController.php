@@ -19,6 +19,11 @@ class PessoaController extends Controller
     public function show($id)
     {
         $dado = Pessoa::where('id', $id)->get();
+
+    //    if($dado->tipoStatus == 2){
+    //         $dado = Mecanico::where('id', $id)->get();
+    //     }
+
         if (!empty($dado)) {
             return view('pessoa.show')->with('dado', $dado);
         } else {
@@ -54,8 +59,8 @@ class PessoaController extends Controller
 
     public function edit($id)
     {
-        $dado = Pessoa::where('id',$id)->get();
-        $label = "Cliente";
+        $dado = Pessoa::where('id',$id)->with('mecanicos')->get();
+
         if(!empty($dado)){
             return view('pessoa.edit')->with('dado',$dado);
         } else {
@@ -65,7 +70,8 @@ class PessoaController extends Controller
 
     public function update(Request $request, $id)
     {
-        $dado = Pessoa::find($id);
+        $dado = Pessoa::find($id)->with('mecanicos');
+        // $dado = Pessoa::find($id)->with('mecanicos');
 
         $dado->nome = $request->nome;
         $dado->matricula = $request->matricula;
@@ -82,6 +88,10 @@ class PessoaController extends Controller
         $dado->numero = $request->numero;
         $dado->complemento = $request->complemento;
         $dado->tipoStatus = $request->tipoStatus;
+
+        // $dado->data_admissao = $request->data_admissao;
+        // $dado->salario = $request->salario;
+
         $dado->save();
         return redirect()->route('pessoa');
 
