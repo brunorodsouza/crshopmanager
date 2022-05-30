@@ -12,10 +12,11 @@
             <div class="col-md-3">
                 <label class="form-label" for="id_pessoa">Selecione o Cliente: </label>
                 <select class="custom-select custom-select-md mb-3" name="id_pessoa" id="id_pessoa">
-                    <option selected>Selecione o Cliente</option>               
-                    <!--Montar o select com o nome dos clientes-->
-                    @foreach ( $dados as $dado )       
-                        <option value="{{$dado->id}}">{{$dado->nome}}</option>
+                    <option selected>Selecione o Cliente</option>
+                    @foreach ( $dados as $dado )
+                        @if ($dado->tipoStatus == 1 )
+                            <option value="{{$dado->id}}">{{$dado->nome}}</option>
+                        @endif
                     @endforeach
                 </select>
             </div>
@@ -56,7 +57,7 @@
                 <label class="form-label" for="combustivel">Combustivel: </label>
                 <input type="text" class="form-control" id="combustivel" name="combustivel">
             </div>
-            
+
             <div class="col-md-3">
                 <label class="form-label" for="placa">Placa: </label>
                 <input type="text" class="form-control" id="placa" name ="placa">
