@@ -70,8 +70,7 @@ class PessoaController extends Controller
 
     public function update(Request $request, $id)
     {
-        $dado = Pessoa::find($id)->with('mecanicos');
-        // $dado = Pessoa::find($id)->with('mecanicos');
+        $dado = Pessoa::find($id);
 
         $dado->nome = $request->nome;
         $dado->matricula = $request->matricula;
@@ -89,10 +88,12 @@ class PessoaController extends Controller
         $dado->complemento = $request->complemento;
         $dado->tipoStatus = $request->tipoStatus;
 
-        // $dado->data_admissao = $request->data_admissao;
-        // $dado->salario = $request->salario;
+        $dado->mecanicos->data_admissao = $request->data_admissao;
+        $dado->mecanicos->salario = $request->salario;
+
 
         $dado->save();
+
         return redirect()->route('pessoa');
 
     }
