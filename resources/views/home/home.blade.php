@@ -103,13 +103,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href='{{route('servico.novo')}}' class="nav-link">
+                    <a href='{{route('veiculo.novo')}}' class="nav-link">
                       <i class="nav-icon fas fa-plus-square"></i>
                       <p>Novo Veículo</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href='{{route('servico')}}' class="nav-link">
+                    <a href='{{route('veiculo')}}' class="nav-link">
                       <i class="nav-icon fas fa-list-alt"></i>
                       <p>Lista de Veículos</p>
                     </a>
@@ -167,6 +167,30 @@
 
               <li class="nav-item  menu-open">
                 <a href="#" class="nav-link active" style="background-color: #3B3B89">
+                  <i class="nav-icon fas fa-dolly"></i>
+                  <p>
+                    Materiais OS
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href='' class="nav-link">
+                      <i class="nav-icon fas fa-plus-square"></i>
+                      <p>Novo Material OS</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href='' class="nav-link">
+                      <i class="nav-icon fas fa-list-alt"></i>
+                      <p>Lista de Materiais OS</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item  menu-open">
+                <a href="#" class="nav-link active" style="background-color:  #79581b">
                   <i class="nav-icon fas fa-book"></i>
                   <p>
                     Ordens de Serviço
@@ -189,29 +213,6 @@
                 </ul>
               </li>
 
-              <li class="nav-item  menu-open">
-                <a href="#" class="nav-link active" style="background-color: #79581b">
-                  <i class="nav-icon fas fa-dolly"></i>
-                  <p>
-                    Materiais OS
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href='' class="nav-link">
-                      <i class="nav-icon fas fa-plus-square"></i>
-                      <p>Novo Material OS</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href='' class="nav-link">
-                      <i class="nav-icon fas fa-list-alt"></i>
-                      <p>Lista de Materiais OS</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
             </ul>
           </nav>
           <!-- /.sidebar menu -->
