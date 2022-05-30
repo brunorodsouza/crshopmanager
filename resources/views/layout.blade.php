@@ -10,13 +10,13 @@
         <link rel="stylesheet" type="text/css" href={{asset('css/bootstrap/bootstrap.min.css')}}>
         <link rel="stylesheet" type="text/css" href={{asset('css/app.css')}}>
         <link rel="stylesheet" type="text/css" href={{asset('css/login/login.css')}}>
-       
-        <!--FONTE UBUNTU-->
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        @yield('conteudo') <!--Chama section 'conteudo'-->
-        @yield('scripts') <!--Chama section 'scripts'-->
+        @yield('conteudo')
+        @yield('scripts')
     </body>
 </html>
+
+

@@ -23,6 +23,7 @@ class popula_tabela_pessoa extends Seeder
             'complemento' => 'Apto 1',
             'cidade' => 'São Paulo',
             'uf' => 'SP',
+            'tipoStatus' => '1'
         ]);
     }
 }
