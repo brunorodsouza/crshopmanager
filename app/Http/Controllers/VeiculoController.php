@@ -49,8 +49,6 @@ class VeiculoController extends Controller
     {
         $dado = Veiculo::where('id',$id)->with('pessoa')->get();
 
-        // $dadosPessoas = DB::table('pessoas')->select('id','nome')->where('tipoStatus','=',1)->get();
-
         if(!empty($dado)){
             return view('veiculo.edit')->with('dado',$dado);
         } else {
