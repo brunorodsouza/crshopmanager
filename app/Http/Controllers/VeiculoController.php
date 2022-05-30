@@ -68,7 +68,6 @@ class VeiculoController extends Controller
         $dado->ano_mod = $request->ano_mod;
         $dado->combustivel = $request->combustivel;
         $dado->placa = $request->placa;
-        $dado->id_pessoa = $request->id_pessoa;
 
         $dado->save();
         return redirect()->route('veiculo');
