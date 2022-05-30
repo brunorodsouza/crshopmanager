@@ -1,3 +1,4 @@
+// pessoa create
 const divMecanicos = document.getElementById('mecanico');
 const select = document.getElementById('select');
 
@@ -10,4 +11,3 @@ select.addEventListener('change', function(e) {
         divMecanicos.style['content-visibility'] = 'visible';
     }
 })
-

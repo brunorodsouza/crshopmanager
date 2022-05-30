@@ -20,38 +20,38 @@
                     </div>
                     <div class="col-md-2">
                         <label class="form-label" for="modelo">Modelo: </label>
-                        <input type="text" class="form-control" id="modelo" value="<?= $d -> modelo ?>" disabled>
+                        <input type="text" class="form-control" id="modelo" value="<?=$d->modelo?>" disabled>
                     </div>
                     <div class="col-md-2">
                         <label class="form-label" for="codigo">Código: </label>
-                        <input type="text" class="form-control" id="codigo" value="<?= $d -> codigo ?>" disabled>
+                        <input type="text" class="form-control" id="codigo" value="<?=$d->codigo?>" disabled>
                     </div>
                     <div class="col-md-3">
                         <label class="form-label" for="marca">Marca: </label>
-                        <input type="text" class="form-control" id="marca" value="<?= $d -> marca ?>" disabled>
+                        <input type="text" class="form-control" id="marca" value="<?$d->marca?>" disabled>
                     </div>
                     <div class="col-md-2">
                         <label class="form-label" for="cor">Cor: </label>
-                        <input type="text" class="form-control" id="cor" value="<?= $d -> cor ?>" disabled>
+                        <input type="text" class="form-control" id="cor" value="<?=$d->cor?>" disabled>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <div class="col-md-2">
                         <label class="form-label" for="ano_fab">Ano Fabricação: </label>
-                        <input type="text" class="form-control" id="ano_fab" value="<?= $d -> ano_fab ?>" disabled>
+                        <input type="text" class="form-control" id="ano_fab" value="<?=$d->ano_fab?>" disabled>
                     </div>
                     <div class="col-md-2">
                         <label class="form-label" for="ano_mod">Ano Modelo: </label>
-                        <input type="text" class="form-control" id="ano_mod" value="<?= $d -> ano_mod ?>" disabled>
+                        <input type="text" class="form-control" id="ano_mod" value="<?=$d->ano_mod?>" disabled>
                     </div>
                     <div class="col-md-3">
                         <label class="form-label" for="combustivel">Combustivel: </label>
-                        <input type="text" class="form-control" id="combustivel" value="<?= $d -> combustivel ?>" disabled>
+                        <input type="text" class="form-control" id="combustivel" value="<?=$d->combustivel?>" disabled>
                     </div>
                     <div class="col-md-3">
                         <label class="form-label" for="placa">Placa: </label>
-                        <input type="text" class="form-control" id="placa" value="<?= $d -> placa ?>" disabled>
+                        <input type="text" class="form-control" id="placa" value="<?=$d->placa?>" disabled>
                     </div>
                 </div>
 
