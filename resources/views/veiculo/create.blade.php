@@ -13,7 +13,6 @@
                 <label class="form-label" for="id_pessoa">Selecione o Cliente: </label>
                 <select class="custom-select custom-select-md mb-3" name="id_pessoa" id="id_pessoa">
                     <option selected>Selecione o Cliente</option>
-                    <!--Montar o select com o nome dos clientes-->
                     @foreach ( $dados as $dado )
                         @if ($dado->tipoStatus == 1 )
                             <option value="{{$dado->id}}">{{$dado->nome}}</option>
