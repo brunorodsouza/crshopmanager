@@ -103,13 +103,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href='{{route('servico.novo')}}' class="nav-link">
+                    <a href='{{route('veiculo.novo')}}' class="nav-link">
                       <i class="nav-icon fas fa-plus-square"></i>
                       <p>Novo Veículo</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href='{{route('servico')}}' class="nav-link">
+                    <a href='{{route('veiculo')}}' class="nav-link">
                       <i class="nav-icon fas fa-list-alt"></i>
                       <p>Lista de Veículos</p>
                     </a>
