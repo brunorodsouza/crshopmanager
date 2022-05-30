@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-md-3">
                         <label class="form-label" for="marca">Marca: </label>
-                        <input type="text" class="form-control" id="marca" value="<?$d->marca?>" disabled>
+                        <input type="text" class="form-control" id="marca" value="{{$d->marca}}" disabled>
                     </div>
                     <div class="col-md-2">
                         <label class="form-label" for="cor">Cor: </label>
