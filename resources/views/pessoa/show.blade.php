@@ -89,7 +89,8 @@
                     </div>
                 </div>
 
-                {{-- <div class="mecanicos" id="mecanico">
+                @if ($d->tipoStatus == "Funcionário")
+                <div class="mecanicos" id="mecanico">
                     <p class="text-center bg-secondary text-white fw-bold">Informações do Mecânico</p>
 
                     <div class="form-group row ">
@@ -102,7 +103,8 @@
                             <input type="text" class="form-control" id ="salario" name="salario" value="<?=$d->mecanicos->salario?>" disabled>
                         </div>
                     </div>
-                </div> --}}
+                </div>
+                @endif
 
                 <div class="mt-4 text-left">
                     <a href="{{route('pessoa')}}" class="btn btn-secondary">Voltar</a>
