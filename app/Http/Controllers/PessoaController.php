@@ -70,7 +70,11 @@ class PessoaController extends Controller
 
     public function update(Request $request, $id)
     {
-        $dado = Pessoa::find($id);
+        //$dado = Pessoa::find($id);
+
+        $dado = Pessoa::where('id',$id)->with('mecanicos')->get();
+
+        //$dado = $dado[0];
 
         $dado->nome = $request->nome;
         $dado->matricula = $request->matricula;
@@ -93,6 +97,7 @@ class PessoaController extends Controller
 
 
         $dado->save();
+        //$dado->push();
 
         return redirect()->route('pessoa');
 
