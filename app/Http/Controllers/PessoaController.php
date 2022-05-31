@@ -74,7 +74,7 @@ class PessoaController extends Controller
 
         $dado = Pessoa::where('id',$id)->with('mecanicos')->get();
 
-        //$dado = $dado[0];
+        $dado = $dado[0];
 
         $dado->nome = $request->nome;
         $dado->matricula = $request->matricula;
@@ -95,9 +95,8 @@ class PessoaController extends Controller
         $dado->mecanicos->data_admissao = $request->data_admissao;
         $dado->mecanicos->salario = $request->salario;
 
-
-        $dado->save();
-        //$dado->push();
+        // $dado->save();
+        $dado->push();
 
         return redirect()->route('pessoa');
 
