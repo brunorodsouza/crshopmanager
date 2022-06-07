@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Ordem_Servico;
 use App\Models\Pessoa;
 use App\Models\Mecanico;
 use Illuminate\Support\Facades\DB;
@@ -116,10 +116,14 @@ class PessoaController extends Controller
             DB::delete('DELETE FROM veiculo WHERE id_pessoa = ?', [$id]);
         }
 
+        if($dado->tipoStatus = 1){
+            DB::delete('DELETE FROM ordem_servico WHERE id_pessoa = ?', [$id]);
+        }
+
         if (!empty($dado)) {
             DB::delete('DELETE FROM pessoas WHERE id = ?', [$id]);
-
         }
+
         DB::commit();
         return redirect()->route('pessoa');
     }
