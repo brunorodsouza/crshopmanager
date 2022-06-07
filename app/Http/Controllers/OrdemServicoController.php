@@ -9,21 +9,13 @@ use App\Models\Servico;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-
-
 class OrdemServicoController extends Controller
 {
     public function index()
     {
-        
         $dados = Ordem_Servico::with('pessoa','veiculo','servico')->get();
-        
         return view('ordem_servico.index')->with('dados', $dados);
-        
-    
-    
     }
-
 
     public function show($id)
     {
@@ -38,21 +30,18 @@ class OrdemServicoController extends Controller
 
     public function create()
     {
-        
         $dados['pessoa']=Pessoa::all();
         $dados['veiculo']=Veiculo::all();
         $dados['servico']=Servico::all();
-        
+
         if (!empty($dados)) {
-            
-            return view('ordem_servico.create',['dados'=>$dados]);  
-        }     
+
+            return view('ordem_servico.create',['dados'=>$dados]);
+        }
         else {
 
-            return redirect()->route('ordem_servico');            
+            return redirect()->route('ordem_servico');
         }
-    
-         
     }
 
     public function store(Request $request)
@@ -84,12 +73,9 @@ class OrdemServicoController extends Controller
         $dados->valor_servico = $request->valor_servico;
         $dados->valor_pago = $request->valor_pago;
         $dados->status_pagamento = $request->status_pagamento;
-        
 
         $dados->save();
         return redirect()->route('ordem_servico');
-
-        
     }
 
     public function destroy($id)
@@ -100,6 +86,4 @@ class OrdemServicoController extends Controller
         }
         return redirect()->route('ordem_servico');
     }
-
-
 }
