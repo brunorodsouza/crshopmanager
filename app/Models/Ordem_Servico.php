@@ -8,16 +8,38 @@ use Ramsey\Uuid\Type\Decimal;
 
 class Ordem_Servico extends Model
 {
-    private Servico $servico;
-    private Veiculo $veiculo;
-    private Mecanico $mecanico;
-    private Cliente $cliente;
-    private Date $data_inicio;
-    private Date $data_previsao;
-    private Date $data_fim;
-    private Decimal $valor_servico;
-    private Decimal $valor_total_material;
-    private Decimal $valor_pago;
-    private $status_pagamento;
+   
+    protected $table = 'ordem_servico';
+
+    protected $fillable = [
+        'id_servico',
+        'id_veiculo',
+        'id_pessoa',
+        'data_inicio',
+        'data_previsao',
+        'data_fim',
+        'valor_total_material',
+        'valor_servico',
+        'valor_pago',
+        'status_pagamento',
+        
+    ];
+    
+    public function pessoa()
+    {
+        return $this->belongsTo(Pessoa::class, 'id_pessoa', 'id');
+    }
+
+    public function veiculo()
+    {
+        return $this->belongsTo(Veiculo::class, 'id_veiculo', 'id');
+    }
+
+    public function servico()
+    {
+        return $this->belongsTo(Servico::class, 'id_servico', 'id');
+    }
+
+    
     use HasFactory;
 }
