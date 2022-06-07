@@ -13,17 +13,17 @@ class CreatePessoasTable extends Migration
             $table->string('matricula');
             $table->string('cpf')->unique();
             $table->string('nome');
-            $table->date('data_nascimento');
+            $table->date('data_nascimento')->nullable();
             $table->string('telefone');
-            $table->string('celular');
+            $table->string('celular')->nullable();
             $table->string('email');
-            $table->string('cep');
-            $table->string('bairro');
-            $table->string('logradouro');
-            $table->string('numero');
-            $table->string('complemento');
-            $table->string('cidade');
-            $table->string('uf');
+            $table->string('cep')->nullable();
+            $table->string('bairro')->nullable();
+            $table->string('logradouro')->nullable();
+            $table->string('numero')->nullable();
+            $table->string('complemento')->nullable();
+            $table->string('cidade')->nullable();
+            $table->string('uf')->nullable();
             $table->timestamps();
         });
     }
