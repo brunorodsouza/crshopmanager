@@ -5,83 +5,80 @@
     <h2 style="margin-bottom: 15px; padding-top:15px;"> Editar Ordem de Serviço </h2>
 
     <?php
-    $dados = $dados[0];
+        $dados = $dados[0];
     ?>
 
-<form  action="<?= url('/ordem_servico/update',['id' => $dados -> id]);?>" method="post">
-    <?= csrf_field(); ?>
-    <?= method_field('PUT');?>
-    <p class="text-center bg-secondary text-white fw-bold">Dados de Ordem de Serviço</p>
+    <form  action="<?= url('/ordem_servico/update',['id' => $dados->id]);?>" method="post">
+        <?= csrf_field(); ?>
+        <?= method_field('PUT');?>
+        <p class="text-center bg-secondary text-white fw-bold">Dados de Ordem de Serviço</p>
 
-    <div class="form-group row">
-        <div class="col-md-3">
-            <label class="form-label" for="id_pessoa">Cliente: </label>
-                <input type="text" class="form-control" id="cliente" value="<?=$dados->pessoa->nome?>" disabled>
-            </select>
+        <div class="form-group row">
+            <div class="col-md-4">
+                <label class="form-label" for="id_pessoa">Cliente: </label>
+                    <input type="text" class="form-control" id="cliente" value="<?=$dados->pessoa->nome?>" disabled>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label" for="id_pessoa">Servico: </label>
+                    <input type="text" class="form-control" id="servico" value="<?=$dados->servico->titulo?>" disabled>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label" for="id_pessoa">Veículo: </label>
+                    <input type="text" class="form-control" id="veiculo" value="<?=$dados->veiculo->placa?>" disabled>
+                </select>
+            </div>
         </div>
-        
-        <div class="col-md-3">
-            <label class="form-label" for="id_pessoa">Servico: </label>
-                <input type="text" class="form-control" id="servico" value="<?=$dados->servico->titulo?>" disabled>
-            </select>
-        </div>    
-        
-        <div class="col-md-3">
-            <label class="form-label" for="id_pessoa">Veículo: </label>
-                <input type="text" class="form-control" id="veiculo" value="<?=$dados->veiculo->placa?>" disabled>
-            </select>
-        </div>    
-</div>    
-        
-<div class="form-group row">        
-            <div class="col-md-2">
+
+        <div class="form-group row">
+            <div class="col-md-4">
                 <label  class="form-label" for="data_inicio">Data de Início:</label>
                 <input type="date" class="form-control" id="data_inicio" name="data_inicio" value="<?=$dados->data_inicio?>" required>
             </div>
-            
-            <div class="col-md-2">
+
+            <div class="col-md-4">
                 <label  class="form-label" for="data_previsao">Data de Previsão:</label>
                 <input type="date" class="form-control" id="data_previsao" name="data_previsao" value="<?=$dados->data_previsao?>" required>
             </div>
-            
-            <div class="col-md-2">
+
+            <div class="col-md-4">
                 <label  class="form-label" for="data_fim">Data de Fim:</label>
                 <input type="date" class="form-control" id="data_fim" name="data_fim" value="<?=$dados->data_fim?>" required>
             </div>
-</div>            
-<div class="form-group row">            
-            <div class="col-md-2">
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-3">
                 <label class="form-label" for="valor_total_material">Valor do Material: </label>
                 <input type="text" class="form-control" id="valor_total_material" name ="valor_total_material" value="<?=$dados->valor_total_material?>">
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <label class="form-label" for="valor_servico">Valor do Serviço: </label>
                 <input type="text" class="form-control" id="valor_servico" name ="valor_servico" value="<?=$dados->valor_servico?>">
             </div>
-            
-            <div class="col-md-2">
+
+            <div class="col-md-3">
                 <label class="form-label" for="valor_pago">Valor Pago: </label>
                 <input type="text" class="form-control" id="valor_pago" name ="valor_pago" value="<?=$dados->valor_pago?>">
             </div>
-</div>
-            
-<div class="form-group row">
-        <div class="col-md-2">
+            <div class="col-md-3">
                 <label class="form-label" for=status_pagamento>Status Pagamento: </label>
                 <select class="custom-select custom-select-md mb-3" name="status_pagamento" id="status_pagamento">
                     <option value='1' selected>Pago</option>
                     <option value='0' selected>Não Pago</option>
                 </select>
+            </div>
         </div>
-        
-</div>
 
+        <div class="mt-4 text-left">
+            <button type="submit" class="btn btn-success text-white">Salvar</button>
+    </form>
+        <a href="{{route('ordem_servico')}}" class="btn btn-secondary">Voltar</a>
+        </div>
 
-    <div class="mt-4 text-left">
-        <button type="submit" class="btn btn-success text-white">Salvar</button>
-</form>
-    <a href="{{route('ordem_servico')}}" class="btn btn-secondary">Voltar</a>
-    </div>
 </div>
 @endsection
