@@ -31,7 +31,7 @@
                     <td>$dado->modelo</td>
                     <td>$dado->marca</td>
                     <td>$dado->placa</td>
-                    <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a> | <a href='{$linkBoleto}'>Boleto</a></td>
+                    <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a> | <a target=_blank href='{$linkBoleto}'>Boleto</a></td>
                  </tr>";
         }
         echo"</table>";
