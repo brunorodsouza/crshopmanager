@@ -8,9 +8,7 @@ class CriarProcedureGERARBOLETO extends Migration
 {
     public function up()
     {
-        $procedure = "IF EXISTS(SELECT 1 FROM sys.procedures WHERE Name = 'GERAR_BOLETO')
-                        DROP PROCEDURE dbo.sp_temp
-        CREATE PROCEDURE [dbo].[GERAR_BOLETO]
+        $procedure = "CREATE PROCEDURE [dbo].[GERAR_BOLETO]
             (
                 @VEICULO_ID int
             )
