@@ -66,6 +66,7 @@ class MaterialController extends Controller
     {
         $dado = Material::where('id', $id)->get();
         if (!empty($dado)) {
+            DB::delete('DELETE FROM ordem_servico WHERE id_material = ?', [$id]);
             DB::delete('DELETE FROM material WHERE id = ?', [$id]);
         }
         return redirect()->route('material');
