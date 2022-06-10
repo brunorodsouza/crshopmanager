@@ -78,6 +78,7 @@ class VeiculoController extends Controller
     {
         $dado = Veiculo::where('id', $id)->get();
         if (!empty($dado)) {
+            DB::delete('DELETE FROM ordem_servico WHERE id_veiculo = ?', [$id]);
             DB::delete('DELETE FROM veiculo WHERE id = ?', [$id]);
         }
         return redirect()->route('veiculo');
