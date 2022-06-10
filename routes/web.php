@@ -59,5 +59,4 @@ Route::get('/ordem_servico/editar/{id}', [OrdemServicoController::class, 'edit']
 Route::put('/ordem_servico/update/{id}', [OrdemServicoController::class, 'update'])->name('ordem_servico.update');
 Route::get('/ordem_servico/remover/{id}', [OrdemServicoController::class, 'destroy'])->name('ordem_servico.remover');
 
-
 Route::get('pdf/{id}', [PdfController::class, 'geraPDF']);
