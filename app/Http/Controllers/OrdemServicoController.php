@@ -17,6 +17,14 @@ class OrdemServicoController extends Controller
         return view('ordem_servico.index')->with('dados', $dados);
     }
 
+    public function boleto($id)
+    {
+        $dado = DB::select('exec GERAR_BOLETO @VEICULO_ID = ?', [$id]);
+
+        return $dado;
+
+    }
+
     public function show($id)
     {
         $dado = Ordem_Servico::where('id', $id)->with('pessoa','veiculo','servico')->get();
