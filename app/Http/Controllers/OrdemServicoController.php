@@ -19,13 +19,12 @@ class OrdemServicoController extends Controller
 
     public function boleto($id)
     {
-        // $dado = Ordem_Servico::where('id', $id)->with('pessoa','veiculo','servico')->get();
         $dado = DB::select('exec GERAR_BOLETO @VEICULO_ID = ?', [$id]);
 
         return $dado;
-        
+
     }
-    
+
     public function show($id)
     {
         $dado = Ordem_Servico::where('id', $id)->with('pessoa','veiculo','servico')->get();

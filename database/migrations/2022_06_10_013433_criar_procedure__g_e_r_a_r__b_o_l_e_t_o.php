@@ -6,49 +6,39 @@ use Illuminate\Support\Facades\Schema;
 
 class CriarProcedureGERARBOLETO extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         $procedure = "IF EXISTS(SELECT 1 FROM sys.procedures WHERE Name = 'GERAR_BOLETO')
                         DROP PROCEDURE dbo.sp_temp
         CREATE PROCEDURE [dbo].[GERAR_BOLETO]
-(
-	@VEICULO_ID int
-)
-AS
- --DECLARE @VEICULO_ID int = 1
- select distinct
+            (
+                @VEICULO_ID int
+            )
+            AS
+            --DECLARE @VEICULO_ID int = 1
+            select distinct
 
-	'Valores referentes ao veículo placa ('+ v.placa +'), modelo ('+ v.modelo +') com ano de fabricação ' + v.ano_fab + '.'  as a,
-	v.placa,
-	p.nome,
-	s.titulo,
-	s.valor as valorServico,
-	os.valor_total_material,
-	SUM(s.valor + os.valor_total_material) valorTotal
-	
-from veiculo v
-join pessoas p on p.id = v.id_pessoa
-join ordem_servico os on os.id_veiculo = v.id
-join servico s on s.id = os.id_servico
+                'Valores referentes ao veículo placa ('+ v.placa +'), modelo ('+ v.modelo +') com ano de fabricação ' + v.ano_fab + '.'  as a,
+                v.placa,
+                p.nome,
+                s.titulo,
+                s.valor as valorServico,
+                os.valor_total_material,
+                SUM(s.valor + os.valor_total_material) valorTotal
 
-where v.id = @VEICULO_ID
-and os.status_pagamento = 0
+            from veiculo v
+            join pessoas p on p.id = v.id_pessoa
+            join ordem_servico os on os.id_veiculo = v.id
+            join servico s on s.id = os.id_servico
 
-group by v.placa, v.modelo, v.ano_fab, p.nome, s.titulo, s.valor, os.valor_total_material";
+            where v.id = @VEICULO_ID
+            and os.status_pagamento = 0
 
-    \DB::unprepared($procedure);
+            group by v.placa, v.modelo, v.ano_fab, p.nome, s.titulo, s.valor, os.valor_total_material";
+
+        \DB::unprepared($procedure);
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         //
