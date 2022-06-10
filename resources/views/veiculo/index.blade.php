@@ -24,13 +24,14 @@
             $linkReadMore = url('/veiculo/' . $dado->id);
             $linkEditItem = url ('/veiculo/editar/' . $dado->id);
             $linkRemoveItem = url ('/veiculo/remover/' . $dado->id);
+            $linkBoleto = url ('/pdf/' . $dado->id);
             echo"<tr>
                     <td>{$dado->pessoa->nome}</td>
                     <td>$dado->codigo</td>
                     <td>$dado->modelo</td>
                     <td>$dado->marca</td>
                     <td>$dado->placa</td>
-                    <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a></td>
+                    <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a> | <a href='{$linkBoleto}'>Boleto</a></td>
                  </tr>";
         }
         echo"</table>";
