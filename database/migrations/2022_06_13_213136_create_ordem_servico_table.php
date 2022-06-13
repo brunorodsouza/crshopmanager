@@ -18,7 +18,7 @@ class CreateOrdemServicoTable extends Migration
             $table->decimal('valor_pago');
             //identificação do cliente
             $table->integer('id_pessoa')->unsigned();
-            $table->foreign('id_pessoa')->references('id')->on('pessoas');
+            $table->foreign('id_pessoa')->references('id')->on('pessoa');
             //identifição do veiculo
             $table->integer('id_veiculo')->unsigned();
             $table->foreign('id_veiculo')->references('id')->on('veiculo');

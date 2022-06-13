@@ -1,14 +1,14 @@
 <?php
 
 namespace Database\Seeders;
-use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Seeder;
 
-class popula_tabela_pessoa extends Seeder
+class popula_pessoa extends Seeder
 {
     public function run()
     {
-        DB::table('pessoas')->insert([
+        DB::table('pessoa')->insert([
             'matricula' => '123456789',
             'cpf' => '12345678901',
             'nome' => 'João da Silva',

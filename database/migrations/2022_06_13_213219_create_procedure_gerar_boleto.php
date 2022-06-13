@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CriarProcedureGERARBOLETO extends Migration
+class CreateProcedureGerarBoleto extends Migration
 {
     public function up()
     {
@@ -25,7 +25,7 @@ class CriarProcedureGERARBOLETO extends Migration
                 SUM(s.valor + os.valor_total_material) valorTotal
 
             from veiculo v
-            join pessoas p on p.id = v.id_pessoa
+            join pessoa p on p.id = v.id_pessoa
             join ordem_servico os on os.id_veiculo = v.id
             join servico s on s.id = os.id_servico
 
