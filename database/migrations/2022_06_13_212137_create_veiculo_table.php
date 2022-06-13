@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVeiculoTabela extends Migration
+class CreateVeiculoTable extends Migration
 {
     public function up()
     {
@@ -19,7 +19,7 @@ class CreateVeiculoTabela extends Migration
             $table->string('combustivel');
             $table->string('placa');
             $table->integer('id_pessoa')->unsigned();
-            $table->foreign('id_pessoa')->references('id')->on('pessoas');
+            $table->foreign('id_pessoa')->references('id')->on('pessoa');
             $table->timestamps();
         });
     }
