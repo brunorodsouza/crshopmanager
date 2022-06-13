@@ -5,7 +5,6 @@ $('.FLDSTRREQ_telefone').mask('(00) 0000-0000');
 $('.FLDSTRREQ_celular').mask('(00) 0000-0000');
 $('.FLDSTROPT_cep').mask('00000-000');
 
-
 //Completar endereço através do cep
 $(document).on('blur', '#cep', function(){
     const cep = $(this).val();
@@ -29,5 +28,5 @@ function CompletarEndereço(dados){
     $('#cidade').val(dados.localidade);
     $('#bairro').val(dados.bairro);
     $('#logradouro').val(dados.logradouro);
-    
+
 };

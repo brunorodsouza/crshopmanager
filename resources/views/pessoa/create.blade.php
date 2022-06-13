@@ -64,7 +64,7 @@
             </div>
             <div class="col-md-1">
                 <label class="form-label" for="uf">UF:</label>
-                <input type="text" class="form-control"  minlength="2" maxlength="2" id ="uf" name="uf" style="text-transform:uppercase">
+                <input type="text" class="form-control"  minlength="2" maxlength="2" id ="uf" name="uf">
             </div>
             <div class="col-md-5">
                 <label class="form-label" for="cidade">Cidade:</label>
