@@ -1,4 +1,3 @@
-// pessoa create
 const divMecanicos = document.getElementById('mecanico');
 const select = document.getElementById('select');
 
