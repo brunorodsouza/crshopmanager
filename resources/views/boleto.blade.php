@@ -14,7 +14,8 @@
 
         @foreach ($ordem_servico as $header)
             @if ($loop->first)
-                <h2 style="text-align:center"> {{$header->placa}}  </h2>
+
+                <h3 style="text-align:center"> {{$header->nome}} - Placa {{$header->placa}} </h3>
                 <br>
                 <p style="text-align:center"> {{$header->a}} </p>
             @endif
