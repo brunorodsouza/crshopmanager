@@ -1,10 +1,10 @@
 <?php
 
 namespace Database\Seeders;
-use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Seeder;
 
-class popula_tabela_pessoa extends Seeder
+class popula_pessoa extends Seeder
 {
     public function run()
     {
