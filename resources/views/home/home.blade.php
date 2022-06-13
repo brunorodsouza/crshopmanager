@@ -199,13 +199,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href='' class="nav-link">
+                    <a href='{{route('ordem_servico.novo')}}' class="nav-link">
                       <i class="nav-icon fas fa-plus-square"></i>
                       <p>Nova OS</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href='' class="nav-link">
+                    <a href='{{route('ordem_servico')}}' class="nav-link">
                       <i class="nav-icon fas fa-list-alt"></i>
                       <p>Lista de OS</p>
                     </a>

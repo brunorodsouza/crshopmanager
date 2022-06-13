@@ -1,11 +1,10 @@
 <?php
 
 namespace Database\Seeders;
-
-use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Seeder;
 
-class popula_tabela_material extends Seeder
+class popula_material extends Seeder
 {
     public function run()
     {

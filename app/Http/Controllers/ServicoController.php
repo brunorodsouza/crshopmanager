@@ -65,6 +65,7 @@ class ServicoController extends Controller
     {
         $dado = Servico::where('id', $id)->get();
         if (!empty($dado)) {
+            DB::delete('DELETE FROM ordem_servico WHERE id_servico = ?', [$id]);
             DB::delete('DELETE FROM servico WHERE id = ?', [$id]);
         }
         return redirect()->route('servico');
