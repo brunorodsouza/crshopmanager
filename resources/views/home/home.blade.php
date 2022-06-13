@@ -12,7 +12,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href={{asset('plugins/fontawesome-free/css/all.min.css')}}>
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href={{asset('puglins/overlayScrollbars/css/OverlayScrollbars.min.css')}}>
+    <link rel="stylesheet" href={{asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}>
     <!-- Theme style -->
     <link rel="stylesheet" type="text/css" href={{asset('dist/css/adminlte.min.css')}}>
     <!-- Home style -->
@@ -256,6 +256,10 @@
     <script src={{asset('plugins/raphael/raphael.min.js')}}></script>
     <script src={{asset('plugins/jquery-mapael/jquery.mapael.min.js')}}></script>
     <script src={{asset('plugins/jquery-mapael/maps/usa_states.min.js')}}></script>
+
+    <!-- jQuery-mask -->
+    <script src={{asset('plugins/jquery-mask/jquery.mask.min.js')}}></script>
+
     @yield('scripts')
   </body>
 </html>

@@ -14,6 +14,7 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/login.js', 'public/static/js/login.js')
     .js('resources/js/pessoa.js', 'public/static/js/pessoa.js')
+    .js('resources/js/jqueryMask-cep-pessoa.js', 'public/static/js/jqueryMask-cep-pessoa.js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ]);
