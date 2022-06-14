@@ -8,9 +8,9 @@ class popula_tabela_ordem_servico extends Seeder
 {
     public function run()
     {
-        $servicoId = DB::statement('SELECT TOP 1 id FROM servico ');
-        $veiculoId = DB::statement('SELECT TOP 1 id FROM veiculo ');
-        $pessoaId = DB::statement('SELECT TOP 1 id FROM pessoas ');
+        //$servicoId = DB::statement('SELECT TOP 1 id FROM servico ');
+        //$veiculoId = DB::statement('SELECT TOP 1 id FROM veiculo ');
+        //$pessoaId = DB::statement('SELECT TOP 1 id FROM pessoas ');
 
         DB::table('ordem_servico')->insert([
             'data_inicio' => '2022-06-12',
@@ -22,6 +22,7 @@ class popula_tabela_ordem_servico extends Seeder
             'id_pessoa' => '3',
             'id_veiculo' => '1',
             'id_servico' => '3',
+            'id_material' => '8',
             'status_pagamento' => 1,
         ]);
     }

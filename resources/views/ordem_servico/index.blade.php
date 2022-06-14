@@ -12,7 +12,7 @@
         echo"<thead class='bg-secondary text-white'>
                 <td>Cliente</td>
                 <td>Veículo</td>
-                <td>Serviço</td>
+                <td>Valor do Serviço</td>
                 <td>Status do Pagamento</td>
                 <td>Ações</td>
             </thead>";
@@ -28,8 +28,8 @@
             }
             echo"<tr>
                     <td>{$dado->pessoa->nome}</td>
-                    <td>{$dado->veiculo->modelo}</td>
-                    <td>{$dado->servico->titulo}</td>
+                    <td>{$dado->veiculo->placa}</td>
+                    <td>{$dado->valor_servico}</td>
                     <td>{$recebePago}</td>
                     <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a></td>
                  </tr>";

@@ -14,19 +14,25 @@
         <p class="text-center bg-secondary text-white fw-bold">Dados de Ordem de Serviço</p>
 
         <div class="form-group row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <label class="form-label" for="id_pessoa">Cliente: </label>
                     <input type="text" class="form-control" id="cliente" value="<?=$dados->pessoa->nome?>" disabled>
                 </select>
             </div>
 
-            <div class="col-md-4">
-                <label class="form-label" for="id_pessoa">Servico: </label>
+            <div class="col-md-3">
+                <label class="form-label" for="id_pessoa">Serviços: </label>
                     <input type="text" class="form-control" id="servico" value="<?=$dados->servico->titulo?>" disabled>
                 </select>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
+                <label class="form-label" for="id_material">Materiais: </label>
+                    <input type="text" class="form-control" id="material" value="<?=$dados->material->titulo?>" disabled>
+                </select>
+            </div>
+            
+            <div class="col-md-3">
                 <label class="form-label" for="id_pessoa">Veículo: </label>
                     <input type="text" class="form-control" id="veiculo" value="<?=$dados->veiculo->placa?>" disabled>
                 </select>
@@ -53,12 +59,12 @@
         <div class="form-group row">
             <div class="col-md-3">
                 <label class="form-label" for="valor_total_material">Valor do Material: </label>
-                <input type="text" class="form-control" id="valor_total_material" name ="valor_total_material" value="<?=$dados->valor_total_material?>">
+                <input type="text" class="form-control" id="valor_total_material" name ="valor_total_material" value="<?=$dados->valor_total_material?>"disabled>
             </div>
 
             <div class="col-md-3">
                 <label class="form-label" for="valor_servico">Valor do Serviço: </label>
-                <input type="text" class="form-control" id="valor_servico" name ="valor_servico" value="<?=$dados->valor_servico?>">
+                <input type="text" class="form-control" id="valor_servico" name ="valor_servico" value="<?=$dados->valor_servico?>"disabled>
             </div>
 
             <div class="col-md-3">
