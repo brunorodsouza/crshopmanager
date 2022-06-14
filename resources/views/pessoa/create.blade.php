@@ -28,11 +28,11 @@
             </div>
             <div class="col-md-2">
                 <label class="form-label" for="cpf">CPF:</label>
-                <input type="text" class="form-control" minlength="11" maxlength="16" id="cpf" name="cpf" required>
+                <input type="text" class="form-control FLDSTRREQ_cpf" minlength="11" maxlength="16" id="cpf" name="cpf" required>
             </div>
             <div class="col-md-2">
                 <label for="matricula" class="form-label">Matrícula:</label>
-                <input type="text" class="form-control" minlength="11" maxlength="16" id="matricula" name="matricula" required>
+                <input type="text" class="form-control FLDSTRREQ_matricula" minlength="11" maxlength="16" id="matricula" name="matricula" required>
             </div>
             <div class="col-md-2">
                 <label  class="form-label" for="data_nascimento">Data Nascimento:</label>
@@ -43,11 +43,11 @@
         <div class="form-group row mt-2">
             <div class="col-md-3">
                 <label class="form-label" for="telefone">Telefone:</label>
-                <input type="text" class="form-control"  minlength="9" maxlength="16" id ="telefone" name="telefone" required>
+                <input type="text" class="form-control FLDSTRREQ_telefone"  minlength="9" maxlength="16" id ="telefone" name="telefone" required>
             </div>
             <div class="col-md-3">
                 <label  class="form-label" for="celular">Celular:</label>
-                <input type="text" class="form-control" minlength="9" maxlength="16" id="celular" name="celular" required>
+                <input type="text" class="form-control FLDSTRREQ_celular" minlength="9" maxlength="16" id="celular" name="celular" required>
             </div>
             <div class="col-md-6">
                 <label  class="form-label" for="email">E-mail:</label>
@@ -60,7 +60,7 @@
         <div class="form-group row">
             <div class="col-md-2">
                 <label class="form-label" for="cep">CEP:</label>
-                <input type="text" class="form-control" minlength="7" maxlength="12" id="cep" name="cep">
+                <input type="text" class="form-control FLDSTROPT_cep" minlength="7" maxlength="12" id="cep" name="cep">
             </div>
             <div class="col-md-1">
                 <label class="form-label" for="uf">UF:</label>
@@ -68,11 +68,11 @@
             </div>
             <div class="col-md-5">
                 <label class="form-label" for="cidade">Cidade:</label>
-                <input type="text" class="form-control" id="cidade" name="cidade">
+                <input type="text" class="form-control" id="cidade" name="cidade" >
             </div>
             <div class="col-md-4">
                 <label class="form-label" for="bairro">Bairro:</label>
-                <input type="text" class="form-control" id ="bairro" name="bairro">
+                <input type="text" class="form-control" id ="bairro" name="bairro" >
             </div>
         </div>
 
@@ -87,7 +87,7 @@
             </div>
             <div class="col-md-5">
                 <label class="form-label" for="complemento">Complemento:</label>
-                <input type="text" class="form-control" id ="complemento" name="complemento">
+                <input type="text" class="form-control" id ="complemento" name="complemento" >
             </div>
         </div>
 
@@ -101,7 +101,7 @@
                 </div>
                 <div class="col-md-3">
                     <label class="form-label" for="uf">Salário:</label>
-                    <input type="text" class="form-control" id ="salario" name="salario">
+                    <input type="text" class="form-control FLDSTROPT_salario" id ="salario" name="salario">
                 </div>
             </div>
         </div>
@@ -117,4 +117,5 @@
 
 @section('scripts')
     <script type="text/javascript" src='{{asset('/static/js/pessoa.js')}}'></script>
+    <script type="text/javascript" src='{{asset('/static/js/jqueryMask-cep-pessoa.js')}}'></script>
 @endsection

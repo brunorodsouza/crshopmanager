@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Date;
 
 class Pessoa extends Model
 {
-    protected $table = 'pessoas';
+    protected $table = 'pessoa';
 
     protected $fillable = [
         'nome',

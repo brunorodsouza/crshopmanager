@@ -21,18 +21,31 @@
             $linkReadMore = url('/ordem_servico/' . $dado->id);
             $linkEditItem = url ('/ordem_servico/editar/' . $dado->id);
             $linkRemoveItem = url ('/ordem_servico/remover/' . $dado->id);
-            if($dado->status_pagamento==1){
+            $linkBoleto = url ('/pdf/' . $dado->id);
+
+            if($dado->status_pagamento == 1){
                 $recebePago = 'Pago';
             }else{
                 $recebePago = 'Não Pago';
             }
+
+            if($dado->status_pagamento == 0){
             echo"<tr>
                     <td>{$dado->pessoa->nome}</td>
                     <td>{$dado->veiculo->placa}</td>
                     <td>{$dado->valor_servico}</td>
                     <td>{$recebePago}</td>
+                    <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a>  | <a target=_blank href='{$linkBoleto}'>Boleto</a></td>
+                 </tr>";
+            }else{
+                echo"<tr>
+                    <td>{$dado->pessoa->nome}</td>
+                    <td>{$dado->veiculo->modelo}</td>
+                    <td>{$dado->servico->titulo}</td>
+                    <td>{$recebePago}</td>
                     <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a></td>
                  </tr>";
+            }
         }
         echo"</table>";
     }

@@ -7,6 +7,7 @@ use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\OrdemServicoController;
 use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\VeiculoController;
+use App\Http\Controllers\PdfController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -57,3 +58,5 @@ Route::get('/ordem_servico/{id}', [OrdemServicoController::class, 'show'])->name
 Route::get('/ordem_servico/editar/{id}', [OrdemServicoController::class, 'edit'])->name('ordem_servico.editar');
 Route::put('/ordem_servico/update/{id}', [OrdemServicoController::class, 'update'])->name('ordem_servico.update');
 Route::get('/ordem_servico/remover/{id}', [OrdemServicoController::class, 'destroy'])->name('ordem_servico.remover');
+
+Route::get('pdf/{id}', [PdfController::class, 'geraPDF']);
