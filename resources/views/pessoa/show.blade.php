@@ -24,32 +24,28 @@
                 <p class="text-center bg-secondary text-white fw-bold">Dados Cadastrais</p>
 
                 <div class="form-group row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
+                        <label class="form-label" for="email">Email: </label>
+                        <input type="text" class="form-control" id="email" value="<?=$d->email?>" disabled>
+                    </div>
+                    <div class="col-md-3">
                         <label class="form-label" for="cpf">CPF: </label>
                         <input type="text" class="form-control" id="cpf" value="<?=$d->cpf?>" disabled>
                     </div>
-                    <div class="col-md-4">
-                        <label class="form-label" for="matricula">Matrícula: </label>
-                        <input type="text" class="form-control" id="matricula" value="<?=$d->matricula?>" disabled>
-                    </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <label class="form-label" for="data_nascimento">Data Nascimento: </label>
                         <input type="text" class="form-control" id="data_nascimento" value="<?=$d->data_nascimento?>" disabled>
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <label class="form-label" for="telefone">Telefone: </label>
                         <input type="text" class="form-control" id="telefone" value="<?=$d->telefone?>" disabled>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <label class="form-label" for="celular">Celular: </label>
                         <input type="text" class="form-control" id="celular" value="<?=$d->celular?>" disabled>
-                    </div>
-                    <div class="col-md-4">
-                        <label class="form-label" for="email">Email: </label>
-                        <input type="text" class="form-control" id="email" value="<?=$d->email?>" disabled>
                     </div>
                 </div>
 

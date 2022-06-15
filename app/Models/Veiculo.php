@@ -10,8 +10,7 @@ class Veiculo extends Model
     protected $table = 'veiculo';
 
     protected $fillable = [
-        'id_pessoa',
-        'codigo',
+        'pessoa',
         'modelo',
         'marca',
         'cor',
@@ -19,12 +18,11 @@ class Veiculo extends Model
         'ano_mod',
         'combustivel',
         'placa',
-
     ];
 
     public function pessoa()
     {
-        return $this->belongsTo(Pessoa::class, 'id_pessoa', 'id');
+        return $this->belongsTo(Pessoa::class, 'pessoa', 'id');
     }
 
     use HasFactory;
