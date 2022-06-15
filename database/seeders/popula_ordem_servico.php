@@ -13,9 +13,9 @@ class popula_ordem_servico extends Seeder
     public function run()
     {
         $pessoaId = Pessoa::orderBy('id')->first();
-        $pessoaId = Servico::orderBy('id')->first();
-        $pessoaId = Veiculo::orderBy('id')->first();
-        $pessoaId = Material::orderBy('id')->first();
+        $servicoId = Servico::orderBy('id')->first();
+        $veiculoId = Veiculo::orderBy('id')->first();
+        $materialId = Material::orderBy('id')->first();
 
         DB::table('ordem_servico')->insert([
             'data_inicio' => '2022-06-12',
@@ -25,8 +25,8 @@ class popula_ordem_servico extends Seeder
             'valor_servico' => '270.00',
             'valor_pago' => '270.00',
             'pessoa' => $pessoaId['id'],
-            'veiculo' => $veiculoId['id'],
             'servico' => $servicoId['id'],
+            'veiculo' => $veiculoId['id'],
             'material' => $materialId['id'],
             'status_pagamento' => 1,
         ]);
