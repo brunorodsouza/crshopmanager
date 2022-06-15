@@ -41,12 +41,12 @@ class PessoaController extends Controller
         $pessoa = Pessoa::create($dados);
 
         if($request->tipoStatus == '2'){
-        Mecanico::create([
-            "pessoa" => $pessoa->id,
-            'salario' => $request->salario,
-            'data_admissao' => $request->data_admissao
-        ]);
-    }
+            Mecanico::create([
+                "pessoa" => $pessoa->id,
+                'salario' => $request->salario,
+                'data_admissao' => $request->data_admissao
+            ]);
+        }
 
         DB::commit();
         return redirect()->route('pessoa');
