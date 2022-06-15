@@ -85,8 +85,10 @@ class PessoaController extends Controller
         $dado->complemento = $request->complemento;
         $dado->tipoStatus = $request->tipoStatus;
         // update do mecanico
-        $dado->mecanicos->data_admissao = $request->data_admissao;
-        $dado->mecanicos->salario = $request->salario;
+        if($request->tipoStatus == 2){
+            $dado->mecanicos->salario = $request->salario;
+            $dado->mecanicos->data_admissao = $request->data_admissao;
+        }
 
         $dado->push();
 
