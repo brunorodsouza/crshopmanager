@@ -12,7 +12,7 @@ class popula_veiculo extends Seeder
 
         DB::table('veiculo')->insert([
             'codigo' => '20181105255',
-            'id_pessoa' => $pessoaId,
+            'pessoa' => $pessoaId,
             'modelo' => 'Sedan',
             'marca' => '200',
             'cor' => 'azul',

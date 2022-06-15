@@ -13,5 +13,8 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'administrador',
         //     'password' => bcrypt('demo')
         // ]);
+
+        // ordem das demais seeds
+        // pessoa > veiuculo > servico > material > ordem_servico
     }
 }

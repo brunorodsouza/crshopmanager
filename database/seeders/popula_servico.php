@@ -9,7 +9,6 @@ class popula_servico extends Seeder
     public function run()
     {
         DB::table('servico')->insert([
-            'codigo' => 'LAN100',
             'titulo' => 'Lanternagem',
             'valor' => '200',
         ]);
