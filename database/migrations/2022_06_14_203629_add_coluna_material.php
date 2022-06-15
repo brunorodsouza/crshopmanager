@@ -6,20 +6,20 @@ use Illuminate\Support\Facades\Schema;
 
 class AddColunaMaterial extends Migration
 {
-    
+
     public function up()
     {
         Schema::table('ordem_servico', function($table) {
-            $table->integer('id_material')->unsigned();
-            $table->foreign('id_material')->references('id')->on('material');
+            $table->integer('material')->unsigned();
+            $table->foreign('material')->references('id')->on('material');
         });
 
     }
     public function down()
     {
         Schema::table('ordem_servico', function($table) {
-            $table->dropColumn('id_material');
-            
+            $table->dropColumn('material');
+
         });
     }
 }

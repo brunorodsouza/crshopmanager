@@ -10,7 +10,6 @@ class CreateServicoTable extends Migration
     {
         Schema::create('servico', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('codigo');
             $table->string('titulo');
             $table->decimal('valor');
             $table->timestamps();

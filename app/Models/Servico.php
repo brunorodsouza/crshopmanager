@@ -9,12 +9,9 @@ class Servico extends Model
     protected $table = 'servico';
 
     protected $fillable = [
-        'codigo',
         'titulo',
         'valor',
     ];
 
-    
-    
     use HasFactory;
 }
