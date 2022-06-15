@@ -19,11 +19,12 @@ class CreateOrdemServicoTable extends Migration
             $table->integer('pessoa')->unsigned();
             $table->integer('veiculo')->unsigned();
             $table->integer('servico')->unsigned();
+            $table->integer('material')->unsigned();
             $table->boolean('status_pagamento');
             $table->timestamps();
-            $table->foreign('pessoa')->references('id')->on('pessoa');
-            $table->foreign('veiculo')->references('id')->on('veiculo');
-            $table->foreign('servico')->references('id')->on('servico');
+            $table->foreign('pessoa')->references('id')->on('pessoa')->onDelete('cascade');
+            $table->foreign('servico')->references('id')->on('servico')->onDelete('cascade');
+            $table->foreign('material')->references('id')->on('material')->onDelete('cascade');
         });
     }
 

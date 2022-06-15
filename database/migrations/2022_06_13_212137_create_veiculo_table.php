@@ -19,7 +19,7 @@ class CreateVeiculoTable extends Migration
             $table->string('combustivel');
             $table->string('placa');
             $table->integer('pessoa')->unsigned();
-            $table->foreign('pessoa')->references('id')->on('pessoa');
+            $table->foreign('pessoa')->references('id')->on('pessoa')->onDelete('cascade');
             $table->timestamps();
         });
     }

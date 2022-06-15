@@ -13,7 +13,7 @@ class CreateMecanicoTable extends Migration
             $table->date('data_admissao');
             $table->decimal('salario', 10, 2);
             $table->integer('pessoa')->unsigned();
-            $table->foreign('pessoa')->references('id')->on('pessoa');
+            $table->foreign('pessoa')->references('id')->on('pessoa')->onDelete('cascade');
             $table->timestamps();
         });
     }
