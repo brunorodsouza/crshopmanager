@@ -15,7 +15,6 @@ class VeiculoController extends Controller
         return view('veiculo.index')->with('dados', $dados);
     }
 
-
     public function show($id)
     {
         $dado = Veiculo::where('id', $id)->with('pessoa')->get();
@@ -60,7 +59,6 @@ class VeiculoController extends Controller
     {
         $dado = Veiculo::find($id);
 
-        $dado->codigo = $request->codigo;
         $dado->modelo = $request->modelo;
         $dado->marca = $request->marca;
         $dado->cor = $request->cor;
@@ -78,7 +76,7 @@ class VeiculoController extends Controller
     {
         $dado = Veiculo::where('id', $id)->get();
         if (!empty($dado)) {
-            DB::delete('DELETE FROM ordem_servico WHERE id_veiculo = ?', [$id]);
+            DB::delete('DELETE FROM ordem_servico WHERE veiculo = ?', [$id]);
             DB::delete('DELETE FROM veiculo WHERE id = ?', [$id]);
         }
         return redirect()->route('veiculo');

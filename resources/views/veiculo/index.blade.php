@@ -12,7 +12,6 @@
         echo"<table class='table table-striped table-hover'>";
         echo"<thead class='bg-secondary text-white'>
                 <td>Cliente</td>
-                <td>Código</td>
                 <td>Modelo</td>
                 <td>Marca</td>
                 <td>Placa</td>
@@ -24,9 +23,9 @@
             $linkReadMore = url('/veiculo/' . $dado->id);
             $linkEditItem = url ('/veiculo/editar/' . $dado->id);
             $linkRemoveItem = url ('/veiculo/remover/' . $dado->id);
+
             echo"<tr>
-                    <td>{$dado->pessoa->nome}</td>
-                    <td>$dado->codigo</td>
+                    <td>{$dado->pessoa}</td>
                     <td>$dado->modelo</td>
                     <td>$dado->marca</td>
                     <td>$dado->placa</td>

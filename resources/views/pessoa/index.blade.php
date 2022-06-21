@@ -13,7 +13,6 @@
         echo"<table class='table table-striped table-hover'>";
         echo"<thead class='bg-secondary text-white'>
                 <td>Nome</td>
-                <td>Matrícula</td>
                 <td>CPF</td>
                 <td>Email</td>
                 <td>Tipo de Usuário</td>
@@ -33,7 +32,6 @@
             $linkRemoveItem = url ('/pessoa/remover/' . $dado->id);
             echo"<tr>
                  <td>$dado->nome</td>
-                 <td>$dado->matricula</td>
                  <td>$dado->cpf</td>
                  <td>$dado->email</td>
                  <td>$dado->tipoStatus</td>

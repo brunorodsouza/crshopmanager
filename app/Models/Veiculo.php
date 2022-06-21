@@ -10,14 +10,13 @@ class Veiculo extends Model
     protected $table = 'veiculo';
 
     protected $fillable = [
-        'pessoa',
-        'modelo',
         'marca',
         'cor',
         'ano_fab',
         'ano_mod',
         'combustivel',
         'placa',
+        'pessoa',
     ];
 
     public function pessoa()

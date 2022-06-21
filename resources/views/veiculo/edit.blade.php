@@ -27,11 +27,6 @@
             <input type="text" class="form-control" id="modelo" name="modelo" value="<?=$dado->modelo?>">
         </div>
 
-        <div class="col-md-2">
-            <label class="form-label" for="codigo">Código: </label>
-            <input type="text" class="form-control" id="codigo" name="codigo" value="<?=$dado->codigo?>">
-        </div>
-
         <div class="col-md-3">
             <label class="form-label" for="marca">Marca: </label>
             <input type="text" class="form-control" id="marca" name ="marca" value="<?=$dado->marca?>">

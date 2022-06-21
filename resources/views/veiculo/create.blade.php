@@ -9,9 +9,9 @@
         <p class="text-center bg-secondary text-white fw-bold">Dados Veículo</p>
 
         <div class="form-group row">
-            <div class="col-md-3">
-                <label class="form-label" for="id_pessoa">Selecione o Cliente: </label>
-                <select class="custom-select custom-select-md mb-3" name="id_pessoa" id="id_pessoa">
+            <div class="col-md-4">
+                <label class="form-label" for="pessoa">Selecione o Cliente: </label>
+                <select class="custom-select custom-select-md mb-3" name="pessoa" id="pessoa">
                     <option selected>Selecione o Cliente</option>
                     @foreach ( $dados as $dado )
                         @if ($dado->tipoStatus == 1 )
@@ -21,14 +21,9 @@
                 </select>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <label class="form-label" for="modelo">Modelo: </label>
                 <input type="text" class="form-control" id="modelo" name="modelo">
-            </div>
-
-            <div class="col-md-2">
-                <label class="form-label" for="codigo">Código: </label>
-                <input type="text" class="form-control" id="codigo" name="codigo">
             </div>
 
             <div class="col-md-3">
@@ -43,12 +38,12 @@
         </div>
 
         <div class="form-group row">
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <label class="form-label" for="ano_fab">Ano Fabricação: </label>
                 <input type="text" class="form-control" id="ano_fab" name="ano_fab">
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <label class="form-label" for="ano_mod">Ano Modelo: </label>
                 <input type="text" class="form-control" id="ano_mod" name="ano_mod">
             </div>

@@ -10,7 +10,6 @@ class CreateVeiculoTable extends Migration
     {
         Schema::create('veiculo', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('codigo');
             $table->string('modelo');
             $table->string('marca');
             $table->string('cor');
