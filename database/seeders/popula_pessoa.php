@@ -9,7 +9,6 @@ class popula_pessoa extends Seeder
     public function run()
     {
         DB::table('pessoa')->insert([
-            'matricula' => '123456789',
             'cpf' => '12345678901',
             'nome' => 'João da Silva',
             'data_nascimento' => '01/01/2000',

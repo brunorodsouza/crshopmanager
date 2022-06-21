@@ -3,14 +3,19 @@
 namespace Database\Seeders;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
+use App\Models\Pessoa;
+use App\Models\Servico;
+use App\Models\Veiculo;
+use App\Models\Material;
 
 class popula_ordem_servico extends Seeder
 {
     public function run()
     {
-        $servicoId = DB::statement('SELECT TOP 1 id FROM servico ');
-        $veiculoId = DB::statement('SELECT TOP 1 id FROM veiculo ');
-        $pessoaId = DB::statement('SELECT TOP 1 id FROM pessoa ');
+        $pessoaId = Pessoa::orderBy('id')->first();
+        $servicoId = Servico::orderBy('id')->first();
+        $veiculoId = Veiculo::orderBy('id')->first();
+        $materialId = Material::orderBy('id')->first();
 
         DB::table('ordem_servico')->insert([
             'data_inicio' => '2022-06-12',
@@ -19,9 +24,10 @@ class popula_ordem_servico extends Seeder
             'valor_total_material' => '70.00',
             'valor_servico' => '270.00',
             'valor_pago' => '270.00',
-            'id_pessoa' => $pessoaId,
-            'id_veiculo' => $veiculoId,
-            'id_servico' => $servicoId,
+            'pessoa' => $pessoaId['id'],
+            'servico' => $servicoId['id'],
+            'veiculo' => $veiculoId['id'],
+            'material' => $materialId['id'],
             'status_pagamento' => 1,
         ]);
     }

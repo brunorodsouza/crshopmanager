@@ -9,7 +9,6 @@ class popula_material extends Seeder
     public function run()
     {
         DB::table('material')->insert([
-            'codigo' => 'L2',
             'titulo' => 'Luz de Freio',
             'valor' => '100',
             'descricao' => 'Luz para o freio de carros em geral',

@@ -17,17 +17,16 @@
         <div class="form-group row">
             <div class="col-sm-6">
                 <label class="form-label" for="nome">Selecione a opção desejada:</label>
-                <select class="form-select" id="select" name="tipoStatus" style="width:150px;height:35px;margin-left:10px;">
+                <select class="form-select"  name="tipoStatus" id="select" style="width:150px;height:35px;margin-left:10px;">
+                    @if ($dado->tipoStatus == 1)
+                        <option default value="<?=$dado->tipoStatus;?>"><?="Cliente"?></option>
+                        <option value='2'>Funcionário</option>
+                    @endif
 
-                @if ($dado->tipoStatus == "1")
-                    <option default value="<?=$dado->tipoStatus;?>"><?="Cliente"?></option>
-                    <option value="2" id="funcionario">Funcionário</option>
-                @endif
-
-                @if ($dado->tipoStatus == "2")
-                    <option default value="<?=$dado->tipoStatus;?>"><?='Funcionario'?></option>
-                    <option value="1" id="cliente">Cliente</option>
-                @endif
+                    @if ($dado->tipoStatus == 2)
+                        <option default value="<?=$dado->tipoStatus;?>"><?='Funcionario'?></option>
+                        <option value='1'>Cliente</option>
+                    @endif
                 </select>
             </div>
         </div>
@@ -35,36 +34,32 @@
         <p class="text-center bg-secondary text-white fw-bold">Dados Cadastrais</p>
 
         <div class="form-group row">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <label class="form-label" for="nome">Nome:</label>
                 <input type="text" class="form-control"  id="nome" name="nome" value="<?=$dado->nome?>">
+            </div>
+            <div class="col-md-5">
+                <label class="form-label" for="email">Email: </label>
+                <input type="text" class="form-control" id="email" name="email" value="<?=$dado->email?>">
             </div>
             <div class="col-md-2">
                 <label class="form-label" for="cpf">CPF: </label>
                 <input type="text" class="form-control FLDSTRREQ_cpf" id="cpf" name="cpf" minlength="11" maxlength="16" value="<?=$dado->cpf?>">
             </div>
-            <div class="col-md-2">
-                <label class="form-label" for="matricula">Matrícula: </label>
-                <input type="text" class="form-control FLDSTRREQ_matricula" id="matricula" name="matricula" minlength="11" maxlength="16" value="<?=$dado->matricula?>">
-            </div>
+        </div>
+
+        <div class="form-group row">
             <div class="col-md-2">
                 <label class="form-label" for="data_nascimento">Data Nascimento: </label>
                 <input type="text" class="form-control" id="data_nascimento" name="data_nascimento" value="<?=$dado->data_nascimento?>">
             </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <label class="form-label" for="telefone">Telefone: </label>
                 <input type="text" class="form-control FLDSTRREQ_telefone" id="telefone" name="telefone" minlength="9" maxlength="16" value="<?=$dado->telefone?>">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <label class="form-label" for="celular">Celular: </label>
                 <input type="text" class="form-control FLDSTRREQ_celular" id="celular" name="celular" minlength="9" maxlength="16" value="<?=$dado->celular?>">
-            </div>
-            <div class="col-md-4">
-                <label class="form-label" for="email">Email: </label>
-                <input type="text" class="form-control" id="email" name="email" value="<?=$dado->email?>">
             </div>
         </div>
 
@@ -105,20 +100,19 @@
         </div>
 
         @if ($dado->tipoStatus == 2)
-        <div class="mecanicos" id="mecanico">
-            <p class="text-center bg-secondary text-white fw-bold">Informações do Mecânico</p>
-
-            <div class="form-group row ">
-                <div class="col-md-3">
-                    <label class="form-label" for="cep">Data de Admissão:</label>
-                    <input type="date" class="form-control" id="data_admissao" name="data_admissao" value="<?=$dado->mecanicos->data_admissao?>">
-                </div>
-                <div class="col-md-3">
-                    <label class="form-label" for="uf">Salário:</label>
-                    <input type="text" class="form-control" id ="salario" name="salario" value="<?=$dado->mecanicos->salario?>">
+            <div id="mecanico">
+                <p class="text-center bg-secondary text-white fw-bold">Informações do Mecânico</p>
+                <div class="form-group row ">
+                    <div class="col-md-3">
+                        <label class="form-label" for="cep">Data de Admissão:</label>
+                        <input type="date" class="form-control" id="data_admissao" name="data_admissao" value="<?=$dado->mecanicos->data_admissao?>">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label" for="uf">Salário:</label>
+                        <input type="text" class="form-control" id ="salario" name="salario" value="<?=$dado->mecanicos->salario?>">
+                    </div>
                 </div>
             </div>
-        </div>
         @endif
 
         <div class="mt-4 text-left">

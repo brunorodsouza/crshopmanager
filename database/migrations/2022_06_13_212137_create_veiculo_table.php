@@ -18,8 +18,8 @@ class CreateVeiculoTable extends Migration
             $table->string('ano_mod');
             $table->string('combustivel');
             $table->string('placa');
-            $table->integer('id_pessoa')->unsigned();
-            $table->foreign('id_pessoa')->references('id')->on('pessoa');
+            $table->integer('pessoa')->unsigned();
+            $table->foreign('pessoa')->references('id')->on('pessoa')->onDelete('cascade');
             $table->timestamps();
         });
     }

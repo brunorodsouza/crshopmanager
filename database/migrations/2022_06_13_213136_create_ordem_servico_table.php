@@ -16,17 +16,15 @@ class CreateOrdemServicoTable extends Migration
             $table->decimal('valor_total_material');
             $table->decimal('valor_servico');
             $table->decimal('valor_pago');
-            //identificação do cliente
-            $table->integer('id_pessoa')->unsigned();
-            $table->foreign('id_pessoa')->references('id')->on('pessoa');
-            //identifição do veiculo
-            $table->integer('id_veiculo')->unsigned();
-            $table->foreign('id_veiculo')->references('id')->on('veiculo');
-            //identificação do servico
-            $table->integer('id_servico')->unsigned();
-            $table->foreign('id_servico')->references('id')->on('servico');
+            $table->integer('pessoa')->unsigned();
+            $table->integer('veiculo')->unsigned();
+            $table->integer('servico')->unsigned();
+            $table->integer('material')->unsigned();
             $table->boolean('status_pagamento');
             $table->timestamps();
+            $table->foreign('pessoa')->references('id')->on('pessoa')->onDelete('cascade');
+            $table->foreign('servico')->references('id')->on('servico')->onDelete('cascade');
+            $table->foreign('material')->references('id')->on('material')->onDelete('cascade');
         });
     }
 

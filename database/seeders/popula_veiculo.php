@@ -3,16 +3,17 @@
 namespace Database\Seeders;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
+use App\Models\Pessoa;
 
 class popula_veiculo extends Seeder
 {
     public function run()
     {
-        $pessoaId = DB::statement('SELECT TOP 1 id FROM pessoa ');
+        $pessoaId = Pessoa::orderBy('id')->first();
 
         DB::table('veiculo')->insert([
             'codigo' => '20181105255',
-            'id_pessoa' => $pessoaId,
+            'pessoa' => $pessoaId['id'],
             'modelo' => 'Sedan',
             'marca' => '200',
             'cor' => 'azul',

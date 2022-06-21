@@ -10,7 +10,6 @@ class CreateMaterialTable extends Migration
     {
         Schema::create('material', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('codigo');
             $table->string('titulo');
             $table->decimal('valor');
             $table->string('descricao');

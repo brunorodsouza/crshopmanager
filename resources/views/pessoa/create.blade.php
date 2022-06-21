@@ -12,7 +12,7 @@
         <div class="form-group row">
             <div class="col-sm-6">
                 <label class="form-label" for="nome">Selecione a opção desejada:</label>
-                <select class="form-select" name="tipoStatus" style="width:150px;height:35px;margin-left:10px;" id="select" required>
+                <select class="form-select" name="tipoStatus" id="select"  style="width:150px;height:35px;margin-left:10px;" required>
                     <option value="1" id="cliente">Cliente</option>
                     <option value="2" id="funcionario">Funcionário</option>
                   </select>
@@ -22,25 +22,25 @@
         <p class="text-center bg-secondary text-white fw-bold">Dados Cadastrais</p>
 
         <div class="form-group row">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <label class="form-label" for="nome">Nome:</label>
                 <input type="text" class="form-control"  id="nome" name="nome" required>
+            </div>
+            <div class="col-md-5">
+                <label  class="form-label" for="email">E-mail:</label>
+                <input type="email" class="form-control" id ="email" name="email" required>
             </div>
             <div class="col-md-2">
                 <label class="form-label" for="cpf">CPF:</label>
                 <input type="text" class="form-control FLDSTRREQ_cpf" minlength="11" maxlength="16" id="cpf" name="cpf" required>
             </div>
-            <div class="col-md-2">
-                <label for="matricula" class="form-label">Matrícula:</label>
-                <input type="text" class="form-control FLDSTRREQ_matricula" minlength="11" maxlength="16" id="matricula" name="matricula" required>
-            </div>
+        </div>
+
+        <div class="form-group row mt-6">
             <div class="col-md-2">
                 <label  class="form-label" for="data_nascimento">Data Nascimento:</label>
                 <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" required>
             </div>
-        </div>
-
-        <div class="form-group row mt-2">
             <div class="col-md-3">
                 <label class="form-label" for="telefone">Telefone:</label>
                 <input type="text" class="form-control FLDSTRREQ_telefone"  minlength="9" maxlength="16" id ="telefone" name="telefone" required>
@@ -48,10 +48,6 @@
             <div class="col-md-3">
                 <label  class="form-label" for="celular">Celular:</label>
                 <input type="text" class="form-control FLDSTRREQ_celular" minlength="9" maxlength="16" id="celular" name="celular" required>
-            </div>
-            <div class="col-md-6">
-                <label  class="form-label" for="email">E-mail:</label>
-                <input type="email" class="form-control" id ="email" name="email" required>
             </div>
         </div>
 
@@ -91,7 +87,7 @@
             </div>
         </div>
 
-        <div class="mecanicos" id="mecanico" style="content-visibility: hidden">
+        <div id="mecanico" style="content-visibility:hidden">
             <p class="text-center bg-secondary text-white fw-bold">Informações do Mecânico</p>
 
             <div class="form-group row ">

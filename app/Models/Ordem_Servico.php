@@ -8,13 +8,10 @@ use Ramsey\Uuid\Type\Decimal;
 
 class Ordem_Servico extends Model
 {
-   
+
     protected $table = 'ordem_servico';
 
     protected $fillable = [
-        'id_servico',
-        'id_veiculo',
-        'id_pessoa',
         'data_inicio',
         'data_previsao',
         'data_fim',
@@ -22,24 +19,31 @@ class Ordem_Servico extends Model
         'valor_servico',
         'valor_pago',
         'status_pagamento',
-        
+        'servico',
+        'material',
+        'veiculo',
+        'pessoa',
     ];
-    
+
     public function pessoa()
     {
-        return $this->belongsTo(Pessoa::class, 'id_pessoa', 'id');
+        return $this->belongsTo(Pessoa::class, 'pessoa', 'id');
     }
 
     public function veiculo()
     {
-        return $this->belongsTo(Veiculo::class, 'id_veiculo', 'id');
+        return $this->belongsTo(Veiculo::class, 'veiculo', 'id');
     }
 
     public function servico()
     {
-        return $this->belongsTo(Servico::class, 'id_servico', 'id');
+        return $this->belongsTo(Servico::class, 'servico','id');
     }
 
-    
+    public function material()
+    {
+        return $this->belongsTo(Material::class, 'material','id');
+    }
+
     use HasFactory;
 }

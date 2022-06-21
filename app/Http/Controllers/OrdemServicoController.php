@@ -6,14 +6,16 @@ use App\Models\Ordem_Servico;
 use App\Models\Veiculo;
 use App\Models\Pessoa;
 use App\Models\Servico;
+use App\Models\Material;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+
 
 class OrdemServicoController extends Controller
 {
     public function index()
     {
-        $dados = Ordem_Servico::with('pessoa','veiculo','servico')->get();
+        $dados = Ordem_Servico::with('pessoa','veiculo')->get();
         return view('ordem_servico.index')->with('dados', $dados);
     }
 
@@ -27,10 +29,10 @@ class OrdemServicoController extends Controller
 
     public function show($id)
     {
-        $dado = Ordem_Servico::where('id', $id)->with('pessoa','veiculo','servico')->get();
-
-        if (!empty($dado)) {
-            return view('ordem_servico.show')->with('dado', $dado);
+        $dados = Ordem_Servico::where('id', $id)->with('pessoa','veiculo','servico','material')->get();
+        
+        if (!empty($dados)) {
+            return view('ordem_servico.show')->with('dados', $dados);
         } else {
             return redirect()->route('ordem_servico');
         }
@@ -38,12 +40,14 @@ class OrdemServicoController extends Controller
 
     public function create()
     {
-        $dados['pessoa']=Pessoa::all();
-        $dados['veiculo']=Veiculo::all();
-        $dados['servico']=Servico::all();
-
+        $dados['pessoa'] = Pessoa::all();
+        $dados['veiculo'] = Veiculo::all();
+        $dados['ordem'] = Ordem_Servico::all();
+        $dados['servico'] = Servico::all();
+        $dados['material'] = Material::all();
+        
         if (!empty($dados)) {
-
+            
             return view('ordem_servico.create',['dados'=>$dados]);
         }
         else {
@@ -53,15 +57,16 @@ class OrdemServicoController extends Controller
     }
 
     public function store(Request $request)
-    {
+    {   
         $dados = $request->all();
         Ordem_Servico::create($dados);
         return redirect()->route('ordem_servico');
     }
 
+  
     public function edit($id)
     {
-        $dados = Ordem_Servico::where('id',$id)->with('pessoa','veiculo','servico')->get();
+        $dados = Ordem_Servico::where('id',$id)->with('pessoa','veiculo','servico','material')->get();
 
         if(!empty($dados)){
             return view('ordem_servico.edit')->with('dados',$dados);
@@ -77,11 +82,9 @@ class OrdemServicoController extends Controller
         $dados->data_inicio = $request->data_inicio;
         $dados->data_previsao = $request->data_previsao;
         $dados->data_fim = $request->data_fim;
-        $dados->valor_total_material = $request->valor_total_material;
-        $dados->valor_servico = $request->valor_servico;
         $dados->valor_pago = $request->valor_pago;
         $dados->status_pagamento = $request->status_pagamento;
-
+        
         $dados->save();
         return redirect()->route('ordem_servico');
     }
@@ -90,6 +93,8 @@ class OrdemServicoController extends Controller
     {
         $dado = Ordem_Servico::where('id', $id)->get();
         if (!empty($dado)) {
+            DB::delete('DELETE FROM pivo_ordem_servico WHERE id_ordem_servico = ?', [$id]);
+            DB::delete('DELETE FROM pivo_ordem_material WHERE id_ordem_servico = ?', [$id]);
             DB::delete('DELETE FROM ordem_servico WHERE id = ?', [$id]);
         }
         return redirect()->route('ordem_servico');

@@ -8,10 +8,10 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        // DB::table('users')->insert([
-        //     'name' => 'administrador',
-        //     'email' => 'administrador',
-        //     'password' => bcrypt('demo')
-        // ]);
+        $this->call(popula_pessoa::class);
+        $this->call(popula_material::class);
+        $this->call(popula_servico::class);
+        $this->call(popula_veiculo::class);
+        $this->call(popula_ordem_servico::class);
     }
 }

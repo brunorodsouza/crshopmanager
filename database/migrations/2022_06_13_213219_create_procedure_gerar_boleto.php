@@ -25,9 +25,9 @@ class CreateProcedureGerarBoleto extends Migration
                 SUM(s.valor + os.valor_total_material) valorTotal
 
             from veiculo v
-            join pessoa p on p.id = v.id_pessoa
-            join ordem_servico os on os.id_veiculo = v.id
-            join servico s on s.id = os.id_servico
+            join pessoa p on p.id = v.pessoa
+            join ordem_servico os on os.veiculo = v.id
+            join servico s on s.id = os.servico
 
             where v.id = @VEICULO_ID
             and os.status_pagamento = 0
