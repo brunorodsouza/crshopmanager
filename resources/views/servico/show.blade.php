@@ -2,10 +2,8 @@
 
 @section('conteudo')
     <div class="container my-4">
-    <?php
-        if(!empty($dado)){
-            foreach ($dado as $d) {
-                ?>
+        @if (!empty($dado))
+            @foreach ( $dado as $d )
                 <h2 class="fw-bold text-uppercase" style="margin-bottom: 15px; padding-top:15px;">{{$d->titulo}}</h2>
 
                 <form>
@@ -20,10 +18,8 @@
                         <a href="{{route('servico')}}" class="btn btn-secondary">Voltar</a>
                     </div>
                 </form>
-                <?php
-                }
-            }
-                ?>
+            @endforeach
+        @endif
     </div>
 @endsection
 

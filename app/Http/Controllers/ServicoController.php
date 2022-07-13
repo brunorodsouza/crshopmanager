@@ -39,7 +39,7 @@ class ServicoController extends Controller
 
     public function edit($id)
     {
-        $dado = Servico::where('id',$id)->get();
+        $dado = Servico::where('id',$id)->get()->first();
         if(!empty($dado)){
             return view('servico.edit')->with('dado',$dado);
         } else {
