@@ -60,7 +60,7 @@ class OrdemServicoController extends Controller
 
     public function edit($id)
     {
-        $dados = Ordem_Servico::where('id',$id)->with('pessoas','veiculos','servicos','materiais')->get();
+        $dados = Ordem_Servico::where('id',$id)->with('pessoas','veiculos','servicos','materiais')->get()->first();
 
         if(!empty($dados)){
             return view('ordem_servico.edit')->with('dados',$dados);
