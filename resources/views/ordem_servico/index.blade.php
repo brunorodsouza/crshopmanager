@@ -49,7 +49,7 @@
                                     @if ($dado->status_pagamento == 0)
                                         <a target=_blank href={{$linkBoleto}} class="btn btn-success mr-2">Boleto</a>
                                     @endif
-                                    <a href={{$linkEditItem}} class="btn btn-warning mr-2">Editar</a>
+                                    <a href={{$linkEditItem}} class="btn btn-warning mr-2" style="color:white">Editar</a>
                                     <a href={{$linkRemoveItem}} class="btn btn-danger mr-2">Excluir</a>
                                 </div>
                             </td>
