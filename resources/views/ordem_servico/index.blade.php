@@ -31,17 +31,17 @@
 
             if($dado->status_pagamento == 0){
             echo"<tr>
-                    <td>{$dado->pessoa->nome}</td>
-                    <td>{$dado->veiculo->placa}</td>
+                    <td>{$dado->pessoas->nome}</td>
+                    <td>{$dado->veiculos->placa}</td>
                     <td>{$dado->valor_servico}</td>
                     <td>{$recebePago}</td>
                     <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a>  | <a target=_blank href='{$linkBoleto}'>Boleto</a></td>
                  </tr>";
             }else{
                 echo"<tr>
-                    <td>{$dado->pessoa->nome}</td>
-                    <td>{$dado->veiculo->modelo}</td>
-                    <td>{$dado->servico->titulo}</td>
+                    <td>{$dado->pessoas->nome}</td>
+                    <td>{$dado->veiculos->modelo}</td>
+                    <td>{$dado->servicos->titulo}</td>
                     <td>{$recebePago}</td>
                     <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a></td>
                  </tr>";

@@ -11,7 +11,7 @@
         <div class="form-group row">
             <div class="col-md-3">
                     <label class="form-label" for="id_pessoa">Selecione o Cliente: </label>
-                    <select class="custom-select custom-select-md mb-3" name="id_pessoa" id="id_pessoa">
+                    <select class="custom-select custom-select-md mb-3" name="pessoa" id="pessoa">
                         @foreach ( $dados['pessoa'] as $dado )
                             @if ($dado->tipoStatus == 1)
                                 <option value="{{$dado->id}}">{{$dado->nome}}</option>
@@ -22,7 +22,7 @@
 
                 <div class="col-md-3">
                     <label class="form-label" for="id_servico">Selecione os Serviços: </label>
-                    <select class="custom-select custom-select-md mb-3" name="id_servico" id="id_servico">
+                    <select class="custom-select custom-select-md mb-3" name="servico" id="servico">
                         @foreach ( $dados['servico'] as $dado )
                             <option value="{{$dado->id}}">{{$dado->titulo}}</option>
                         @endforeach
@@ -31,18 +31,18 @@
 
                 <div class="col-md-3">
                     <label class="form-label" for="id_material">Selecione os Materiais: </label>
-                    <select class="custom-select custom-select-md mb-3" name="id_material" id="id_material">
+                    <select class="custom-select custom-select-md mb-3" name="material" id="material">
                         @foreach ( $dados['material'] as $dado )
                             <option value="{{$dado->id}}">{{$dado->titulo}}</option>
                         @endforeach
 
 
                     </select>
-                </div> 
-                
+                </div>
+
                 <div class="col-md-3">
                     <label class="form-label" for="id_veiculo">Selecione o Veículo: </label>
-                    <select class="custom-select custom-select-md mb-3" name="id_veiculo" id="id_veiculo">
+                    <select class="custom-select custom-select-md mb-3" name="veiculo" id="veiculo">
                         @foreach ( $dados['veiculo'] as $dado )
                                 <option value="{{$dado->id}}">{{$dado->placa}}</option>
                         @endforeach
@@ -82,21 +82,21 @@
                 </select>
             </div>
         </div>
-        
-        
+
+
         <?php
-                    
+
             foreach ( $dados['material'] as $dado ) {$valormat = $dado->valor;}
             foreach ( $dados['servico'] as $dado ) {$valorser = $dado->valor;}
-            
-                
+
+
         ?>
-        
+
         <input type="hidden" class="form-control" id="valor_total_material" name ="valor_total_material" value="{{$valormat}}">
-       
+
         <input type="hidden" class="form-control" id="valor_servico" name ="valor_servico" value="{{$valorser}}">
-        
-                
+
+
         <div class="mt-4 text-end">
             <button type ="submit "class="btn btn-success">Cadastrar</button>
 

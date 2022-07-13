@@ -16,25 +16,25 @@
         <div class="form-group row">
             <div class="col-md-3">
                 <label class="form-label" for="id_pessoa">Cliente: </label>
-                    <input type="text" class="form-control" id="cliente" value="<?=$dados->pessoa->nome?>" disabled>
+                    <input type="text" class="form-control" id="cliente" value="<?=$dados->pessoas->nome?>"disabled>
                 </select>
             </div>
 
             <div class="col-md-3">
                 <label class="form-label" for="id_pessoa">Serviços: </label>
-                    <input type="text" class="form-control" id="servico" value="<?=$dados->servico->titulo?>" disabled>
+                    <input type="text" class="form-control" id="servico" value="<?=$dados->servicos->titulo?>"disabled>
                 </select>
             </div>
 
             <div class="col-md-3">
                 <label class="form-label" for="id_material">Materiais: </label>
-                    <input type="text" class="form-control" id="material" value="<?=$dados->material->titulo?>" disabled>
+                    <input type="text" class="form-control" id="material" value="<?=$dados->materiais->titulo?>"disabled>
                 </select>
             </div>
-            
+
             <div class="col-md-3">
                 <label class="form-label" for="id_pessoa">Veículo: </label>
-                    <input type="text" class="form-control" id="veiculo" value="<?=$dados->veiculo->placa?>" disabled>
+                    <input type="text" class="form-control" id="veiculo" value="<?=$dados->veiculos->placa?>"disabled>
                 </select>
             </div>
         </div>
@@ -42,17 +42,17 @@
         <div class="form-group row">
             <div class="col-md-4">
                 <label  class="form-label" for="data_inicio">Data de Início:</label>
-                <input type="date" class="form-control" id="data_inicio" name="data_inicio" value="<?=$dados->data_inicio?>" required>
+                <input type="date" class="form-control" id="data_inicio" name="data_inicio" value="<?=$dados->data_inicio?>"required>
             </div>
 
             <div class="col-md-4">
                 <label  class="form-label" for="data_previsao">Data de Previsão:</label>
-                <input type="date" class="form-control" id="data_previsao" name="data_previsao" value="<?=$dados->data_previsao?>" required>
+                <input type="date" class="form-control" id="data_previsao" name="data_previsao" value="<?=$dados->data_previsao?>"required>
             </div>
 
             <div class="col-md-4">
                 <label  class="form-label" for="data_fim">Data de Fim:</label>
-                <input type="date" class="form-control" id="data_fim" name="data_fim" value="<?=$dados->data_fim?>" required>
+                <input type="date" class="form-control" id="data_fim" name="data_fim" value="<?=$dados->data_fim?>"required>
             </div>
         </div>
 

@@ -6,10 +6,10 @@
 <?php
 
     if(!empty($dados)){
-       
+
 ?>
             @foreach ( $dados as $d )
-            <h2 class="fw-bold text-uppercase" style="margin-bottom: 15px; padding-top:15px;"><?= $d->veiculo->placa; ?></h2>
+            <h2 class="fw-bold text-uppercase" style="margin-bottom: 15px; padding-top:15px;">{{$d->pessoas->nome}} </h2>
             @endforeach
             <form>
                 <p class="text-center bg-secondary text-white fw-bold">Dados de Ordem de Serviço</p>
@@ -17,23 +17,23 @@
                 <div class="form-group row">
                     <div class="col-md-4">
                         <label class="form-label" for="id_pessoa">Cliente: </label>
-                        @foreach ( $dados as $d )    
-                        <input type="text" class="form-control" id="modelo" value="{{$d->pessoa->nome}}" disabled>
+                        @foreach ( $dados as $d )
+                        <input type="text" class="form-control" id="modelo" value="{{$d->pessoas->nome}}" disabled>
                         @endforeach
                     </div>
                     <div class="col-md-4">
                         <label class="form-label" for="modelo">Serviços: </label>
-                        @foreach ( $dados as $d )    
-                            <input type="text" class="form-control" id="modelo" name="servicos" value="{{$d->servico->titulo}}" disabled>
+                        @foreach ( $dados as $d )
+                            <input type="text" class="form-control" id="modelo" name="servicos" value="{{$d->servicos->titulo}}" disabled>
                         @endforeach
                     </div>
                     <div class="col-md-4">
                         <label class="form-label" for="modelo">Materiais: </label>
-                        @foreach ( $dados as $d )    
-                            <input type="text" class="form-control" id="modelo" name="materiais[]" value="{{$d->material->titulo}}" disabled>
+                        @foreach ( $dados as $d )
+                            <input type="text" class="form-control" id="modelo" name="materiais[]" value="{{$d->materiais->titulo}}" disabled>
                         @endforeach
                     </div>
-                    
+
                 </div>
 
                 <div class="form-group row">
@@ -95,7 +95,7 @@
             </form>
     <?php
         }
-   
+
     ?>
 </div>
 @endsection

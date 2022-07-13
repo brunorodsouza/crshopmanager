@@ -1,6 +1,10 @@
 <?php
 namespace App\Models;
 
+use App\Models\Veiculo;
+use App\Models\Pessoa;
+use App\Models\Material;
+use App\Models\Servico;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Date;
@@ -25,22 +29,22 @@ class Ordem_Servico extends Model
         'pessoa',
     ];
 
-    public function pessoa()
+    public function pessoas()
     {
         return $this->belongsTo(Pessoa::class, 'pessoa', 'id');
     }
 
-    public function veiculo()
+    public function veiculos()
     {
         return $this->belongsTo(Veiculo::class, 'veiculo', 'id');
     }
 
-    public function servico()
+    public function servicos()
     {
         return $this->belongsTo(Servico::class, 'servico','id');
     }
 
-    public function material()
+    public function materiais()
     {
         return $this->belongsTo(Material::class, 'material','id');
     }
