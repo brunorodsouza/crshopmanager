@@ -12,7 +12,6 @@ use Ramsey\Uuid\Type\Decimal;
 
 class Ordem_Servico extends Model
 {
-
     protected $table = 'ordem_servico';
 
     protected $fillable = [
