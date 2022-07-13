@@ -48,7 +48,7 @@
                         }
                     }
                 echo"</table>";
-                }
-            ?>
+            }
+        ?>
     </div>
 @endsection
