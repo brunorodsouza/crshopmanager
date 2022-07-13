@@ -39,7 +39,7 @@ class MaterialController extends Controller
 
     public function edit($id)
     {
-        $dado = Material::where('id',$id)->get();
+        $dado = Material::where('id',$id)->get()->first();
         if(!empty($dado)){
             return view('material.edit')->with('dado',$dado);
         } else {
