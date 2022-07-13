@@ -46,7 +46,7 @@ class VeiculoController extends Controller
 
     public function edit($id)
     {
-        $dado = Veiculo::where('id',$id)->with('pessoas')->get();
+        $dado = Veiculo::where('id',$id)->with('pessoas')->get()->first();
 
         if(!empty($dado)){
             return view('veiculo.edit')->with('dado',$dado);
