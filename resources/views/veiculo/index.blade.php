@@ -26,17 +26,6 @@
                             $linkEditItem = url ('/veiculo/editar/' . $dado->id);
                             $linkRemoveItem = url ('/veiculo/remover/' . $dado->id);
                         @endphp
-
-                        @if ($dado->tipoStatus == 1)
-                            @php
-                                $dado->tipoStatus = "Cliente";
-                            @endphp
-                        @else
-                            @php
-                                $dado->tipoStatus = "Funcionário";
-                            @endphp
-                        @endif
-
                         <tr>
                             <td>{{$dado->pessoas->nome}}</td>
                             <td>{{$dado->modelo}}</td>
