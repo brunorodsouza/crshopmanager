@@ -7,48 +7,48 @@
             <a href='{{route('ordem_servico.novo')}}' class='btn btn-success' style="height: 40px;">Cadastrar</a>
         </div>
         <?php
-        if (!empty($dados)){
-            echo"<table class='table table-striped table-hover'>";
-            echo"<thead class='bg-secondary text-white'>
-                    <td>Cliente</td>
-                    <td>Veículo</td>
-                    <td>Valor do Serviço</td>
-                    <td>Status do Pagamento</td>
-                    <td>Ações</td>
-                </thead>";
+            if (!empty($dados)){
+                echo"<table class='table table-striped table-hover'>";
+                echo"<thead class='bg-secondary text-white'>
+                        <td>Cliente</td>
+                        <td>Veículo</td>
+                        <td>Valor do Serviço</td>
+                        <td>Status do Pagamento</td>
+                        <td>Ações</td>
+                    </thead>";
 
-            foreach($dados as $dado){
-                $linkReadMore = url('/ordem_servico/' . $dado->id);
-                $linkEditItem = url ('/ordem_servico/editar/' . $dado->id);
-                $linkRemoveItem = url ('/ordem_servico/remover/' . $dado->id);
-                $linkBoleto = url ('/pdf/' . $dado->id);
+                foreach($dados as $dado){
+                    $linkReadMore = url('/ordem_servico/' . $dado->id);
+                    $linkEditItem = url ('/ordem_servico/editar/' . $dado->id);
+                    $linkRemoveItem = url ('/ordem_servico/remover/' . $dado->id);
+                    $linkBoleto = url ('/pdf/' . $dado->id);
 
-                if($dado->status_pagamento == 1){
-                    $recebePago = 'Pago';
-                }else{
-                    $recebePago = 'Não Pago';
-                }
-
-                if($dado->status_pagamento == 0){
-                echo"<tr>
-                        <td>{$dado->pessoas->nome}</td>
-                        <td>{$dado->veiculos->placa}</td>
-                        <td>{$dado->valor_servico}</td>
-                        <td>{$recebePago}</td>
-                        <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a>  | <a target=_blank href='{$linkBoleto}'>Boleto</a></td>
-                    </tr>";
-                }else{
-                    echo"<tr>
-                        <td>{$dado->pessoas->nome}</td>
-                        <td>{$dado->veiculos->modelo}</td>
-                        <td>{$dado->servicos->titulo}</td>
-                        <td>{$recebePago}</td>
-                        <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a></td>
-                    </tr>";
+                    if($dado->status_pagamento == 1){
+                        $recebePago = 'Pago';
+                    }else{
+                        $recebePago = 'Não Pago';
                     }
-                 }
-            echo"</table>";
-            }
+
+                    if($dado->status_pagamento == 0){
+                    echo"<tr>
+                            <td>{$dado->pessoas->nome}</td>
+                            <td>{$dado->veiculos->placa}</td>
+                            <td>{$dado->valor_servico}</td>
+                            <td>{$recebePago}</td>
+                            <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a>  | <a target=_blank href='{$linkBoleto}'>Boleto</a></td>
+                        </tr>";
+                    }else{
+                        echo"<tr>
+                            <td>{$dado->pessoas->nome}</td>
+                            <td>{$dado->veiculos->modelo}</td>
+                            <td>{$dado->servicos->titulo}</td>
+                            <td>{$recebePago}</td>
+                            <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a></td>
+                        </tr>";
+                        }
+                    }
+                echo"</table>";
+                }
             ?>
     </div>
 @endsection
