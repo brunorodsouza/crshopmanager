@@ -10,6 +10,7 @@ class Veiculo extends Model
     protected $table = 'veiculo';
 
     protected $fillable = [
+        'modelo',
         'marca',
         'cor',
         'ano_fab',
