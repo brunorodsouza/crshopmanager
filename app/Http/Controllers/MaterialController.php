@@ -14,7 +14,6 @@ class MaterialController extends Controller
         return view('material.index')->with('dados', $dados);
     }
 
-
     public function show($id)
     {
         $dado = Material::where('id', $id)->get();

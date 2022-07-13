@@ -81,5 +81,4 @@ class VeiculoController extends Controller
         }
         return redirect()->route('veiculo');
     }
-
 }
