@@ -62,12 +62,12 @@
 
                 <div class="col-md-2">
                     <label class="form-label" for="ano_fab">Ano Fabricação: </label>
-                    <input type="number" class="form-control" minlength="4" maxlength="4" id="ano_fab" name="ano_fab" value="{{$dado->ano_fab}}">
+                    <input type="number" min="1950" max="2099" class="form-control" id="ano_fab" name="ano_fab" value="{{$dado->ano_fab}}">
                 </div>
 
                 <div class="col-md-2">
                     <label class="form-label" for="ano_mod">Ano Modelo: </label>
-                    <input type="number" class="form-control" minlength="4" maxlength="4" id="ano_mod" name="ano_mod" value="{{$dado->ano_mod}}">
+                    <input type="number" min="1950" max="2099" class="form-control" id="ano_mod" name="ano_mod" value="{{$dado->ano_mod}}">
                 </div>
 
                 <div class="col-md-3">
