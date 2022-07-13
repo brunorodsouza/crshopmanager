@@ -20,7 +20,7 @@ class Veiculo extends Model
         'pessoa',
     ];
 
-    public function pessoa()
+    public function pessoas()
     {
         return $this->belongsTo(Pessoa::class, 'pessoa', 'id');
     }

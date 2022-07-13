@@ -11,13 +11,13 @@ class VeiculoController extends Controller
 {
     public function index()
     {
-        $dados = Veiculo::with('pessoa')->get();
+        $dados = Veiculo::with('pessoas')->get();
         return view('veiculo.index')->with('dados', $dados);
     }
 
     public function show($id)
     {
-        $dado = Veiculo::where('id', $id)->with('pessoa')->get();
+        $dado = Veiculo::where('id', $id)->with('pessoas')->get();
 
         if (!empty($dado)) {
             return view('veiculo.show')->with('dado', $dado);
@@ -46,7 +46,7 @@ class VeiculoController extends Controller
 
     public function edit($id)
     {
-        $dado = Veiculo::where('id',$id)->with('pessoa')->get();
+        $dado = Veiculo::where('id',$id)->with('pessoas')->get();
 
         if(!empty($dado)){
             return view('veiculo.edit')->with('dado',$dado);

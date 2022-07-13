@@ -18,11 +18,11 @@
 
         <div class="col-md-3">
             <label class="form-label" for="id_pessoa">Selecione o Cliente: </label>
-                <input type="text" class="form-control" id="modelo" value="<?=$dado->pessoa->nome?>" disabled>
+                <input type="text" class="form-control" id="modelo" value="<?=$dado->pessoas->nome?>" disabled>
             </select>
         </div>
 
-        <div class="col-md-2">
+        <div class="col-md-3">
             <label class="form-label" for="modelo">Modelo: </label>
             <input type="text" class="form-control" id="modelo" name="modelo" value="<?=$dado->modelo?>">
         </div>
@@ -32,19 +32,19 @@
             <input type="text" class="form-control" id="marca" name ="marca" value="<?=$dado->marca?>">
         </div>
 
-        <div class="col-md-2">
+        <div class="col-md-3">
             <label class="form-label" for="cor">Cor: </label>
             <input type="text" class="form-control" id="cor" name="cor" value="<?=$dado->cor?>">
         </div>
     </div>
 
     <div class="form-group row">
-        <div class="col-md-2">
+        <div class="col-md-3">
             <label class="form-label" for="ano_fab">Ano Fabricação: </label>
             <input type="text" class="form-control" id="ano_fab" name="ano_fab" value="<?=$dado->ano_fab?>">
         </div>
 
-        <div class="col-md-2">
+        <div class="col-md-3">
             <label class="form-label" for="ano_mod">Ano Modelo: </label>
             <input type="text" class="form-control" id="ano_mod" name="ano_mod" value="<?=$dado->ano_mod?>">
         </div>
@@ -59,7 +59,6 @@
             <input type="text" class="form-control" id="placa" name ="placa" value="<?=$dado->placa?>">
         </div>
     </div>
-
 
     <div class="mt-4 text-left">
         <button type="submit" class="btn btn-success text-white">Salvar</button>
