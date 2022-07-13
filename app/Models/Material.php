@@ -13,7 +13,4 @@ class Material extends Model
         'valor',
         'descricao'
     ];
-
-
-
 }

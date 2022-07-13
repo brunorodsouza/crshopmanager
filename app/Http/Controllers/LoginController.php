@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
@@ -7,7 +8,6 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-
     public function index()
     {
         return view('login.login');
@@ -41,7 +41,6 @@ class LoginController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password)
-
         ];
 
         DB::table('users')->insert($property);

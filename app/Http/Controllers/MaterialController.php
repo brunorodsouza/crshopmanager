@@ -14,7 +14,6 @@ class MaterialController extends Controller
         return view('material.index')->with('dados', $dados);
     }
 
-
     public function show($id)
     {
         $dado = Material::where('id', $id)->get();
@@ -24,7 +23,7 @@ class MaterialController extends Controller
             return redirect()->route('material');
         }
     }
-    
+
     public function create()
     {
         return view('material.create');
@@ -53,20 +52,18 @@ class MaterialController extends Controller
         $dado = Material::find($id);
 
         $dado->titulo = $request->titulo;
-        $dado->codigo = $request->codigo;
         $dado->valor = $request->valor;
         $dado->descricao = $request->descricao;
 
         $dado->save();
         return redirect()->route('material');
-
     }
 
     public function destroy($id)
     {
         $dado = Material::where('id', $id)->get();
         if (!empty($dado)) {
-            DB::delete('DELETE FROM ordem_servico WHERE id_material = ?', [$id]);
+            DB::delete('DELETE FROM ordem_servico WHERE material = ?', [$id]);
             DB::delete('DELETE FROM material WHERE id = ?', [$id]);
         }
         return redirect()->route('material');

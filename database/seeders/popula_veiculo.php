@@ -12,7 +12,6 @@ class popula_veiculo extends Seeder
         $pessoaId = Pessoa::orderBy('id')->first();
 
         DB::table('veiculo')->insert([
-            'codigo' => '20181105255',
             'pessoa' => $pessoaId['id'],
             'modelo' => 'Sedan',
             'marca' => '200',

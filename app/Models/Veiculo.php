@@ -10,7 +10,6 @@ class Veiculo extends Model
     protected $table = 'veiculo';
 
     protected $fillable = [
-        'pessoa',
         'modelo',
         'marca',
         'cor',
@@ -18,9 +17,10 @@ class Veiculo extends Model
         'ano_mod',
         'combustivel',
         'placa',
+        'pessoa',
     ];
 
-    public function pessoa()
+    public function pessoas()
     {
         return $this->belongsTo(Pessoa::class, 'pessoa', 'id');
     }

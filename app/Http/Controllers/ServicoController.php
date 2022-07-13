@@ -14,7 +14,6 @@ class ServicoController extends Controller
         return view('servico.index')->with('dados', $dados);
     }
 
-
     public function show($id)
     {
         $dado = Servico::where('id', $id)->get();
@@ -53,7 +52,6 @@ class ServicoController extends Controller
         $dado = Servico::find($id);
 
         $dado->titulo = $request->titulo;
-        $dado->codigo = $request->codigo;
         $dado->valor = $request->valor;
 
         $dado->save();
@@ -65,10 +63,9 @@ class ServicoController extends Controller
     {
         $dado = Servico::where('id', $id)->get();
         if (!empty($dado)) {
-            DB::delete('DELETE FROM ordem_servico WHERE id_servico = ?', [$id]);
+            DB::delete('DELETE FROM ordem_servico WHERE servico = ?', [$id]);
             DB::delete('DELETE FROM servico WHERE id = ?', [$id]);
         }
         return redirect()->route('servico');
     }
-
 }

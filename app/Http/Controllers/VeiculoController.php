@@ -11,14 +11,13 @@ class VeiculoController extends Controller
 {
     public function index()
     {
-        $dados = Veiculo::with('pessoa')->get();
+        $dados = Veiculo::with('pessoas')->get();
         return view('veiculo.index')->with('dados', $dados);
     }
 
-
     public function show($id)
     {
-        $dado = Veiculo::where('id', $id)->with('pessoa')->get();
+        $dado = Veiculo::where('id', $id)->with('pessoas')->get();
 
         if (!empty($dado)) {
             return view('veiculo.show')->with('dado', $dado);
@@ -47,7 +46,7 @@ class VeiculoController extends Controller
 
     public function edit($id)
     {
-        $dado = Veiculo::where('id',$id)->with('pessoa')->get();
+        $dado = Veiculo::where('id',$id)->with('pessoas')->get();
 
         if(!empty($dado)){
             return view('veiculo.edit')->with('dado',$dado);
@@ -60,7 +59,6 @@ class VeiculoController extends Controller
     {
         $dado = Veiculo::find($id);
 
-        $dado->codigo = $request->codigo;
         $dado->modelo = $request->modelo;
         $dado->marca = $request->marca;
         $dado->cor = $request->cor;
@@ -71,17 +69,15 @@ class VeiculoController extends Controller
 
         $dado->save();
         return redirect()->route('veiculo');
-
     }
 
     public function destroy($id)
     {
         $dado = Veiculo::where('id', $id)->get();
         if (!empty($dado)) {
-            DB::delete('DELETE FROM ordem_servico WHERE id_veiculo = ?', [$id]);
+            DB::delete('DELETE FROM ordem_servico WHERE veiculo = ?', [$id]);
             DB::delete('DELETE FROM veiculo WHERE id = ?', [$id]);
         }
         return redirect()->route('veiculo');
     }
-
 }

@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout.login')
 
 @section('conteudo')
 <body id="fundoLogin">
