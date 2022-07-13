@@ -10,7 +10,6 @@ use App\Models\Material;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-
 class OrdemServicoController extends Controller
 {
     public function index()
@@ -22,9 +21,7 @@ class OrdemServicoController extends Controller
     public function boleto($id)
     {
         $dado = DB::select('exec GERAR_BOLETO @VEICULO_ID = ?', [$id]);
-
         return $dado;
-
     }
 
     public function show($id)
@@ -60,7 +57,6 @@ class OrdemServicoController extends Controller
         Ordem_Servico::create($dados);
         return redirect()->route('ordem_servico');
     }
-
 
     public function edit($id)
     {

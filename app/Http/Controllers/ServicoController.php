@@ -14,7 +14,6 @@ class ServicoController extends Controller
         return view('servico.index')->with('dados', $dados);
     }
 
-
     public function show($id)
     {
         $dado = Servico::where('id', $id)->get();
@@ -69,5 +68,4 @@ class ServicoController extends Controller
         }
         return redirect()->route('servico');
     }
-
 }

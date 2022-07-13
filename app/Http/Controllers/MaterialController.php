@@ -57,7 +57,6 @@ class MaterialController extends Controller
 
         $dado->save();
         return redirect()->route('material');
-
     }
 
     public function destroy($id)

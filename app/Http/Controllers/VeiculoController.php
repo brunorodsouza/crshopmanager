@@ -69,7 +69,6 @@ class VeiculoController extends Controller
 
         $dado->save();
         return redirect()->route('veiculo');
-
     }
 
     public function destroy($id)

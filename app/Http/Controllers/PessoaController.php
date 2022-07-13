@@ -91,7 +91,6 @@ class PessoaController extends Controller
         }
 
         $dado->push();
-
         return redirect()->route('pessoa');
     }
 
