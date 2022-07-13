@@ -87,8 +87,6 @@ class OrdemServicoController extends Controller
     {
         $dado = Ordem_Servico::where('id', $id)->get();
         if (!empty($dado)) {
-            DB::delete('DELETE FROM pivo_ordem_servico WHERE ordem_servico = ?', [$id]);
-            DB::delete('DELETE FROM pivo_ordem_material WHERE ordem_servico = ?', [$id]);
             DB::delete('DELETE FROM ordem_servico WHERE id = ?', [$id]);
         }
         return redirect()->route('ordem_servico');
