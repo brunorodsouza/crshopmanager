@@ -15,10 +15,6 @@
 
                 <div class="form-group row">
                     <div class="col-md-2">
-                        <label class="form-label" for="codigo">Código: </label>
-                        <input type="text" class="form-control" id="codigo" value="<?=$d->codigo?>" disabled>
-                    </div>
-                    <div class="col-md-2">
                         <label class="form-label" for="valor">Valor: </label>
                         <input type="text" class="form-control" id="valor" value="<?=$d->valor?>" disabled>
                     </div>

@@ -10,7 +10,6 @@
     if (!empty($dados)){
         echo"<table class='table table-striped table-hover'>";
         echo"<thead class='bg-secondary text-white'>
-                <td>Código</td>
                 <td>Titulo</td>
                 <td>Valor</td>
                 <td>Ações</td>
@@ -21,7 +20,6 @@
             $linkEditItem = url ('/servico/editar/' . $dado->id);
             $linkRemoveItem = url ('/servico/remover/' . $dado->id);
             echo"<tr>
-                    <td>$dado->codigo</td>
                     <td>$dado->titulo</td>
                     <td>$dado->valor</td>
                     <td><a href='{$linkReadMore}'>Ver Mais</a> | <a href='{$linkEditItem}'>Editar</a> | <a href='{$linkRemoveItem}'>Excluir</a></td>
