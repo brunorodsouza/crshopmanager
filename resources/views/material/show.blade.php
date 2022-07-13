@@ -15,14 +15,10 @@
 
                 <div class="form-group row">
                     <div class="col-md-2">
-                        <label class="form-label" for="codigo">Código: </label>
-                        <input type="text" class="form-control" id="codigo" value="<?=$d->codigo?>" disabled>
-                    </div>
-                    <div class="col-md-2">
                         <label class="form-label" for="valor">Valor: </label>
                         <input type="text" class="form-control" id="valor" value="<?=$d->valor?>" disabled>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <label class="form-label" for="descricao">Descrição: </label>
                         <input type="text" class="form-control" id="descricao" value="<?=$d->descricao?>" disabled>
                     </div>
