@@ -4,20 +4,16 @@
     <div class="container my-4">
         <h2 style="margin-bottom: 15px; padding-top:15px;"> Editar Usuário </h2>
 
-        <?php
-        $dado = $dado[0];
-        ?>
-
         <form  action="<?= url('/pessoa/update',['id' => $dado->id]);?>" method="post">
-            <?= csrf_field(); ?>
-            <?= method_field('PUT');?>
+            @csrf
+            @method('PUT')
 
             <p class="text-center bg-secondary text-white fw-bold">Tipo de Usuário</p>
 
             <div class="form-group row">
                 <div class="col-sm-6">
                     <label class="form-label" for="nome">Selecione a opção desejada:</label>
-                    <select class="form-select"  name="tipoStatus" id="select" style="width:150px;height:35px;margin-left:10px;">
+                    <select class="form-select"  name="tipoStatus" id="select" style="width:150px; height:35px; margin-left:10px;">
                         @if ($dado->tipoStatus == 1)
                             <option default value="{{$dado->tipoStatus}}"><?="Cliente"?></option>
                             <option value='2'>Funcionário</option>
