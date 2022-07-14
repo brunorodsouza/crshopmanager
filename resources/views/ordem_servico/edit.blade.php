@@ -65,14 +65,20 @@
                 </div>
 
                 <div class="col-md-3">
-                    <label class="form-label" for="valor_pago">Valor Pago: </label>
-                    <input type="text" class="form-control" id="valor_pago" name ="valor_pago" value="{{$dados->valor_pago}}">
+                    <label class="form-label" for="valor_pago">Valor a Pagar: </label>
+                    <input type="text" class="form-control" id="valor_pago" name ="valor_pago" value="{{$dados->valor_pago}}" disabled>
                 </div>
                 <div class="col-md-3">
                     <label class="form-label" for=status_pagamento>Status Pagamento: </label>
                     <select class="custom-select custom-select-md mb-3" name="status_pagamento" id="status_pagamento">
-                        <option value='1' selected>Pago</option>
-                        <option value='0' selected>Não Pago</option>
+                        @if ($dados->status_pagamento == 1)
+                            <option value='{{$dados->status_pagamento}}' selected>Pago</option>
+                            <option value='0'>Não Pago</option>
+                        @endif
+                        @if ($dados->status_pagamento == 0)
+                            <option value='{{$dados->status_pagamento}}' selected>Não Pago</option>
+                            <option value='1'>Pago</option>
+                        @endif
                     </select>
                 </div>
             </div>
