@@ -45,12 +45,13 @@
                             <td>{{$recebePago}}</td>
                             <td>
                                 <div class="d-flex">
-                                    <a href={{$linkReadMore}} class="btn btn-info mr-2">Ver Mais</a>
+                                    <a href={{$linkReadMore}} class="btn btn-info mr-2"><i class="fa fa-eye mr-1 mb-0" aria-hidden="true"></i>Ver Mais</a>
                                     @if ($dado->status_pagamento == 0)
-                                        <a target=_blank href={{$linkBoleto}} class="btn btn-success mr-2">Boleto</a>
+                                        <a target=_blank href={{$linkBoleto}} class="btn btn-success mr-2"><i class="fa fa-file mr-1 mb-0" aria-hidden="true"></i>Boleto</a>
                                     @endif
-                                    <a href={{$linkEditItem}} class="btn btn-warning mr-2" style="color:white">Editar</a>
-                                    <a href={{$linkRemoveItem}} class="btn btn-danger mr-2">Excluir</a>
+                                    <a href={{$linkEditItem}} class="btn btn-warning mr-2" style="color:white"><i class="fa fa-pen mr-1 mb-0" aria-hidden="true"></i>Editar</a>
+                                    <a href={{$linkRemoveItem}} class="btn btn-danger mr-2"><i class="fa fa-trash mr-1 mb-0" aria-hidden="true"></i>Excluir</a>
+
                                 </div>
                             </td>
                         </tr>
@@ -60,3 +61,5 @@
         @endif
     </div>
 @endsection
+
+{{-- <i class="fa fa-check" aria-hidden="true"> --}}

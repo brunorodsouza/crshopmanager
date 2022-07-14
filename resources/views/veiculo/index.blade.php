@@ -33,9 +33,9 @@
                             <td>{{$dado->placa}}</td>
                             <td>
                                 <div class="d-flex">
-                                    <a href={{$linkReadMore}} class="btn btn-info mr-2">Ver Mais</a>
-                                    <a href={{$linkEditItem}} class="btn btn-warning mr-2" style="color:white">Editar</a>
-                                    <a href={{$linkRemoveItem}} class="btn btn-danger mr-2">Excluir</a>
+                                    <a href={{$linkReadMore}} class="btn btn-info mr-2"><i class="fa fa-eye mr-1 mb-0" aria-hidden="true"></i> Ver Mais</a>
+                                    <a href={{$linkEditItem}} class="btn btn-warning mr-2" style="color:white"><i class="fa fa-pen mr-1 mb-0" aria-hidden="true"></i>Editar</a>
+                                    <a href={{$linkRemoveItem}} class="btn btn-danger mr-2"><i class="fa fa-trash mr-1 mb-0" aria-hidden="true"></i>Excluir</a>
                                 </div>
                             </td>
                         </tr>
