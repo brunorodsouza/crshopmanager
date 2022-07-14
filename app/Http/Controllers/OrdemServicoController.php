@@ -76,7 +76,7 @@ class OrdemServicoController extends Controller
         $dados->data_inicio = $request->data_inicio;
         $dados->data_previsao = $request->data_previsao;
         $dados->data_fim = $request->data_fim;
-        $dados->valor_pago = $request->valor_pago;
+        // $dados->valor_pago = $request->valor_pago;
         $dados->status_pagamento = $request->status_pagamento;
 
         $dados->save();

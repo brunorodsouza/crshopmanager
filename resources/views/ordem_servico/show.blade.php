@@ -48,7 +48,7 @@
                             <input type="text" class="form-control" id="valor_servico" value="{{$d->valor_servico}}" disabled>
                         </div>
                         <div class="col-md-3">
-                            <label class="form-label" for="valor_pago">Valor Pago: </label>
+                            <label class="form-label" for="valor_pago">Valor a Pagar: </label>
                             <input type="text" class="form-control" id="valor_pago" value="{{$d->valor_pago}}" disabled>
                         </div>
                         <div class="col-md-3">

@@ -64,33 +64,35 @@
                     <label  class="form-label" for="data_fim">Data de Fim:</label>
                     <input type="date" class="form-control" id="data_fim" name="data_fim" >
                 </div>
-            </div>
 
-            <div class="form-group row">
-                <div class="col-md-3">
-                    <label class="form-label" for="valor_pago">Valor Pago: </label>
-                    <input type="text" class="form-control" id="valor_pago" name ="valor_pago">
-                </div>
+                @foreach ( $dados['material'] as $dado )
+                @php
+                    $valormat = $dado->valor
+                @endphp
+                @endforeach
+
+                @foreach ( $dados['servico'] as $dado )
+                    @php
+                    $valorser = $dado->valor
+                    @endphp
+                @endforeach
+
+                @php
+                    $valorpag = $valorser + $valormat
+                @endphp
 
                 <div class="col-md-3">
                     <label class="form-label" for=status_pagamento>Status Pagamento: </label>
-                    <select class="custom-select custom-select-md mb-3" name="status_pagamento" id="status_pagamento">
+                    <select class="custom-select custom-select-md" name="status_pagamento" id="status_pagamento">
                         <option value='1' selected>Pago</option>
-                        <option value='0' selected>Não Pago</option>
+                        <option value='0'>Não Pago</option>
                     </select>
                 </div>
             </div>
 
-            @foreach ( $dados['material'] as $dado )
-                {{$valormat = $dado->valor}}
-            @endforeach
-
-            @foreach ( $dados['servico'] as $dado )
-                {{$valorser = $dado->valor}}
-            @endforeach
-
             <input type="hidden" class="form-control" id="valor_total_material" name ="valor_total_material" value="{{$valormat}}">
             <input type="hidden" class="form-control" id="valor_servico" name ="valor_servico" value="{{$valorser}}">
+            <input type="hidden" class="form-control" id="valor_pago" name ="valor_pago" value="{{$valorpag}}">
 
             <div class="mt-4 text-end">
                 <button type ="submit "class="btn btn-success">Cadastrar</button>

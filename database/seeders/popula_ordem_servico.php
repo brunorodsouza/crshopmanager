@@ -23,7 +23,7 @@ class popula_ordem_servico extends Seeder
             'data_fim' => '2022-06-13',
             'valor_total_material' => '70.00',
             'valor_servico' => '270.00',
-            'valor_pago' => '270.00',
+            'valor_pago' => '340.00',
             'pessoa' => $pessoaId['id'],
             'servico' => $servicoId['id'],
             'veiculo' => $veiculoId['id'],

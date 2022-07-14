@@ -13,7 +13,7 @@
                     <tr>
                     <td>Cliente</td>
                     <td>Veículo</td>
-                    <td>Valor do Serviço</td>
+                    <td>Valor a Pagar</td>
                     <td>Status do Pagamento</td>
                     <td>Ações</td>
                     </tr>
@@ -41,7 +41,7 @@
                         <tr>
                             <td>{{$dado->pessoas->nome}}</td>
                             <td>{{$dado->veiculos->placa}}</td>
-                            <td>{{$dado->valor_servico}}</td>
+                            <td>{{$dado->valor_pago}}</td>
                             <td>{{$recebePago}}</td>
                             <td>
                                 <div class="d-flex">
