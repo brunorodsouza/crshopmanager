@@ -6,7 +6,7 @@
             @foreach ($dados as $d)
                 <h2 class="fw-bold text-uppercase" style="margin-bottom:15px; padding-top:15px;">{{$d->pessoas->nome}} </h2>
                 <form>
-                    <p class="text-center bg-secondary text-white fw-bold">Dados de Ordem de Serviço</p>
+                    <p class="text-center bg-info text-white fw-bold">Dados de Ordem de Serviço</p>
 
                     <div class="form-group row">
                         <div class="col-md-4">

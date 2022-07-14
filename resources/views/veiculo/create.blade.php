@@ -6,7 +6,7 @@
 
         <form action='{{route('veiculo.store')}}' method="POST">
             @csrf
-            <p class="text-center bg-secondary text-white fw-bold">Dados Veículo</p>
+            <p class="text-center bg-info text-white fw-bold">Dados Veículo</p>
 
             <div class="form-group row">
                 <div class="col-md-4">

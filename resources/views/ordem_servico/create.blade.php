@@ -6,7 +6,7 @@
 
         <form action='{{route('ordem_servico.store')}}' method="POST">
             @csrf
-            <p class="text-center bg-secondary text-white fw-bold">Dados Ordem de Serviço</p>
+            <p class="text-center bg-info text-white fw-bold">Dados Ordem de Serviço</p>
 
             <div class="form-group row">
                 <div class="col-md-3">

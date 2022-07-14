@@ -8,7 +8,7 @@
             @csrf
             @method('PUT')
 
-            <p class="text-center bg-secondary text-white fw-bold">Dados Material</p>
+            <p class="text-center bg-info text-white fw-bold">Dados Material</p>
 
             <div class="form-group row">
                 <div class="col-md-5">

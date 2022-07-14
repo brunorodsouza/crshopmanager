@@ -8,7 +8,7 @@
             @csrf
             @method('PUT')
 
-            <p class="text-center bg-secondary text-white fw-bold">Tipo de Usuário</p>
+            <p class="text-center bg-info text-white fw-bold">Tipo de Usuário</p>
 
             <div class="form-group row">
                 <div class="col-sm-6">
@@ -27,7 +27,7 @@
                 </div>
             </div>
 
-            <p class="text-center bg-secondary text-white fw-bold">Dados Cadastrais</p>
+            <p class="text-center bg-info text-white fw-bold">Dados Cadastrais</p>
 
             <div class="form-group row">
                 <div class="col-md-5">
@@ -59,7 +59,7 @@
                 </div>
             </div>
 
-            <p class="text-center bg-secondary text-white fw-bold">Dados Residênciais</p>
+            <p class="text-center bg-info text-white fw-bold">Dados Residênciais</p>
 
             <div class="form-group row">
                 <div class="col-md-2">
@@ -97,7 +97,7 @@
 
             @if ($dado->tipoStatus == 2)
                 <div id="mecanico">
-                    <p class="text-center bg-secondary text-white fw-bold">Informações do Mecânico</p>
+                    <p class="text-center bg-info text-white fw-bold">Informações do Mecânico</p>
                     <div class="form-group row ">
                         <div class="col-md-3">
                             <label class="form-label" for="cep">Data de Admissão:</label>

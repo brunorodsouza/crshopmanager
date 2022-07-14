@@ -21,7 +21,7 @@
                 <h2 class="fw-bold text-uppercase" style="margin-bottom: 15px; padding-top:15px;">&nbsp;- {{$d->tipoStatus}}</h2>
             </div>
 
-            <p class="text-center bg-secondary text-white fw-bold">Dados Cadastrais</p>
+            <p class="text-center bg-info text-white fw-bold">Dados Cadastrais</p>
 
             <div class="form-group row">
                 <div class="col-md-6">
@@ -49,7 +49,7 @@
                 </div>
             </div>
 
-            <p class="text-center bg-secondary text-white fw-bold">Dados Residênciais</p>
+            <p class="text-center bg-info text-white fw-bold">Dados Residênciais</p>
 
             <div class="form-group row">
                 <div class="col-md-2">
@@ -87,7 +87,7 @@
 
             @if ($d->tipoStatus == "Funcionário")
                 <div class="mecanicos" id="mecanico">
-                    <p class="text-center bg-secondary text-white fw-bold">Informações do Mecânico</p>
+                    <p class="text-center bg-info text-white fw-bold">Informações do Mecânico</p>
                     <div class="form-group row ">
                         <div class="col-md-3">
                             <label class="form-label" for="cep">Data de Admissão:</label>
