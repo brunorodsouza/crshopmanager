@@ -42,7 +42,15 @@
                             <td>{{$dado->pessoas->nome}} {{$dado->veiculos->id}}</td>
                             <td>{{$dado->veiculos->placa}}</td>
                             <td>{{$dado->valor_pago}}</td>
-                            <td>{{$recebePago}}</td>
+
+                            @if ($recebePago == 'Pago')
+                                <td> <i class="fa fa-check" style="color: #28a745"> {{$recebePago}} </td>
+                            @endif
+
+                            @if ($recebePago == 'Não Pago')
+                                <td> <i class="fa fa-times" style="color: #dc3545"> {{$recebePago}} </td>
+                            @endif
+
                             <td>
                                 <div class="d-flex">
                                     <a href={{$linkReadMore}} class="btn btn-info mr-2"><i class="fa fa-eye mr-1 mb-0" aria-hidden="true"></i>Ver Mais</a>
@@ -63,3 +71,4 @@
 @endsection
 
 {{-- <i class="fa fa-check" aria-hidden="true"> --}}
+{{-- <i class="fa fa-x" aria-hidden="true"> --}}
