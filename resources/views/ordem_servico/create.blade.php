@@ -42,7 +42,7 @@
                     <label class="form-label" for="id_veiculo">Selecione o Veículo: </label>
                     <select class="custom-select custom-select-md mb-3" name="veiculo" id="veiculo">
                         @foreach ( $dados['veiculo'] as $dado )
-                                <option value="{{$dado->id}}">{{$dado->placa}}</option>
+                                <option value="{{$dado->id}}">{{$dado->modelo}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -84,8 +84,8 @@
                 <div class="col-md-3">
                     <label class="form-label" for=status_pagamento>Status Pagamento: </label>
                     <select class="custom-select custom-select-md" name="status_pagamento" id="status_pagamento">
-                        <option value='1' selected>Pago</option>
-                        <option value='0'>Não Pago</option>
+                        <option value='1'>Pago</option>
+                        <option value='0'selected>Não Pago</option>
                     </select>
                 </div>
             </div>

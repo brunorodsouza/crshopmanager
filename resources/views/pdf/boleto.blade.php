@@ -14,18 +14,15 @@
 
         @foreach ($ordem_servico as $header)
             @if ($loop->first)
-
                 <h3 style="text-align:center"> {{$header->nome}} - Placa {{$header->placa}} </h3>
                 <br>
                 <p style="text-align:center"> {{$header->a}} </p>
             @endif
         @endforeach
-
         <br>
-
         <div class="card">
             <div class="card-header text-center">
-            <h4> Ordem de Serviço </h4>
+                <h4> Ordem de Serviço </h4>
             </div>
             <div class="card-body">
                 @foreach ($ordem_servico as $boleto)

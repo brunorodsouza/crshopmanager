@@ -12,7 +12,7 @@
                 <thead class="table-info">
                     <tr>
                     <td>Cliente</td>
-                    <td>Veículo</td>
+                    <td>Placa</td>
                     <td>Valor a Pagar</td>
                     <td>Status do Pagamento</td>
                     <td>Ações</td>
@@ -25,7 +25,7 @@
                             $linkReadMore = url('/ordem_servico/' . $dado->id);
                             $linkEditItem = url ('/ordem_servico/editar/' . $dado->id);
                             $linkRemoveItem = url ('/ordem_servico/remover/' . $dado->id);
-                            $linkBoleto = url ('/pdf/' . $dado->id);
+                            $linkBoleto = url ('/pdf/' . $dado->veiculos->id);
                         @endphp
 
                         @if ($dado->status_pagamento == 1)
@@ -39,7 +39,7 @@
                         @endif
 
                         <tr>
-                            <td>{{$dado->pessoas->nome}}</td>
+                            <td>{{$dado->pessoas->nome}} {{$dado->veiculos->id}}</td>
                             <td>{{$dado->veiculos->placa}}</td>
                             <td>{{$dado->valor_pago}}</td>
                             <td>{{$recebePago}}</td>

@@ -31,7 +31,7 @@
 
                 <div class="col-md-3">
                     <label class="form-label" for="id_pessoa">Veículo: </label>
-                        <input type="text" class="form-control" id="veiculo" value="{{$dados->veiculos->placa}}"disabled>
+                        <input type="text" class="form-control" id="veiculo" value="{{$dados->veiculos->modelo}}"disabled>
                     </select>
                 </div>
             </div>
