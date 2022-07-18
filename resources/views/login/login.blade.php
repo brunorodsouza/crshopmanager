@@ -29,8 +29,8 @@
                     @csrf
 
                     <div class="mt-3 mb-3 form-floating">
-                        <input type="email" class="form-control" id="email" name="email"  minlength="2" maxlength="50" placeholder="Digite seu Email"  required >
-                        <label for="username" class="form-label">Digite seu Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu email"  required >
+                        <label for="username" class="form-label">Digite seu email</label>
                     </div>
 
                     <div class="mb-3 form-floating">
@@ -43,8 +43,8 @@
                     </button>
                 </form>
                 <div class="d-flex justify-content-center align-itens-center mb-3">
-                    <a class="card-link" href="{{route('registrar')}}">Cadastre-se</a>
-                    <a class="card-link" href="{{route('pessoa')}}">Home</a>
+                    <a class="card-link red-link" href="{{route('registrar')}}">Cadastre-se</a>
+                    <a class="card-link red-link" href="{{route('pessoa')}}">Home</a>
                 </div>
             </div>
         </div>
