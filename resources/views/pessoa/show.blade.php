@@ -107,8 +107,3 @@
         @endif
     </div>
 @endsection
-
-@section('scripts')
-    <script type="text/javascript" src='{{asset('/static/js/pessoa.js')}}'></script>
-@endsection
-

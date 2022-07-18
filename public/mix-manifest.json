@@ -1,7 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
     "/static/js/login.js": "/static/js/login.js",
-    "/static/js/pessoa.js": "/static/js/pessoa.js",
+    "/static/js/pessoaEdit.js": "/static/js/pessoaEdit.js",
+    "/static/js/pessoaCreate.js": "/static/js/pessoaCreate.js",
     "/static/js/jqueryMask-cep-pessoa.js": "/static/js/jqueryMask-cep-pessoa.js",
     "/css/app.css": "/css/app.css"
 }

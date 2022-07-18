@@ -84,10 +84,20 @@ class PessoaController extends Controller
         $dado->numero = $request->numero;
         $dado->complemento = $request->complemento;
         $dado->tipoStatus = $request->tipoStatus;
+
         // update do mecanico
-        if($request->tipoStatus == 2){
+        if($request->tipoStatus == 2 && $dado->mecanicos != null){
             $dado->mecanicos->salario = $request->salario;
             $dado->mecanicos->data_admissao = $request->data_admissao;
+        }
+
+        if($request->tipoStatus == 2 && $dado->mecanicos == null){
+            $dadoMecanico = Mecanico::create([
+                "pessoa" => $id,
+                'salario' => $request->salario,
+                'data_admissao' => $request->data_admissao
+            ]);
+
         }
 
         $dado->push();
