@@ -1,107 +1,16 @@
-#fundoLogin {
+.fundoLogin {
     background-color: rgb(241, 241, 241);
     background-image: url("../../storage/moody-blur-wallpaper.jpg");
     background-repeat: repeat-y;
     background-size: cover;
 }
 
-#telaLogin {
-    background-color: rgba(243, 243, 243, 0.938);
-    width: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 1px 5px 30px rgb(146, 14, 14);
-}
-
-body {
-    height: 100vh;
-    text-align: center;
-}
-
-.card-body{
-    text-align: center;
-}
-
-img {
-    margin-bottom: 18px;
-    border-radius: 20%;
-    height: 140px;
-}
-
-h2.card-title {
-    font-family: "Ubuntu", "Poppins", sans-serif;
-    font-weight: 500;
-}
-
-.form-control {
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding: 5px 10px;
-    border-color: rgba(1, 15, 63, 0.904);
-}
-
-.form-control:focus {
-    box-shadow: none;
-    border-color: rgba(1, 15, 63, 0.904);
-}
-
-#inputGroupAlign {
-    margin-top: -10px;
-}
-
-.input-group-text {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border-color: rgba(1, 15, 63, 0.904);
-    background-color: rgba(1, 15, 63, 0.904);
-    color: rgb(241, 241, 241);
-}
-
-a {
-    color: #000000;
-    display: inline-block;
-}
-
-.container-fluid {
+.center {
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-}
-
-.card-link:after {
-    display: block;
-    left: 0;
-    bottom: -10px;
-    width: 0;
-    height: 2px;
-    background-color: rgba(1, 15, 63, 0.904);
-    content: "";
-    transition: width 0.2s;
-}
-
-.card-link:hover {
-    color: rgba(1, 15, 63, 0.904);
-}
-
-.card-link:hover:after {
-    width: 100%;
-}
-
-.botaoLogin {
-    background-color: rgba(1, 15, 63, 0.904);
-    color: rgb(241, 241, 241);
-    margin-bottom: 5px;
-    margin-top: -5px;
-    width: 75%;
-    padding: 15px 80px;
-    text-transform: uppercase;
-}
-
-.botaoLogin:hover {
-    background-color: rgb(146, 14, 14);
-    color: rgb(241, 241, 241);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
