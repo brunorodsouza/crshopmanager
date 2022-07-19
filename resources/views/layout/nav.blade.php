@@ -37,6 +37,11 @@
               <i class="fas fa-expand-arrows-alt"></i>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" role="button" href='{{route('login')}}'>
+                <span class="fst-italic fw-bold">Logout</span> &nbsp; <i class="fas fa-arrow-right"></i>
+            </a>
+          </li>
         </ul>
       </nav>
 
