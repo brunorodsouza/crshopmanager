@@ -26,7 +26,7 @@
                         @endphp
                         <tr>
                             <td style="vertical-align:middle">{{$dado->titulo}}</td>
-                            <td style="vertical-align:middle">R${{$dado->valor}}</td>
+                            <td style="vertical-align:middle"><span class="text-success" style="font-weight:bold">R$&nbsp;</span>{{$dado->valor}}</td>
                             <td>
                                 <div class="d-flex">
                                     <a href={{$linkReadMore}} class="btn btn-info mr-2"><i class="fa fa-eye mr-1 mb-0" aria-hidden="true"></i> Ver Mais</a>
