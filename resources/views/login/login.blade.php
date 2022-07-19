@@ -20,7 +20,7 @@
                     </div>
                 @endif
                 <h2 class="text-center ">
-                    <img class="mt-2 mb-3" alt="Logo" src={{asset("storage/img.png")}}>
+                    <img class="mt-2 mb-3 img-thumbnail" alt="Logo" src={{asset("storage/img.png")}}>
                     <br/>
                    C.R.Shop - Manager
                 </h2>
