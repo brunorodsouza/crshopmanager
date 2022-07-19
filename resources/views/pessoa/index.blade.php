@@ -38,10 +38,10 @@
                         @endif
 
                         <tr>
-                            <td>{{$dado->nome}}</td>
-                            <td>{{$dado->cpf}}</td>
-                            <td>{{$dado->email}}</td>
-                            <td>{{$dado->tipoStatus}}</td>
+                            <td style="vertical-align:middle">{{$dado->nome}}</td>
+                            <td style="vertical-align:middle">{{$dado->cpf}}</td>
+                            <td style="vertical-align:middle">{{$dado->email}}</td>
+                            <td style="vertical-align:middle">{{$dado->tipoStatus}}</td>
                             <td>
                                 <div class="d-flex">
                                     <a href={{$linkReadMore}} class="btn btn-info mr-2"><i class="fa fa-eye mr-1 mb-0" aria-hidden="true"></i> Ver Mais</a>
