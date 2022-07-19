@@ -27,10 +27,10 @@
                             $linkRemoveItem = url ('/veiculo/remover/' . $dado->id);
                         @endphp
                         <tr>
-                            <td>{{$dado->pessoas->nome}}</td>
-                            <td>{{$dado->modelo}}</td>
-                            <td>{{$dado->marca}}</td>
-                            <td>{{$dado->placa}}</td>
+                            <td style="vertical-align:middle">{{$dado->pessoas->nome}}</td>
+                            <td style="vertical-align:middle">{{$dado->modelo}}</td>
+                            <td style="vertical-align:middle">{{$dado->marca}}</td>
+                            <td style="vertical-align:middle">{{$dado->placa}}</td>
                             <td>
                                 <div class="d-flex">
                                     <a href={{$linkReadMore}} class="btn btn-info mr-2"><i class="fa fa-eye mr-1 mb-0" aria-hidden="true"></i> Ver Mais</a>
