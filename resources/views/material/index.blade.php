@@ -27,7 +27,7 @@
                         @endphp
                         <tr>
                             <td style="vertical-align:middle">{{$dado->titulo}}</td>
-                            <td style="vertical-align:middle">{{$dado->valor}}</td>
+                            <td style="vertical-align:middle">R${{$dado->valor}}</td>
                             <td style="vertical-align:middle">{{$dado->descricao}}</td>
                             <td>
                                 <div class="d-flex">
