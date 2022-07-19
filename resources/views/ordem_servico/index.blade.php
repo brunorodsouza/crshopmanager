@@ -44,11 +44,11 @@
                             <td style="vertical-align:middle">{{$dado->valor_pago}}</td>
 
                             @if ($recebePago == 'Pago')
-                                <td style="vertical-align:middle"> <i class="fa fa-check" style="color: #28a745"> {{$recebePago}} </td>
+                                <td style="vertical-align:middle"> <i class="fa fa-check" style="color: #28a745"> &nbsp;{{$recebePago}} </td>
                             @endif
 
                             @if ($recebePago == 'Não Pago')
-                                <td style="vertical-align:middle"> <i class="fa fa-times" style="color: #dc3545"> {{$recebePago}} </td>
+                                <td style="vertical-align:middle"> <i class="fa fa-times" style="color: #dc3545"> &nbsp;{{$recebePago}} </td>
                             @endif
 
                             <td>
