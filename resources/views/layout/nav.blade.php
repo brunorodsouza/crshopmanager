@@ -38,7 +38,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" role="button" href='{{route('login')}}'>
+            <a class="nav-link" role="button" href='{{route('logout')}}'>
                 <span class="fst-italic fw-bold">Logout</span> &nbsp; <i class="fas fa-arrow-right"></i>
             </a>
           </li>

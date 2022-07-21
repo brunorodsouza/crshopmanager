@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PessoaController;
 use App\Http\Controllers\LoginController;
@@ -9,16 +10,15 @@ use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\VeiculoController;
 use App\Http\Controllers\PdfController;
 
-use Illuminate\Support\Facades\Route;
-
-
 Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::post('/auth',[LoginController::class,'auth'])->name('auth.user');
 Route::post('/store',[LoginController::class,'store'])->name('store.user');
 Route::get('/novasenha', [LoginController::class, 'novasenha'])->name('novasenha');
 Route::get('/registrar', [LoginController::class, 'registrar'])->name('registrar');
 Route::get('/esqueceusenha', [LoginController::class, 'esqueceusenha'])->name('esqueceusenha');
+Route::get('/logout',[LoginController::class,'logout'])->name('logout');
 
+Route::middleware('auth')->group(function () {
 Route::get('/pessoa', [PessoaController::class, 'index'])->name('pessoa');
 Route::get('/pessoa/novo', [PessoaController::class, 'create'])->name('pessoa.novo');
 Route::post('/pessoa/store', [PessoaController::class, 'store'])->name('pessoa.store');
@@ -60,3 +60,5 @@ Route::put('/ordem_servico/update/{id}', [OrdemServicoController::class, 'update
 Route::get('/ordem_servico/remover/{id}', [OrdemServicoController::class, 'destroy'])->name('ordem_servico.remover');
 
 Route::get('pdf/{id}', [PdfController::class, 'geraPDF']);
+
+});
