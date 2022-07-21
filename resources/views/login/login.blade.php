@@ -44,7 +44,6 @@
                 </form>
                 <div class="d-flex justify-content-center align-itens-center mb-3">
                     <a class="card-link red-link" href="{{route('registrar')}}">Cadastre-se</a>
-                    <a class="card-link red-link" href="{{route('pessoa')}}">Home</a>
                 </div>
             </div>
         </div>

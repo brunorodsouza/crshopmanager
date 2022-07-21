@@ -57,7 +57,6 @@
 
                     <div class="d-flex justify-content-center align-itens-center mb-3">
                         <a class="card-link red-link" href='{{route('login')}}'>Já tem cadastro? Entre agora!</a>
-                        <a class="card-link red-link" href="{{route('pessoa')}}">Home</a>
                     </div>
                 </div>
             </div>
