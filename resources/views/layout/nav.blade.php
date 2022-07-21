@@ -27,7 +27,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a style="text-transform:uppercase; font-weight:bold;" href='{{route('pessoa')}}' class="nav-link">Admin</a>
+            <a style="text-transform:uppercase; font-weight:bold;" href='{{route('pessoa')}}' class="nav-link">{{auth()->user()->name}}</a>
           </li>
         </ul>
 
