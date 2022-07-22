@@ -37,11 +37,19 @@
               <i class="fas fa-expand-arrows-alt"></i>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" role="button" href='{{route('logout')}}'>
-                <span class="fst-italic fw-bold">Logout</span> &nbsp; <i class="fas fa-arrow-right"></i>
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+                <i class="far fa-user"></i>
             </a>
-          </li>
+            <div class="dropdown-menu dropdown-menu dropdown-menu-right">
+                <form method="POST" action="{{ route('logout') }}" class="dropdown-item">
+                    @csrf
+                    <button type="submit" class="btn">
+                        <i class="fas fa-arrow-left mr-2"></i> Logout
+                    </button>
+                </form>
+            </div>
+        </li>
         </ul>
       </nav>
 

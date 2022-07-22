@@ -16,7 +16,7 @@ Route::post('/store',[LoginController::class,'store'])->name('store.user');
 Route::get('/novasenha', [LoginController::class, 'novasenha'])->name('novasenha');
 Route::get('/registrar', [LoginController::class, 'registrar'])->name('registrar');
 Route::get('/esqueceusenha', [LoginController::class, 'esqueceusenha'])->name('esqueceusenha');
-Route::get('/logout',[LoginController::class,'logout'])->name('logout');
+Route::post('/logout',[LoginController::class,'logout'])->name('logout');
 
 Route::middleware('auth')->group(function () {
 Route::get('/pessoa', [PessoaController::class, 'index'])->name('pessoa');
