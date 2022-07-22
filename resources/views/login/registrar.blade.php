@@ -50,7 +50,7 @@
                             <label for="username" class="form-label">Repita sua senha</label>
                         </div>
 
-                        <button type="submit" class="w-100 mb-1 btn btn-primary btn-lg fst-italic">
+                        <button type="submit" id="registrar" class="w-100 mb-1 btn btn-primary btn-lg fst-italic">
                             CADASTRAR
                         </button>
                     </form>
@@ -66,5 +66,4 @@
 
 @section('scripts')
     <script src="{{mix("static/js/login.js")}}"></script>
-    {{-- <script type="text/javascript" src="{{asset("/static/js/login.js")}}"></script> --}}
 @endsection
