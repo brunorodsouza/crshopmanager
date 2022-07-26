@@ -65,22 +65,6 @@
                     <input type="date" class="form-control" id="data_fim" name="data_fim" >
                 </div>
 
-                @foreach ( $dados['material'] as $dado )
-                @php
-                    $valormat = $dado->valor
-                @endphp
-                @endforeach
-
-                @foreach ( $dados['servico'] as $dado )
-                    @php
-                    $valorser = $dado->valor
-                    @endphp
-                @endforeach
-
-                @php
-                    $valorpag = $valorser + $valormat
-                @endphp
-
                 <div class="col-md-3">
                     <label class="form-label" for=status_pagamento>Status Pagamento: </label>
                     <select class="custom-select custom-select-md" name="status_pagamento" id="status_pagamento">
@@ -89,10 +73,6 @@
                     </select>
                 </div>
             </div>
-
-            <input type="hidden" class="form-control" id="valor_total_material" name ="valor_total_material" value="{{$valormat}}">
-            <input type="hidden" class="form-control" id="valor_servico" name ="valor_servico" value="{{$valorser}}">
-            <input type="hidden" class="form-control" id="valor_pago" name ="valor_pago" value="{{$valorpag}}">
 
             <div class="mt-4 text-end">
                 <button type ="submit "class="btn btn-success">Cadastrar</button>

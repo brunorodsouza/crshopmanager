@@ -25,7 +25,7 @@ class PdfController extends Controller
             join ordem_servico os on os.veiculo = v.id
             join pessoa p on p.id = os.pessoa
             join servico s on s.id = os.servico
-            where v.id = ?
+            where os.id = ?
                 and os.status_pagamento = 0
             group by v.placa, v.modelo, v.ano_fab, p.nome, s.titulo, s.valor, os.valor_total_material",[$id]);
     }

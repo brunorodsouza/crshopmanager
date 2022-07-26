@@ -25,7 +25,7 @@
                             $linkReadMore = url('/ordem_servico/' . $dado->id);
                             $linkEditItem = url ('/ordem_servico/editar/' . $dado->id);
                             $linkRemoveItem = url ('/ordem_servico/remover/' . $dado->id);
-                            $linkBoleto = url ('/pdf/' . $dado->veiculos->id);
+                            $linkBoleto = url ('/pdf/' . $dado->id);
                         @endphp
 
                         @if ($dado->status_pagamento == 1)

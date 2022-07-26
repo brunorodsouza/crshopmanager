@@ -15,6 +15,7 @@ class OrdemServicoController extends Controller
     public function index()
     {
         $dados = Ordem_Servico::with('pessoas','veiculos')->get();
+        // dd($dados);
         return view('ordem_servico.index')->with('dados', $dados);
     }
 
@@ -54,7 +55,23 @@ class OrdemServicoController extends Controller
     public function store(Request $request)
     {
         $dados = $request->all();
-        Ordem_Servico::create($dados);
+
+        $valorMaterial = floatval(Material::findOrFail($dados['material'])->valor);
+        $valorServico = floatval(Servico::findOrFail($dados['servico'])->valor);
+        $valorPago = $valorMaterial + $valorServico;
+        Ordem_Servico::create([
+            "pessoa" => $dados['pessoa'],
+            "servico" => $dados['servico'],
+            "material" => $dados['material'],
+            "veiculo" => $dados['veiculo'],
+            "data_inicio" => $dados['data_inicio'],
+            "data_previsao" => $dados['data_previsao'],
+            "data_fim" => $dados['data_fim'],
+            "status_pagamento" => $dados['status_pagamento'],
+            "valor_total_material" => $valorMaterial,
+            "valor_servico" => $valorServico,
+            "valor_pago" => $valorPago
+        ]);
         return redirect()->route('ordem_servico');
     }
 
