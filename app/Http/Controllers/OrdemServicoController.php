@@ -15,7 +15,6 @@ class OrdemServicoController extends Controller
     public function index()
     {
         $dados = Ordem_Servico::with('pessoas','veiculos')->get();
-        // dd($dados);
         return view('ordem_servico.index')->with('dados', $dados);
     }
 
